@@ -12,8 +12,9 @@ const server = http.createServer((req, res) => {
       res.writeHead(404).end('Not found');
       return;
     }
-    const isImage = /^assets\/placeholders\/[123]\.png$/.test(name);
-    const canonical = isImage || name.endsWith('.html') ? name : name + '.html';
+    const assetTypes = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.woff2': 'font/woff2' };
+    const assetType = name.startsWith('assets/') ? assetTypes[path.extname(name)] : undefined;
+    const canonical = assetType || name.endsWith('.html') ? name : name + '.html';
     const target = path.resolve(root, canonical);
     if (!target.startsWith(root + path.sep) || !fs.existsSync(target) || !fs.statSync(target).isFile()) {
       res.writeHead(404).end('Not found');
@@ -25,7 +26,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(302, { Location: '/' + canonical + url.search }).end();
       return;
     }
-    res.writeHead(200, { 'Content-Type': isImage ? 'image/png' : 'text/html; charset=utf-8', 'X-Content-Type-Options': 'nosniff' });
+    res.writeHead(200, { 'Content-Type': assetType || 'text/html; charset=utf-8', 'X-Content-Type-Options': 'nosniff' });
     res.end(req.method === 'HEAD' ? undefined : fs.readFileSync(target));
   } catch {
     res.writeHead(400).end('Invalid request');
