@@ -16,7 +16,7 @@ FOOTER_MARK = '<img class="brand-mark" src="/assets/design/team-logo-red.svg" al
 def link(url, label, cls=''):
     return f'<a class="{cls}" href="{url}">{label}</a>'
 def nav(current):
-    items=[('about-us.html','About Us'),('curiosity-cares.html','Curiosity Cares'),('past-seasons.html','Past Seasons'),('blog.html','Blog')]
+    items=[('about-us.html','About Us'),('curiosity-cares.html','Curiosity Cares'),('past-seasons.html','Past Seasons'),('blog.html','Blog'),('pleiades-page/index.html','Pleiades')]
     def active(item):
         if item == current:
             return True
