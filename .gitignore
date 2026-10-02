@@ -1,0 +1,8 @@
+# Temporary public-source captures and local import diagnostics, not site content.
+content/constellation/source/
+content/constellation/inspect-*.txt
+content/constellation/original-map.html
+content/constellation/map-source.txt
+content/constellation/browser-captures.json
+content/constellation/baseline-path.txt
+scripts/__pycache__/

@@ -1,0 +1,27 @@
+{
+  "stars": [
+    {"id":"star-0","label":"Navigators","href":"/constellation/navigators-mentors.html","class":"nav-star star-nav","designation":"ζ / 01","position":"--x:6%;--y:34%;--mx:6%;--my:33%"},
+    {"id":"star-1","label":"Comets","href":"/constellation/comets-frc-teams.html","class":"nav-star star-comets","designation":"β / 02","position":"--x:87%;--y:23%;--mx:85%;--my:22%"},
+    {"id":"star-2","label":"Perseverance","href":"/constellation/perseverance-lausd-outreach.html","class":"nav-star star-persev","designation":"δ / 03","position":"--x:67%;--y:57%;--mx:66%;--my:54%"},
+    {"id":"star-3","label":"Stargazers","href":"/constellation/stargazers-fll-teams.html","class":"nav-star star-gaze","designation":"ε / 04","position":"--x:25%;--y:76%;--mx:22%;--my:70%"},
+    {"id":"star-4","label":"Stars","href":"/constellation/stars-ftc-teams-and-pairings.html","class":"nav-star star-teams","designation":"γ / 05","position":"--x:83%;--y:82%;--mx:82%;--my:80%"},
+    {"id":"star-5","label":"North Star","href":"/constellation/north-star-resources.html","class":"nav-star north-star star-north","designation":"α / 11770","position":"--x:47%;--y:8%;--mx:45%;--my:10%"}
+  ],
+  "connections": [[5,1],[1,2],[2,4],[4,3],[3,0],[0,5]],
+  "fieldStars": [
+    {"x":8,"y":13,"size":"minor","tone":"cool"},{"x":13,"y":17,"size":"micro","tone":"neutral"},{"x":17,"y":11,"size":"micro","tone":"warm"},
+    {"x":23,"y":24,"size":"minor","tone":"neutral"},{"x":29,"y":16,"size":"micro","tone":"cool"},{"x":34,"y":9,"size":"micro","tone":"neutral"},
+    {"x":39,"y":28,"size":"minor","tone":"cool"},{"x":45,"y":21,"size":"micro","tone":"neutral"},{"x":53,"y":13,"size":"minor","tone":"warm"},
+    {"x":60,"y":19,"size":"micro","tone":"neutral"},{"x":67,"y":11,"size":"minor","tone":"cool"},{"x":85,"y":12,"size":"micro","tone":"neutral"},
+    {"x":91,"y":21,"size":"minor","tone":"neutral"},{"x":82,"y":34,"size":"micro","tone":"cool"},{"x":93,"y":41,"size":"micro","tone":"warm"},
+    {"x":73,"y":43,"size":"minor","tone":"neutral"},{"x":58,"y":39,"size":"micro","tone":"cool"},{"x":48,"y":46,"size":"minor","tone":"neutral"},
+    {"x":32,"y":43,"size":"micro","tone":"warm"},{"x":18,"y":49,"size":"minor","tone":"cool"},{"x":10,"y":61,"size":"micro","tone":"neutral"},
+    {"x":38,"y":60,"size":"minor","tone":"neutral"},{"x":53,"y":67,"size":"micro","tone":"cool"},{"x":88,"y":65,"size":"minor","tone":"warm"},
+    {"x":92,"y":83,"size":"micro","tone":"cool"},{"x":69,"y":87,"size":"micro","tone":"neutral"},{"x":57,"y":83,"size":"minor","tone":"warm"},
+    {"x":42,"y":87,"size":"micro","tone":"cool"},{"x":22,"y":83,"size":"minor","tone":"neutral"},{"x":7,"y":90,"size":"micro","tone":"warm"}
+  ],
+  "comets": [
+    {"x":12,"y":19,"angle":26,"travel":140,"duration":32,"delay":-9},
+    {"x":88,"y":14,"angle":151,"travel":125,"duration":38,"delay":-24}
+  ]
+}

@@ -1,0 +1,169 @@
+[
+  {
+    "slug": "comets-frc-teams",
+    "title": "Comets | FRC Teams",
+    "source": "https://constellation.curiosity11770.marlborough.org/comets-frc-teams",
+    "heroImage": "/assets/constellation/786d60135fb76522.jpg"
+  },
+  {
+    "slug": "navigators-mentors",
+    "title": "Navigators | Mentors",
+    "source": "https://constellation.curiosity11770.marlborough.org/navigators-mentors",
+    "heroImage": "/assets/constellation/786d60135fb76522.jpg"
+  },
+  {
+    "slug": "north-star-resources",
+    "title": "North Star | Resources",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/cad-best-practices",
+    "title": "CAD Best Practices",
+    "heading": "🌐 CAD Best Practices",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/cad-best-practices",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/cnc-guide",
+    "title": "CNC Guide",
+    "heading": "HOW TO CNC: A STEP BY STEP GUIDE",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/cnc-guide",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/collaborating-as-a-team",
+    "title": "Collaborating as a Team",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/collaborating-as-a-team",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/creating-the-portfolio-in-depth-guide",
+    "title": "Creating the Portfolio: In-Depth Guide",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/creating-the-portfolio-in-depth-guide",
+    "heroImage": "/assets/constellation/786d60135fb76522.jpg"
+  },
+  {
+    "slug": "north-star-resources/drivetrain-basics",
+    "title": "Drivetrain Basics",
+    "heading": null,
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/drivetrain-basics",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/engineering-the-perfect-portfolio",
+    "title": "Engineering the Perfect Portfolio",
+    "heading": null,
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/engineering-the-perfect-portfolio",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/fll-guides",
+    "title": "FLL Guides",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/fll-guides",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/grants",
+    "title": "Grants",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/grants",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/how-to-build-an-engaging-presentation",
+    "title": "How to Build An Engaging Presentation",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/how-to-build-an-engaging-presentation",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/how-to-fundraise",
+    "title": "How to Fundraise",
+    "heading": null,
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/how-to-fundraise",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/how-to-version-control",
+    "title": "How to Version Control",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/how-to-version-control",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/onshape-insert-tool",
+    "title": "Onshape Insert Tool",
+    "heading": "Creating designs with FTC Parts/How to Use the Insert Tool (OnShape)",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/onshape-insert-tool",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/portfolio-examples",
+    "title": "Portfolio Examples",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/portfolio-examples",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/quick-portfolio-tips",
+    "title": "Quick Portfolio Tips",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/quick-portfolio-tips",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/scouting-tips-and-tricks",
+    "title": "Scouting Tips and Tricks",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/scouting-tips-and-tricks",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/the-perfect-connect-email",
+    "title": "The Perfect Connect Email",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/the-perfect-connect-email",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "north-star-resources/wiring-and-configuration-best-practices",
+    "title": "Wiring and Configuration Best Practices ",
+    "heading": "WIRING AND CONFIGURATION BEST PRACTICES",
+    "source": "https://constellation.curiosity11770.marlborough.org/north-star-resources/wiring-and-configuration-best-practices",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "perseverance-lausd-outreach",
+    "title": "Perseverance | LAUSD Outreach",
+    "heading": null,
+    "source": "https://constellation.curiosity11770.marlborough.org/perseverance-lausd-outreach",
+    "heroImage": "/assets/constellation/786d60135fb76522.jpg"
+  },
+  {
+    "slug": "stargazers-fll-teams",
+    "title": "Stargazers | FLL Teams",
+    "source": "https://constellation.curiosity11770.marlborough.org/stargazers-fll-teams",
+    "heroImage": "/assets/constellation/786d60135fb76522.jpg"
+  },
+  {
+    "slug": "stars-ftc-teams-and-pairings",
+    "title": "Stars | FTC Teams and Pairings",
+    "source": "https://constellation.curiosity11770.marlborough.org/stars-ftc-teams-and-pairings",
+    "heroImage": "/assets/constellation/786d60135fb76522.jpg"
+  },
+  {
+    "slug": "translated-north-star-resources",
+    "title": "TRANSLATED North Star | Resources",
+    "heading": "North Star en Español | Recursos",
+    "source": "https://constellation.curiosity11770.marlborough.org/translated-north-star-resources",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "translated-north-star-resources/translated-cad-best-practices",
+    "title": "Translated CAD Best Practices",
+    "heading": "🌐 Mejores Prácticas de CAD",
+    "source": "https://constellation.curiosity11770.marlborough.org/translated-north-star-resources/translated-cad-best-practices",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  },
+  {
+    "slug": "translated-north-star-resources/translated-how-to-fundraise",
+    "title": "Translated How to Fundraise",
+    "heading": "¿Cómo recaudar fondos?",
+    "source": "https://constellation.curiosity11770.marlborough.org/translated-north-star-resources/translated-how-to-fundraise",
+    "heroImage": "/assets/constellation/a79759f4d9a40e9b.jpg"
+  }
+]

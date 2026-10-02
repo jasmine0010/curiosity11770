@@ -1,0 +1,106 @@
+<section class="c-content-section c-content-section--single"><div class="c-content-grid"><div class="c-column c-column--copy">
+<p>GENERAL BEST PRACTICES FOR WIRING (IF YOU DON'T WANNA READ THE WHOLE GUIDE)</p>
+</div></div></section>
+
+
+
+<section class="c-content-section c-content-section--single"><div class="c-content-grid"><div class="c-column c-column--copy">
+<ul><li>Label your wires! It doesn't matter what your labeling system is as long as your team can quickly understand and implement it. Last season, we used colored tape and a shorthand system. In general, we recommend labeling wires at the beginning and end, and on either side of any connection points.</li><li>Try to avoid having more than 3 wires strung together for any one connection. Excessive use of extensions can introduce extra points of failure into your wiring system, and complicate troubleshooting. This is where custom wire extensions can be really helpful!</li><li>Prioritize strain relief and wire around connection points, sharp edges, and moving parts.</li></ul>
+</div></div></section>
+
+
+
+<section class="c-content-section c-content-section--single"><div class="c-content-grid"><div class="c-column c-column--copy">
+<p>DIFFERENT TYPES OF WIRE CONNECTORS</p>
+<p>This isn't absolutely necessary to memorize, but it can be helpful to know what types of connectors are on your robot for repair purposes.</p>
+</div></div></section>
+
+
+
+<section class="c-content-section"><div class="c-content-grid"><div class="c-column c-column--copy">
+<p>JR</p>
+<p><strong>Common Use Cases:</strong> Servos</p>
+<p><strong>Notes:</strong> JR connectors are relatively stable under strain. However, they're easy to crush if they are in the path of a moving mechanism or squished between two parts, so it's generally a good idea to keep replacement JST extensions in your pit.</p>
+</div>
+<div class="c-column c-column--media">
+<figure><img src="/assets/constellation/f274ddd6d98f1d82.png" alt="" loading="lazy"></figure>
+</div></div></section>
+
+
+
+<section class="c-content-section"><div class="c-content-grid"><div class="c-column c-column--copy">
+<p>XT30</p>
+<p><strong>Common Use Cases:</strong> Batteries</p>
+<p><strong>Notes: </strong>These connectors can be directly plugged into a REV control hub without an adapter, but they need to have significant strain relief to avoid disconnection.</p>
+</div>
+<div class="c-column c-column--media">
+<figure><img src="/assets/constellation/68cb32543a014858.png" alt="" loading="lazy"></figure>
+</div></div></section>
+
+
+
+<section class="c-content-section"><div class="c-content-grid"><div class="c-column c-column--copy">
+<p>ANDERSON POWERPOLE</p>
+<p><strong>Common Use Cases:</strong> Batteries</p>
+<p><strong>Notes:</strong> Powerpoles are relatively sturdy connectors, but they don't plug directly into a standard REV control hub (XT30-Powerpole adapters are relatively easy to find).</p>
+</div>
+<div class="c-column c-column--media">
+<figure><img src="/assets/constellation/dcd0e6c5c274217c.png" alt="" loading="lazy"></figure>
+</div></div></section>
+
+
+
+<section class="c-content-section"><div class="c-content-grid"><div class="c-column c-column--copy">
+<p>BULLET CONNECTORS</p>
+<p><strong>Common Use Cases:</strong> Batteries and Motors</p>
+<p><strong>Notes:</strong> Bullet connectors do not do well under high strain, so bullet connectors in high-tension areas should have as much slack and strain relief surrounding them as possible. If reducing tension is not possible (like in situations where a wire is too short), bullet connectors can be swapped out for a more stable connector type, like Anderson Powerpoles.</p>
+</div>
+<div class="c-column c-column--media">
+<figure><img src="/assets/constellation/194bd80cfb4b227c.png" alt="" loading="lazy"></figure>
+</div></div></section>
+
+
+
+<section class="c-content-section"><div class="c-content-grid"><div class="c-column c-column--copy">
+<p>JST VH AND JST ZH</p>
+<p><strong>Common Use Cases: </strong>Motors and Motor Encoders</p>
+<p><strong>Notes:</strong> These connectors have some design features that are supposed to prevent physical disconnection. If they get chipped or broken, they may not be able to stay plugged in, even if their electrical connectivity is still intact.</p>
+</div>
+<div class="c-column c-column--media">
+<figure><img src="/assets/constellation/88eed3301c6f6118.png" alt="" loading="lazy"></figure>
+</div>
+<div class="c-column c-column--media">
+<figure><img src="/assets/constellation/40458b52a959d4ae.png" alt="" loading="lazy"></figure>
+</div></div></section>
+
+
+
+<section class="c-content-section c-content-section--single"><div class="c-content-grid"><div class="c-column c-column--copy">
+<p>IDENTIFYING PROBLEM WIRES</p>
+</div></div></section>
+
+
+
+<section class="c-content-section c-content-section--single"><div class="c-content-grid"><div class="c-column c-column--copy">
+<p>On a fully built and wired robot, it can be difficult to identify the source of a wiring problem. To simplify the troubleshooting process, make note of your problem wires! These are wires that are specifically predisposed to disconnection or physical damage. In general, wires in the following places/situations are always good to check when troubleshooting:</p>
+<ul><li>Wires near sharp parts where they can be cut or damaged</li><li>Wires that are in the path of moving mechanisms</li><li>Wire connections in high-strain areas</li><li>Wires that have to extend between subsystems (like on lifts or linkages)</li></ul>
+<p>These wires are in uniquely stressful and/or potentially damaging environments that make them especially prone to becoming faulty very quickly. They should be prioritized during pit check-ins and also targeted whenever there seems to be a wiring issue at hand. There are also ways to protect problem wires to make them slightly less problematic:</p>
+<ul><li>Wires near sharp parts where they can be cut or damaged 
+If possible, wrap the sharp part with electrical or gaffer's tape to mask any dangerous edges. If wrapping the part isn't an option, try wrapping the wire itself with electrical tape in the places where it could be cut.</li><li>Wires that are in the path of moving mechanisms
+If one of your goals is to maximize slack in the wire, try securing the wire to anchor points that are just outside of the wheelhouse of the moving part. If you aren't as worried about maintaining slack, consider rerouting the wire altogether to avoid the moving mechanism. If neither of the above suggestions are an option, try wrapping the wire with electrical tape.</li><li>Wire connections in high-strain areas
+Use zip ties or wire clips as strain relief around connection points. The biggest issue with placing wires under significant strain is that they can disconnect from ports or other wires at any time, which can pose a problem during matches. Prioritize connection points in high-strain areas by pulling as much slack as possible toward the connectors, and then using wire clips or zip ties to maintain that slack.</li><li>Wires that have to extend with mobile subsystems (like on lifts or linkages)
+These wires should be bundled as intentionally as possible to ensure that they have enough slack to cover the distance that their subsystem will move within. It's generally good practice to install these wires when the subsystem is at its maximum height/length. Some teams also use wire management techniques like Slinkies or spools, which allow their wires to unravel or extend as the distance that they have to cover increases.</li></ul>
+<p>Intuitive Bundling</p>
+<ul><li>Make the most out of your robot's existing infrastructure by creating anchor points for your wires! This helps significantly with wire management and organization. Wires should be bundled based on where they are coming from and where they are going, and bundles can be broken down into branches. In addition, you can also make small inserts or organizers to help with wire organization within your robot, like panels or shelves.</li></ul>
+</div></div></section>
+
+
+
+<section class="c-content-section"><div class="c-content-grid"><div class="c-column c-column--media">
+<figure><img src="/assets/constellation/dab66b4dabef935f.png" alt="" loading="lazy"></figure>
+</div>
+<div class="c-column c-column--copy">
+<p>This is an example of bundled and branched Ethernet cables (Stock photo, credit to Ultima_Gaina). Even though you probably won't have this many wires on your robot, this is a great example of effective bundling!</p>
+</div></div></section>
+
+

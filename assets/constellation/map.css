@@ -1,0 +1,90 @@
+/* The six linked stars and the fixed field are edited in content/constellation/map.json. */
+.map-page{--black:#0a0e14;--panel:#10151c;--cream:#f1f0e9;--muted:#abb3b9;--line:#39414a;--red:#802010;--red-light:#bd8072;--amber:#e1d7b4;background:var(--black)}
+.map-page .c-header{background:#050505;border-color:#352e2b;backdrop-filter:none}
+.map-page .c-brand-mark{color:var(--red-light)}
+.map-page .c-header nav>a[aria-current=page]{color:#dfbf9a}
+.map-page .c-search{background:#10151c;box-shadow:none}
+.map-page .c-search input{background:#0a0e14}
+
+.c-map-hero{position:relative;min-height:680px;height:calc(100svh - 94px);overflow:hidden;border-bottom:1px solid #3b434b;background:#0a0e14}
+.galaxy-container{position:absolute;inset:0;isolation:isolate;overflow:hidden}
+.galaxy-container::after{content:"";position:absolute;z-index:8;inset:18px 2.4%;border:1px solid #63707b4d;pointer-events:none}
+.chart-grid{position:absolute;z-index:0;inset:0;background:url('/assets/constellation/chart-grid.svg') center/100% 100% no-repeat;opacity:.6;pointer-events:none}
+.chart-topline{position:absolute;z-index:9;top:32px;left:5%;right:5%;display:flex;justify-content:space-between;gap:20px;padding:0 0 12px;border-bottom:1px solid #6f7b854a;color:#aeb8bf;font-size:10px;line-height:1.2;letter-spacing:.18em;text-transform:uppercase;pointer-events:none}
+.chart-topline span:first-child{color:#bf8b7f}
+.chart-compass{position:absolute;z-index:9;right:6%;top:101px;display:flex;flex-direction:column;align-items:center;gap:8px;color:#b8c3c9;font-size:10px;letter-spacing:.1em;pointer-events:none}
+.chart-compass i{position:relative;display:block;width:34px;height:34px;border:1px solid #84919a80;border-radius:50%}
+.chart-compass i::before,.chart-compass i::after{content:"";position:absolute;background:#bd8b7d}
+.chart-compass i::before{left:50%;top:-8px;width:1px;height:48px}
+.chart-compass i::after{top:50%;left:-8px;height:1px;width:48px}
+.chart-scale{position:absolute;z-index:9;left:5%;bottom:38px;display:flex;align-items:center;gap:10px;color:#aeb8bf;font-size:10px;letter-spacing:.07em;pointer-events:none}
+.chart-scale i{position:relative;display:block;width:100px;height:8px;border-bottom:1px solid #aeb8bf7c}
+.chart-scale i::before{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;border-left:1px solid #aeb8bf;border-right:1px solid #aeb8bf}
+.chart-coordinates{position:absolute;z-index:9;left:18%;bottom:38px;color:#919da5;font-size:10px;letter-spacing:.09em;pointer-events:none}
+
+.starfield{position:absolute;z-index:1;inset:0;pointer-events:none}
+.chart-point{position:absolute;display:block;border-radius:50%;animation:chart-twinkle 14s ease-in-out infinite alternate}
+.chart-point--micro{width:2px;height:2px;opacity:.46}
+.chart-point--minor{width:3px;height:3px;opacity:.7}
+.chart-point--cool{background:#acbed1}
+.chart-point--neutral{background:#e8edf0}
+.chart-point--warm{background:#ddcc9a}
+.chart-point:nth-child(3n){animation-delay:-5s;animation-duration:19s}
+.chart-point:nth-child(4n){animation-delay:-11s;animation-duration:16s}
+@keyframes chart-twinkle{to{opacity:.28}}
+.chart-comet{position:absolute;display:block;width:3px;height:3px;border-radius:50%;background:#d9e5ed;opacity:0;animation:comet-route var(--duration) linear var(--delay) infinite}
+.chart-comet::before{content:"";position:absolute;right:100%;top:1px;width:58px;height:1px;background:#adbac477}
+@keyframes comet-route{0%{transform:rotate(var(--angle)) translateX(0);opacity:0}8%{opacity:.62}82%{opacity:.62}100%{transform:rotate(var(--angle)) translateX(var(--travel));opacity:0}}
+
+.constellation{position:absolute;z-index:4;inset:14% 5% 12%;}
+.star-connection{position:absolute;z-index:1;height:1px;background:#c6d0d780;transform-origin:left center;pointer-events:none}
+.star-link{position:absolute;z-index:3;left:var(--x);top:var(--y);width:54px;height:54px;transform:translate(-50%,-50%);color:#f1f0e9;text-align:center}
+.star-link.is-north{width:62px;height:62px}
+.nav-star{position:absolute;left:50%;top:50%;width:11px;height:11px;transform:translate(-50%,-50%);border:1px solid #e8edf0;border-radius:50%;background:#d9e3ee;transition:background .25s,border-color .25s}
+.nav-star::before{content:"";position:absolute;left:50%;top:50%;width:25px;height:25px;transform:translate(-50%,-50%);border:1px solid #a8bac981;border-radius:50%}
+.is-north .nav-star{width:18px;height:18px;background:#f1e4bb;border-color:#fff1cb}
+.is-north .nav-star::before{width:35px;height:35px;border-color:#ddca9e9c}
+.star-comets .nav-star,.star-teams .nav-star{background:#efe8d5;border-color:#fff6dd}
+.star-persev .nav-star,.star-gaze .nav-star{width:9px;height:9px;background:#c3d2dd}
+.star-link:hover .nav-star,.star-link:focus-visible .nav-star{background:#fff7dd;border-color:#fff}
+.star-link:focus-visible{outline:1px solid #f1e4bb;outline-offset:6px}
+.star-designation{position:absolute;left:calc(50% + 18px);top:0;white-space:nowrap;color:#84929b;font-size:10px;letter-spacing:.08em;line-height:1}
+.star-label{position:absolute;left:50%;top:calc(100% - 2px);transform:translateX(-50%);white-space:nowrap;color:#f1f0e9;font-size:15px;font-weight:500;line-height:1.2;letter-spacing:0}
+.is-north .star-label{font-size:16px}
+.star-link:hover .star-label,.star-link:focus-visible .star-label{color:#f1dfb7}
+.spark{position:absolute;z-index:30;width:3px;height:3px;border-radius:50%;background:#e1d7b4;pointer-events:none;animation:spark-out 1.1s ease-out forwards}
+.spark.red{background:#ad3c27}
+.spark.orange{background:#df8b50}
+.spark.white{background:#fff}
+@keyframes spark-out{to{transform:translate(var(--dx),var(--dy));opacity:0}}
+#motion-toggle{position:absolute;z-index:10;right:5%;bottom:31px;min-width:121px;padding:8px 12px;border:1px solid #6e7b83;background:#0a0e14;color:#c7d0d5;font-size:11px;line-height:1.25;letter-spacing:.02em}
+#motion-toggle:hover{border-color:#d6c59e;color:#fff}
+#motion-toggle:disabled{opacity:.6;cursor:default}
+.motion-paused .galaxy-container *{animation-play-state:paused!important}
+
+.c-destinations{display:none;background:#0a0e14}
+.c-destination-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}
+.c-destination-grid a{display:block;padding:18px 2px;border-bottom:1px solid #58636c68;color:#f1f0e9;font-size:16px;line-height:1.35}
+.c-destination-grid a:hover{color:#f1dfb7}
+
+@media(max-width:1020px){.c-map-hero{min-height:640px;height:calc(100svh - 76px)}.constellation{inset:16% 6% 14%}}
+@media(max-width:700px){
+  .c-map-hero{height:620px;min-height:620px}
+  .galaxy-container::after{inset:12px 3%}
+  .chart-topline{top:27px;left:6%;right:6%;font-size:8px;letter-spacing:.11em}
+  .chart-topline span:last-child{text-align:right}
+  .chart-compass{top:81px;right:9%;transform:scale(.8);transform-origin:top right}
+  .constellation{inset:17% 6% 18%}
+  .star-link{left:var(--mx,var(--x));top:var(--my,var(--y));width:48px;height:48px}
+  .star-link.is-north{width:56px;height:56px}
+  .star-label{top:calc(100% - 3px);font-size:12px}
+  .is-north .star-label{font-size:13px}
+  .star-designation{left:calc(50% + 15px);font-size:8px}
+  .chart-coordinates{display:none}
+  .chart-scale{left:6%;bottom:30px}
+  .chart-scale i{width:60px}
+  #motion-toggle{right:6%;bottom:23px;font-size:10px;min-width:0}
+  .c-destinations{display:block;padding:16px 6% 42px}
+}
+@media(max-width:390px){.c-map-hero{height:590px;min-height:590px}}
+@media(prefers-reduced-motion:reduce){.chart-point,.chart-comet,.spark{animation:none!important}.chart-comet,.spark{display:none}}

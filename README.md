@@ -19,3 +19,11 @@ The server supports both saved `.html` pages and the original extensionless rout
 Run `python scripts/build_site.py` after editing templates or content. This uses only the Python standard library and regenerates all 36 HTML pages. Run `node tests/security.cjs` to check local links, assets, and security invariants.
 
 The most recent season in the supplied content is 2024–25; it is presented as a featured season, not a claim about the current season. The reused photos are temporary replacements, not historical portraits or sponsor logos. Google Fonts and the original video/document embeds require an internet connection. No analytics are included.
+
+## Constellation
+
+The editable recreation is at `/constellation/home.html` and includes 27 public pages, the original star map design, resources, translated guides, local images, and site search. Curiosity's navigation links to this local section.
+
+Run `node scripts/build.cjs` to rebuild both sites (63 pages). This also finds Codex's bundled Python on Windows when `python` is not on PATH. Preview with the existing `node preview.cjs` server.
+
+See [the Constellation editing guide](content/constellation/README.md) for content, images, map positions, new pages, and source-link limitations. Run `node tests/constellation.cjs` alongside the existing security checks.

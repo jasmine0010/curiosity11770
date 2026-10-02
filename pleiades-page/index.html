@@ -1,0 +1,1013 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#080b13">
+  <meta name="description" content="Seven outreach initiatives forming 10 to 12 informal FIRST LEGO League teams for a February FLL friendly.">
+  <title>Pleiades — February FLL friendly</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --night: #080b13;
+      --navy: #101827;
+      --white: #fff6ed;
+      --muted: #c5c9d4;
+      --pink: #edbfd4;
+      --cyan: #b9e5ee;
+      --hairline: #3a4354;
+      --serif: "Cormorant Garamond", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: "Segoe UI", Helvetica, Arial, sans-serif;
+      --ease: cubic-bezier(.22,.61,.36,1);
+      /* A display treatment, preserving the original photograph and its detail. */
+      --photo-treatment: hue-rotate(112deg) saturate(.65);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 2rem; scrollbar-gutter: stable; }
+    body { margin: 0; background: var(--night); color: var(--white); font: 1rem/1.65 var(--sans); }
+    body.modal-open { overflow: hidden; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; color: inherit; }
+    a { color: var(--cyan); text-underline-offset: .3em; }
+    a:hover { color: var(--white); }
+    :focus-visible { outline: 2px solid var(--cyan); outline-offset: 6px; }
+    .skip { position: fixed; top: 1rem; left: 1rem; z-index: 20; padding: .75rem; background: var(--night); transform: translateY(-200%); }
+    .skip:focus { transform: none; }
+    .eyebrow { font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.08; }
+    .hero { position: relative; min-height: 820px; height: 100svh; isolation: isolate; overflow: hidden; background: var(--night); }
+    .ambient { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 44%; filter: var(--photo-treatment); opacity: .38; }
+    .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(var(--night), transparent 48%, var(--night)); }
+    .intro { position: relative; z-index: 3; width: min(39rem, 70%); padding: 2.4rem clamp(1.5rem, 5vw, 8rem); padding-right: 0; pointer-events: none; }
+    h1 { font-size: clamp(4.5rem, 8vw, 8rem); letter-spacing: -.04em; margin: .65rem 0 .8rem; }
+    .intro p:last-child { max-width: 28rem; color: var(--white); text-wrap: balance; }
+    .map { position: absolute; inset: 0; }
+    .scene { position: absolute; inset: 0; pointer-events: none; transform-origin: 0 0; will-change: transform; }
+    .star-canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; mix-blend-mode: screen; mix-blend-mode: plus-lighter; }
+    .map { z-index: 2; }
+    .photo { position: absolute; width: 100%; height: 100%; object-fit: cover; filter: var(--photo-treatment); }
+    .vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 53% 49%, transparent 48%, #080b1320 78%, #080b13b5 100%), linear-gradient(#080b13d0, transparent 30%, transparent 82%, #080b13); }
+    .star { position: absolute; width: 44px; height: 44px; padding: 0; border: 0; background: none; transform: translate(-50%, -50%); cursor: pointer; }
+    .star:focus-visible { outline: 0; }
+    .star-label { position: absolute; display: block; width: max-content; max-width: 245px; text-align: left; color: var(--white); font-size: .875rem; font-weight: 400; line-height: 1.5; letter-spacing: .09em; text-shadow: 0 1px 3px #080b13, 0 0 8px #080b13, 0 0 16px #080b13; transition: color 500ms; }
+    .star.is-active .star-label { color: var(--white); }
+    .star:focus-visible .star-label { outline: 2px solid var(--cyan); outline-offset: 5px; }
+    .map-note { position: absolute; z-index: 3; bottom: 1.6rem; left: clamp(1.5rem, 5vw, 8rem); right: clamp(1.5rem, 5vw, 8rem); display: flex; justify-content: space-between; gap: 1rem; font-size: .875rem; color: var(--muted); }
+    .content { max-width: 1160px; margin: auto; padding: 0 clamp(1.5rem, 6vw, 5rem); }
+    .program { padding: 6rem 0; display: grid; grid-template-columns: 1fr 1.35fr; gap: 3rem; border-bottom: 1px solid var(--hairline); }
+    h2 { font-size: clamp(2.4rem, 4vw, 3.7rem); margin-top: .85rem; }
+    .program p + p { margin-top: 1rem; }
+    dl { margin: 1.8rem 0 0; }
+    dl > div { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; padding: .7rem 0; border-top: 1px solid var(--hairline); }
+    dt { color: var(--muted); font-size: .875rem; }
+    dd { margin: 0; overflow-wrap: anywhere; }
+    .placeholder { color: var(--muted); font-size: .875rem; }
+    .initiatives { padding: 5rem 0 2rem; }
+    .initiatives > p { margin-top: 1rem; color: var(--muted); }
+    .initiative-list { list-style: none; padding: 0; margin: 3rem 0 0; counter-reset: initiatives; }
+    .initiative-list > li { position: relative; padding: 2rem 0 2rem 3.4rem; border-top: 1px solid var(--hairline); counter-increment: initiatives; }
+    .initiative-list > li::before { content: "0" counter(initiatives); position: absolute; left: 0; top: 2.2rem; font-size: .75rem; letter-spacing: .12em; color: var(--pink); }
+    h3 { font-size: clamp(1.65rem, 3vw, 2.2rem); }
+    .description { max-width: 44rem; margin-top: 1rem; color: var(--muted); }
+    .name-note { color: var(--pink); font-size: .875rem; margin-top: .7rem; }
+    .details-button, .close { margin-top: 1.2rem; padding: .65rem 0; border: 0; border-bottom: 1px solid var(--pink); background: none; cursor: pointer; font-size: .875rem; }
+    .details-button:hover, .close:hover { color: var(--pink); }
+    footer { display: flex; justify-content: space-between; gap: 2rem; padding: 2rem 0 3rem; margin-top: 2rem; border-top: 1px solid var(--hairline); color: var(--muted); font-size: .75rem; }
+    footer p { max-width: 30rem; }
+    dialog { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; padding: 0; margin: 0; border: 0; background: transparent; color: var(--white); overflow: hidden; }
+    dialog::backdrop { background: #03060bd9; opacity: 0; transition: opacity 550ms var(--ease); }
+    dialog.visible::backdrop { opacity: 1; }
+    .panel { position: absolute; inset: 0 0 0 auto; width: min(100%, 560px); padding: clamp(1.5rem, 4vw, 3.5rem); padding-bottom: max(2rem, env(safe-area-inset-bottom)); background: var(--navy); border-left: 1px solid var(--hairline); overflow-y: auto; overscroll-behavior: contain; transform: translateX(100%); transition: transform 550ms var(--ease); }
+    dialog.visible .panel { transform: none; }
+    .close { display: block; margin: 0 0 4rem auto; }
+    .panel h2 { font-size: clamp(2.3rem, 5vw, 3.5rem); overflow-wrap: anywhere; }
+    .panel .description { margin-top: 1.5rem; }
+    /* The brightened copy inherits exactly the photo's color treatment. */
+    .nebula { filter: var(--photo-treatment) brightness(1.34); opacity: 0; }
+    #page-title { pointer-events: auto; width: fit-content; }
+    .star-label { transition: opacity var(--hover-ms, 500ms) var(--ease); }
+    .hero.selecting .star:not(.is-selected) .star-label { opacity: .18; }
+    .initiative-list > li { transition: border-color var(--hover-ms, 500ms); }
+    .initiative-list > li.is-related { border-color: var(--pink); }
+    .initiative-list > li.is-related h3 { text-decoration: underline; text-decoration-color: var(--pink); text-decoration-thickness: 1px; text-underline-offset: .2em; }
+    .lit-word { display: inline-block; white-space: nowrap; }
+    .lit-letter { display: inline-block; opacity: .92; transition: opacity var(--text-ms, 600ms), filter var(--text-ms, 600ms), letter-spacing var(--text-ms, 600ms); }
+    .motion-toggle { background: none; color: var(--cyan); border: 0; padding: 0; font: inherit; text-decoration: underline; text-underline-offset: .3em; cursor: pointer; }
+    .reveal-pending { opacity: 0; transform: translateY(12px); }
+    .reveal-ready { transition: opacity var(--reveal-ms, 500ms) var(--ease), transform var(--reveal-ms, 500ms) var(--ease); transition-delay: var(--reveal-delay, 0ms); }
+    @media (hover: hover) and (pointer: fine) {
+      .hero.custom-cursor .map, .hero.custom-cursor .map * { cursor: none; }
+    }
+    @media (max-width: 999px) {
+      .hero { height: auto; min-height: max(100svh, 1030px); }
+      .intro { width: 100%; padding: 2rem 1.5rem; }
+      h1 { font-size: clamp(4.5rem, 17vw, 7rem); }
+      .intro p:last-child { max-width: 24rem; }
+      .map { top: 280px; bottom: 100px; }
+      .star { width: 28px; height: 28px; }
+      .star-label { font-size: .875rem; letter-spacing: .045em; }
+      .map-note { flex-direction: column; gap: .3rem; }
+      .program { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 0; }
+      .initiatives { padding-top: 4rem; }
+      .initiative-list > li { padding-left: 2.5rem; }
+      footer { flex-direction: column; }
+      .panel { inset: auto 0 0; width: 100%; max-height: 88dvh; border-left: 0; border-top: 1px solid var(--hairline); transform: translateY(100%); }
+      .close { margin-bottom: 2rem; }
+      dl > div { grid-template-columns: 6rem 1fr; }
+    }
+    @media (prefers-color-scheme: light) { :root { color-scheme: dark; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal-pending { opacity: 1; transform: none; }
+      .lit-letter { opacity: 1; filter: none !important; letter-spacing: inherit !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#initiatives">Skip star map; read initiatives</a>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <img class="ambient" src="pleiades.jpg" alt="" aria-hidden="true">
+      <div class="scene" id="scene">
+        <img class="photo" id="photo" src="pleiades.jpg" width="2400" height="1730" alt="The Pleiades star cluster, with bright star cores and reflection nebulosity shown in pink." fetchpriority="high">
+        <img class="photo nebula" id="nebula" src="pleiades.jpg" alt="" aria-hidden="true">
+      </div>
+      <div class="vignette"></div>
+      <canvas class="star-canvas" id="star-canvas" aria-hidden="true"></canvas>
+      <header class="intro">
+        <p class="eyebrow">Seven initiatives · One February friendly</p>
+        <h1 id="page-title" tabindex="0">Pleiades</h1>
+        <p>Forming 10 to 12 informal FLL teams for our February FLL friendly.</p>
+      </header>
+      <div class="map" id="map" role="group" aria-label="Seven outreach initiatives on the Pleiades photograph">
+          <div id="stars"></div>
+      </div>
+      <div class="map-note"><span>Select a star to explore an initiative.</span><button class="motion-toggle" id="motion-toggle" type="button" hidden>Enable motion</button><a href="#initiatives">Read all seven initiatives</a></div>
+    </section>
+    <div class="content">
+      <section class="program" aria-labelledby="program-title">
+        <div><p class="eyebrow">The program</p><h2 id="program-title">Together<br>in February.</h2></div>
+        <div>
+          <p>We aim to form 10 to 12 informal FIRST LEGO League (FLL) teams across these seven outreach initiatives.</p>
+          <p>The teams will come together for a February FLL friendly. Participation and meeting details will be added here as they are confirmed.</p>
+          <dl>
+            <div><dt>Date</dt><dd class="placeholder">[Placeholder: February date and year]</dd></div>
+            <div><dt>Location</dt><dd class="placeholder">[Placeholder: event location]</dd></div>
+            <div><dt>Registration</dt><dd class="placeholder">[Placeholder: registration link]</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="initiatives" id="initiatives" aria-labelledby="initiatives-title" tabindex="-1">
+        <p class="eyebrow">The initiatives</p><h2 id="initiatives-title">Seven places to take part.</h2>
+        <p>Explore the initiatives below. Contact and sign-up details are awaiting confirmation.</p>
+        <!-- Positions are percentages of the supplied photograph, checked against its star cores. -->
+        <ol class="initiative-list">
+          <li><article id="third-street" data-star="77.679,18.251">
+            <h3>Third Street Elementary</h3><p class="description">An outreach initiative for forming informal FLL teams with Third Street Elementary. Participants will prepare to take part in the February friendly.</p>
+          </article></li>
+          <li><article id="nsbe" data-star="67.310,28.340">
+            <h3>National Society of Black Engineers Jr.</h3><p class="description">An outreach initiative for forming informal FLL teams with National Society of Black Engineers Jr. Participants will prepare to take part in the February friendly.</p>
+          </article></li>
+          <li><article id="escuela" data-star="11.087,51.002">
+            <h3>Escuela Plus Elementary</h3><p class="description">An outreach initiative for forming informal FLL teams with Escuela Plus Elementary. Participants will prepare to take part in the February friendly.</p>
+          </article></li>
+          <li><article id="sisters" data-star="83.043,54.390">
+            <h3>SISTERS</h3><p class="description">An outreach initiative for forming informal FLL teams under the working name SISTERS. Participants will prepare to take part in the February friendly.</p><p class="name-note">SISTERS is a working name and may change.</p>
+          </article></li>
+          <li><article id="mar-vista" data-star="39.532,54.648">
+            <h3>Mar Vista Family Center</h3><p class="description">An outreach initiative for forming informal FLL teams with Mar Vista Family Center. Participants will prepare to take part in the February friendly.</p>
+          </article></li>
+          <li><article id="robot-world" data-star="58.711,70.975">
+            <h3>LEGO Robot World</h3><p class="description">An outreach initiative for forming informal FLL teams with LEGO Robot World. Participants will prepare to take part in the February friendly.</p>
+          </article></li>
+          <li><article id="early-education" data-star="11.419,59.454">
+            <h3>Center for Early Education</h3><p class="description">An outreach initiative for forming informal FLL teams with Center for Early Education. Participants will prepare to take part in the February friendly.</p>
+          </article></li>
+        </ol>
+        <noscript><p>For every initiative: contact, meeting time, and sign-up link are placeholders awaiting confirmation. All initiative descriptions are available above.</p></noscript>
+      </section>
+      <footer><p>Contact: [Placeholder: program email]</p><p>Image credit: NASA, ESA, AURA/Caltech, Palomar Observatory.<br>Pink color treatment for this page.</p></footer>
+    </div>
+  </main>
+  <dialog id="details" aria-labelledby="detail-title" aria-describedby="detail-description">
+    <div class="panel">
+      <button class="close" type="button" autofocus aria-label="Close initiative details">Close</button>
+      <p class="eyebrow">February FLL friendly</p>
+      <h2 id="detail-title"></h2>
+      <p id="detail-description" class="description"></p>
+      <p id="detail-note" class="name-note" hidden></p>
+      <dl>
+        <div><dt>Contact</dt><dd class="placeholder">[Placeholder: contact name and email]</dd></div>
+        <div><dt>Meeting time</dt><dd class="placeholder">[Placeholder: meeting day and time]</dd></div>
+        <div><dt>Sign-up</dt><dd class="placeholder">[Placeholder: sign-up link]</dd></div>
+      </dl>
+    </div>
+  </dialog>
+  <script>
+"use strict";
+
+// All interaction tunables live here. Durations are milliseconds; distances are CSS pixels.
+const CONFIG = {
+  starCount: 240, dprCap: 2,
+  field: { minSize: .48, maxSize: 2.2, spriteScale: 5, power: 2.8, exclusion: 64,
+    largerFraction: .08, largerSize: [2.3, 4.5],
+    twinkle: [2000, 10000], amplitude: [.35, .75], speedBoost: .3 },
+  parallax: { photo: 8.5, field: 28, hero: 9.4, ease: 420, tiltRange: 18,
+    fieldDepth: [.7, 1.2] },
+  tunnel: { speeds: [.02, .044, .08],
+    fadeIn: 1800, edgeMargin: 60, growth: .25 },
+  cursor: { lag: 210, radius: 150, attack: 180, relax: 950,
+    ring: 6, activeRing: 28, ringEase: 90 },
+  hover: { radius: 60, scale: 1.85, ease: 500, dim: .25,
+    dimRadius: 140, nebulaRadius: 175, letterSpacing: .03 },
+  labels: { gap: 24, desktopWidth: 245,
+    mobileWidths: [96, 150, 110, 80, 142, 126, 118],
+    desktopSides: ["above", "right", "above", "right", "below", "below", "below"],
+    mobileSides: ["above", "above-left", "above-start", "below", "above-right", "below", "below"] },
+  sprite: { folder: "stars/", glow: 108, spike: 92,
+    // Equivalent white-core diameters measured from the 2400px-wide photograph.
+    referenceWidth: 2400, whiteCoreDiameter: [24, 32, 18, 33, 46, 28, 31],
+    coreWhiteFraction: .42, coreSpread: 1.12, coreOpacity: .64,
+    coreFalloff: [[0, .96], [.12, .84], [.24, .61], [.42, .30], [.62, .11], [.82, .025], [1, 0]],
+    twinkle: [6500, 15500], twinkleAmplitude: .38,
+    brightness: [.78, .94, .52, .92, 1, .8, .88] },
+  click: { scale: 1.11, duration: 700, panelDuration: 550 },
+  constellation: { draw: 700, hold: 2000, lineWidth: 1.2, opacity: .27,
+    intermediateStar: [84.42, 36.44] },
+  idle: { delay: 4000, duration: 3000, swell: .28 },
+  meteor: { interval: [40000, 90000], duration: 1100, trail: 65,
+    distance: [190, 310], opacity: .22, safeMargin: 24 },
+  scroll: { scale: .06, fade: .14, reveal: 500, stagger: 70 },
+  text: { radius: 200, ease: 600, brightness: .1, spacing: .012 }
+};
+
+const $ = selector => document.querySelector(selector);
+const hero = $(".hero"), map = $("#map"), scene = $("#scene");
+const photo = $("#photo"), nebula = $("#nebula"), canvas = $("#star-canvas");
+const ctx = canvas.getContext("2d", { alpha: true });
+const stars = $("#stars"), dialog = $("#details");
+const panel = dialog.querySelector(".panel"), title = $("#page-title");
+const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+const fine = matchMedia("(hover: hover) and (pointer: fine)");
+const compact = matchMedia("(max-width: 999px)");
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const random = (a, b) => a + Math.random() * (b - a);
+const pair = value => value.split(",").map(Number);
+const easeOut = p => 1 - (1 - p) ** 3;
+const follow = (v, target, dt, duration) =>
+  v + (target - v) * (1 - Math.exp(-dt / Math.max(1, duration)));
+
+document.documentElement.style.setProperty("--hover-ms", CONFIG.hover.ease + "ms");
+document.documentElement.style.setProperty("--text-ms", CONFIG.text.ease + "ms");
+document.documentElement.style.setProperty("--reveal-ms", CONFIG.scroll.reveal + "ms");
+panel.style.transitionDuration = CONFIG.click.panelDuration + "ms";
+
+const state = {
+  raf: 0, lastFrame: 0, time: 0, visible: true, layout: true,
+  width: 0, height: 0, mapX: 0, mapY: 0, dpr: 1, image: null,
+  pointer: { x: 0, y: 0, inside: false, map: false },
+  light: { x: 0, y: 0, alpha: 0 }, pan: { x: 0, y: 0 }, driftCenter: { x: 0, y: 0 },
+  tilt: { enabled: false, x: 0, y: 0, baseline: null },
+  direct: -1, focused: -1, row: -1, active: -1, selected: -1,
+  zoom: 1, tween: null, anchor: { x: 0, y: 0 }, scroll: 0,
+  lastInput: 0, idleDone: false, idle: null, meteor: null,
+  nextMeteor: random(...CONFIG.meteor.interval), constellation: null,
+  ring: CONFIG.cursor.ring, photoReady: false
+};
+let field = [], returnFocus, openTimer, closeTimer, closing = false;
+let savedScroll = { x: 0, y: 0 };
+
+/*
+  Isolated sprite loader: place centered, transparent PNGs in ./stars/:
+  star-core.png, star-glow.png, star-spike.png. Each replaces its fallback
+  independently. Relative URLs work beside the HTML, including file://.
+  No fetch, libraries, or required extra assets. Missing PNGs are expected.
+  Procedural sprites and temperature variants are drawn only once.
+  For the optional main-star core PNG, keep its bright white footprint around
+  42% of its full diameter, or adjust CONFIG.sprite.coreWhiteFraction to match.
+*/
+function makeSprite(kind, color = "255,246,237") {
+  const image = document.createElement("canvas");
+  image.width = image.height = 128;
+  const c = image.getContext("2d");
+  const radial = (sx, sy, stops) => {
+    c.save(); c.translate(64, 64); c.scale(sx, sy);
+    const gradient = c.createRadialGradient(0, 0, 0, 0, 0, 64);
+    stops.forEach(([position, alpha]) =>
+      gradient.addColorStop(position, `rgba(${color},${alpha})`));
+    c.fillStyle = gradient; c.fillRect(-64, -64, 128, 128); c.restore();
+  };
+  if (kind === "spike") {
+    // Two tapered axes give a faint four-point diffraction sprite.
+    radial(1, .026, [[0, .8], [.12, .4], [.7, .08], [1, 0]]);
+    radial(.026, 1, [[0, .8], [.12, .4], [.7, .08], [1, 0]]);
+  } else if (kind === "hero-core") {
+    // Continuous opacity falloff: no opaque plateau or abrupt circular edge.
+    // Bake the feathering once into the sprite rather than blurring every frame.
+    radial(1, 1, CONFIG.sprite.coreFalloff);
+  } else if (kind === "glow") {
+    radial(1, 1, [[0, .5], [.14, .22], [.45, .06], [1, 0]]);
+  } else {
+    radial(1, 1, [[0, 1], [.09, .95], [.25, .38], [.6, .04], [1, 0]]);
+  }
+  return image;
+}
+function createSpriteBank(invalidate) {
+  const bank = {
+    core: makeSprite("hero-core"), glow: makeSprite("glow"),
+    spike: makeSprite("spike"),
+    temperatures: ["255,248,240", "205,228,255", "255,224,194"]
+      .map(color => makeSprite("core", color))
+  };
+  ["core", "glow", "spike"].forEach(kind => {
+    const image = new Image();
+    image.onload = () => {
+      if (image.naturalWidth && image.naturalHeight) {
+        bank[kind] = image; invalidate();
+      }
+    };
+    image.onerror = () => {}; // Keep the already-rendered fallback.
+    image.src = CONFIG.sprite.folder + "star-" + kind + ".png";
+  });
+  return bank;
+}
+const sprites = ctx ? createSpriteBank(wake) : null;
+
+// Static article text remains the source of truth for both navigation modes.
+const initiatives = [...document.querySelectorAll("article[data-star]")].map((article, i) => {
+  const name = article.querySelector("h3").textContent;
+  const button = document.createElement("button");
+  button.type = "button"; button.className = "star"; button.dataset.index = i;
+  button.setAttribute("aria-label", "View " + name + " initiative details");
+  button.setAttribute("aria-haspopup", "dialog");
+  button.setAttribute("aria-controls", "details");
+  const label = document.createElement("span");
+  label.className = "star-label"; label.textContent = name; button.append(label);
+  const listButton = button.cloneNode(false);
+  listButton.className = "details-button";
+  listButton.removeAttribute("data-index");
+  listButton.textContent = "Participation details";
+  listButton.setAttribute("aria-label", name + ": participation details");
+  article.append(dialog.querySelector("dl").cloneNode(true), listButton);
+  [button, listButton].forEach(trigger => trigger.addEventListener("click", () => openDetails(i, trigger)));
+  button.addEventListener("focus", () => { state.focused = i; input(); });
+  button.addEventListener("blur", () => { state.focused = -1; wake(); });
+  const row = article.closest("li");
+  row.addEventListener("pointerenter", event => {
+    if (event.pointerType !== "touch") { state.row = i; input(); }
+  });
+  row.addEventListener("pointerleave", () => { state.row = -1; wake(); });
+  row.addEventListener("focusin", () => { state.row = i; input(); });
+  row.addEventListener("focusout", () => { state.row = -1; wake(); });
+  return { article, button, label, row, star: pair(article.dataset.star),
+    base: { x: 0, y: 0 }, position: { x: 0, y: 0 }, labelBox: {}, hover: 0,
+    brightness: CONFIG.sprite.brightness[i], twinklePeriod: random(...CONFIG.sprite.twinkle),
+    twinklePhase: Math.random(), twinkleAmplitude: random(.7, 1) * CONFIG.sprite.twinkleAmplitude };
+});
+// Natural DOM order gives left-to-right Tab navigation, without positive tabindex.
+const spatialOrder = initiatives.map((_, i) => i)
+  .sort((a, b) => initiatives[a].star[0] - initiatives[b].star[0]);
+spatialOrder.forEach(i => stars.append(initiatives[i].button));
+
+function input() {
+  state.lastInput = state.time; state.idleDone = false; state.idle = null; wake();
+}
+function wake() {
+  if (!state.raf && state.visible && !document.hidden) {
+    state.raf = requestAnimationFrame(frame);
+  }
+}
+function stop() {
+  cancelAnimationFrame(state.raf); state.raf = 0; state.lastFrame = 0;
+}
+
+// Scroll scale, click zoom, and parallax share one coordinate projection.
+function project(point, depth) {
+  const scrollScale = 1 + (reduced.matches ? 0 : state.scroll * CONFIG.scroll.scale);
+  const x = state.width / 2 + (point.x - state.width / 2) * scrollScale;
+  const y = state.height / 2 + (point.y - state.height / 2) * scrollScale;
+  return {
+    x: state.anchor.x + (x - state.anchor.x) * state.zoom + state.pan.x * depth,
+    y: state.anchor.y + (y - state.anchor.y) * state.zoom + state.pan.y * depth
+  };
+}
+function setAnchor(index) {
+  const base = initiatives[index].base;
+  const scale = 1 + (reduced.matches ? 0 : state.scroll * CONFIG.scroll.scale);
+  state.anchor = {
+    x: state.width / 2 + (base.x - state.width / 2) * scale,
+    y: state.height / 2 + (base.y - state.height / 2) * scale
+  };
+}
+function zoomTo(target) {
+  state.tween = { from: state.zoom, to: reduced.matches ? 1 : target,
+    start: performance.now() };
+  wake();
+}
+function openDetails(index, trigger) {
+  if (dialog.open) return;
+  savedScroll = { x: scrollX, y: scrollY };
+  input(); clearTimeout(closeTimer); closing = false; returnFocus = trigger;
+  const item = initiatives[index];
+  $("#detail-title").textContent = item.article.querySelector("h3").textContent;
+  $("#detail-description").textContent = item.article.querySelector(".description").textContent;
+  const note = $("#detail-note");
+  note.textContent = item.article.querySelector(".name-note")?.textContent || "";
+  note.hidden = !note.textContent;
+  state.selected = index; setAnchor(index); zoomTo(CONFIG.click.scale);
+  hero.classList.add("selecting"); hero.classList.remove("custom-cursor");
+  initiatives.forEach((item, i) => item.button.classList.toggle("is-selected", i === index));
+  document.body.classList.add("modal-open");
+  dialog.showModal(); // Focus trap and inert background apply during the zoom too.
+  // Commit the offscreen starting pose before toggling the entering pose, including
+  // list-triggered opens with no camera delay. Prevent autofocus from scrolling it.
+  dialog.scrollLeft = 0; dialog.scrollTop = 0;
+  dialog.querySelector(".close").focus({ preventScroll: true });
+  void panel.offsetWidth;
+  window.scrollTo({ left: savedScroll.x, top: savedScroll.y, behavior: "instant" });
+  panel.scrollTop = 0;
+  const delay = reduced.matches || !state.visible ? 0 : CONFIG.click.duration;
+  openTimer = setTimeout(() => {
+    if (dialog.open && !closing) dialog.classList.add("visible");
+  }, delay);
+}
+function closeDetails() {
+  if (!dialog.open || closing) return;
+  closing = true; clearTimeout(openTimer);
+  dialog.classList.remove("visible"); hero.classList.remove("selecting");
+  zoomTo(1);
+  closeTimer = setTimeout(() => dialog.close(), reduced.matches ? 0 : CONFIG.click.panelDuration);
+}
+dialog.querySelector(".close").addEventListener("click", closeDetails);
+dialog.addEventListener("cancel", event => { event.preventDefault(); closeDetails(); });
+let outsidePointer = false;
+dialog.addEventListener("pointerdown", event => { outsidePointer = event.target === dialog; });
+dialog.addEventListener("click", event => {
+  if (outsidePointer && event.target === dialog) closeDetails();
+  outsidePointer = false;
+});
+dialog.addEventListener("close", () => {
+  clearTimeout(openTimer); clearTimeout(closeTimer);
+  document.body.classList.remove("modal-open");
+  dialog.classList.remove("visible"); hero.classList.remove("selecting");
+  state.selected = -1; state.direct = -1; state.pointer.map = false;
+  // Keep the existing return tween: restarting it here caused a second easing/jump.
+  if (!closing) zoomTo(1);
+  closing = false;
+  returnFocus?.focus({ preventScroll: true }); input();
+  window.scrollTo({ left: savedScroll.x, top: savedScroll.y, behavior: "instant" });
+  onScroll();
+});
+
+function layout() {
+  state.layout = false;
+  state.domKey = "";
+  state.width = hero.clientWidth; state.height = hero.clientHeight;
+  const hb = hero.getBoundingClientRect(), mb = map.getBoundingClientRect();
+  state.mapX = mb.left - hb.left; state.mapY = mb.top - hb.top;
+  const w = map.clientWidth, h = map.clientHeight;
+  state.driftCenter = { x: state.mapX + w / 2, y: state.mapY + h / 2 };
+  const iw = photo.naturalWidth || 2400, ih = photo.naturalHeight || 1730;
+  const cover = Math.max(w / iw, h / ih);
+  const contained = compact.matches || !(iw * cover * .72 < w - 72 && ih * cover * .53 < h - 96);
+  const scale = contained ? Math.min(w / iw, h * .7 / ih) : cover;
+  const rw = iw * scale, rh = ih * scale;
+  const ox = state.mapX + (contained ? (w - rw) / 2 : clamp(w / 2 - rw * .475, w - rw, 0));
+  const oy = state.mapY + (contained ? (h - rh) / 2 : clamp(h / 2 - rh * .445, h - rh, 0));
+  state.image = { x: ox, y: oy, width: rw, height: rh, contained };
+  [photo, nebula].forEach(image => Object.assign(image.style,
+    { width: rw + "px", height: rh + "px", left: ox + "px", top: oy + "px" }));
+  photo.style.maskImage = contained ? "linear-gradient(transparent, #000 14%, #000 86%, transparent)" : "none";
+  initiatives.forEach((item, i) => {
+    item.base = { x: ox + item.star[0] / 100 * rw, y: oy + item.star[1] / 100 * rh };
+    const width = compact.matches ? CONFIG.labels.mobileWidths[i] : Math.min(CONFIG.labels.desktopWidth, w * .19);
+    item.label.style.width = width + "px";
+    item.label.style.maxWidth = width + "px";
+    item.labelBox = { width, side: (compact.matches ? CONFIG.labels.mobileSides : CONFIG.labels.desktopSides)[i] };
+  });
+  if (state.selected >= 0) setAnchor(state.selected);
+  state.dpr = Math.min(devicePixelRatio || 1, CONFIG.dprCap);
+  canvas.width = Math.round(state.width * state.dpr);
+  canvas.height = Math.round(state.height * state.dpr);
+  if (ctx) ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
+  createField();
+}
+function createField() {
+  field = [];
+  const config = CONFIG.field, exponent = 1 - config.power;
+  for (let attempts = 0; field.length < CONFIG.starCount && attempts < 20000; attempts++) {
+    const x = Math.random() * state.width, y = Math.random() * state.height;
+    if (initiatives.some(item => Math.hypot(x - item.base.x, y - item.base.y) < config.exclusion)) continue;
+    const choice = Math.random();
+    // A sparse group of larger, soft stars adds variety to the backmost field.
+    const larger = Math.random() < config.largerFraction;
+    field.push({ x, y,
+      size: larger ? random(...config.largerSize) : (config.minSize ** exponent + Math.random() *
+        (config.maxSize ** exponent - config.minSize ** exponent)) ** (1 / exponent),
+      temperature: choice < .7 ? 0 : choice < .94 ? 1 : 2,
+      period: random(...config.twinkle), phase: Math.random(),
+      depth: CONFIG.parallax.field * (larger ? CONFIG.parallax.fieldDepth[0] : random(...CONFIG.parallax.fieldDepth)),
+      amplitude: random(...config.amplitude), seed: Math.floor(Math.random() * 100000),
+      base: random(.35, .7), heat: 0 });
+    const star = field[field.length - 1];
+    star.speed = CONFIG.tunnel.speeds[(field.length - 1) % CONFIG.tunnel.speeds.length] * random(.9, 1.1);
+    star.age = CONFIG.tunnel.fadeIn;
+  }
+}
+
+function advanceTunnel(star, dt) {
+  if (reduced.matches || state.selected >= 0 || state.tween) return;
+  // Outward scaling runs continuously, independently of pointer parallax.
+  const center = state.driftCenter, growth = Math.exp(star.speed * dt / 1000);
+  star.x = center.x + (star.x - center.x) * growth;
+  star.y = center.y + (star.y - center.y) * growth;
+  star.age += dt;
+  const margin = CONFIG.tunnel.edgeMargin;
+  if (star.x < -margin || star.x > state.width + margin ||
+      star.y < -margin || star.y > state.height + margin) {
+    // Replenish the whole field uniformly rather than emitting from the center.
+    // Prefer open space around the seven initiative stars.
+    for (let attempt = 0; attempt < 30; attempt++) {
+      star.x = random(0, state.width);
+      star.y = random(0, state.height);
+      if (!initiatives.some(item => Math.hypot(star.x - item.base.x,
+        star.y - item.base.y) < CONFIG.field.exclusion)) break;
+    }
+    star.age = 0; star.heat = 0;
+  }
+}
+
+// Stable variation for reduced motion; normal motion uses independent slow breaths.
+function hash(n, seed) {
+  let x = Math.imul(n ^ seed, 1597334677);
+  x = Math.imul(x ^ (x >>> 16), 2246822507);
+  return ((x ^ (x >>> 13)) >>> 0) / 4294967295;
+}
+function blink(phase) {
+  return .5 - .5 * Math.cos(phase * Math.PI * 2);
+}
+
+function nearestPointerStar() {
+  if (!state.pointer.map) return -1;
+  if (state.direct >= 0) return state.direct;
+  let best = -1, distance = CONFIG.hover.radius;
+  initiatives.forEach((item, i) => {
+    const d = Math.hypot(item.position.x - state.pointer.x, item.position.y - state.pointer.y);
+    if (d < distance) { distance = d; best = i; }
+  });
+  return best;
+}
+function nearestStar() {
+  if (state.selected >= 0) return state.selected;
+  if (state.row >= 0) return state.row;
+  const pointed = nearestPointerStar();
+  return pointed >= 0 ? pointed : state.focused;
+}
+function setActive(index) {
+  if (index === state.active) return;
+  state.active = index;
+  initiatives.forEach((item, i) => {
+    item.button.classList.toggle("is-active", i === index);
+    item.row.classList.toggle("is-related", i === index);
+  });
+  // Magnetic hover, direct hover, and keyboard focus share the same line reveal.
+  if (index >= 0 && state.selected < 0) triggerConstellation("star");
+  else if (index < 0) releaseConstellation("star");
+}
+
+function positionLabel(item) {
+  const p = item.position, width = item.labelBox.width, gap = CONFIG.labels.gap;
+  const half = item.button.offsetWidth / 2;
+  let side = item.labelBox.side;
+  // All labels use the same center-to-text-box gap, including diagonal placements.
+  if (side === "right") {
+    const fitsRight = p.x + gap + width <= state.width - 12;
+    const fitsLeft = p.x - gap - width >= 12;
+    if (fitsRight || fitsLeft) {
+      item.label.style.left = (half + (fitsRight ? gap : -gap)) + "px";
+      item.label.style.top = half + "px";
+      item.label.style.transform = fitsRight ? "translate(0, -50%)" : "translate(-100%, -50%)";
+      item.label.style.textAlign = fitsRight ? "left" : "right";
+      return;
+    }
+    side = "below";
+  }
+  const diagonal = gap / Math.SQRT2;
+  let left = p.x - width / 2;
+  if (side === "above-start") left = p.x;
+  if (side === "above-left") left = p.x - diagonal - width;
+  if (side === "above-right") left = p.x + diagonal;
+  left = clamp(left, 12, state.width - width - 12);
+  const horizontalGap = Math.max(left - p.x, p.x - left - width, 0);
+  const verticalGap = Math.sqrt(Math.max(0, gap * gap - horizontalGap * horizontalGap));
+  const above = side.startsWith("above");
+  item.label.style.left = (half + left - p.x) + "px";
+  item.label.style.top = (half + (above ? -verticalGap : verticalGap)) + "px";
+  // Percentage translation follows wrapped text height without layout reads each frame.
+  item.label.style.transform = above ? "translateY(-100%)" : "none";
+  item.label.style.textAlign = side === "above-left" ? "right" :
+    side === "above-right" || side === "above-start" ? "left" : "center";
+}
+
+function updateDOM() {
+  // Twinkle needs a canvas redraw; settled DOM geometry does not.
+  const key = [state.zoom, state.scroll, state.pan.x, state.pan.y,
+    state.selected,
+    ...initiatives.map(item => item.hover)].map(value => value.toFixed(4)).join(",");
+  if (key === state.domKey) return;
+  state.domKey = key;
+  const scale = 1 + (reduced.matches ? 0 : state.scroll * CONFIG.scroll.scale);
+  const origin = project({ x: 0, y: 0 }, CONFIG.parallax.photo);
+  const photoScale = scale * state.zoom;
+  scene.style.transform = `matrix(${photoScale},0,0,${photoScale},${origin.x},${origin.y})`;
+  scene.style.opacity = 1 - (reduced.matches ? 0 : state.scroll * CONFIG.scroll.fade);
+  let brightest = null;
+  initiatives.forEach(item => {
+    const p = item.position;
+    item.button.style.left = (p.x - state.mapX) + "px";
+    item.button.style.top = (p.y - state.mapY) + "px";
+    positionLabel(item);
+    item.label.style.letterSpacing = ((compact.matches ? .045 : .09) + item.hover * CONFIG.hover.letterSpacing) + "em";
+    if (!brightest || item.hover > brightest.hover) brightest = item;
+  });
+  if (brightest && brightest.hover > .005 && state.photoReady) {
+    const x = brightest.base.x - state.image.x, y = brightest.base.y - state.image.y;
+    const radius = CONFIG.hover.nebulaRadius * (1 + brightest.hover * .25);
+    const mask = `radial-gradient(circle ${radius}px at ${x}px ${y}px, #000 0%, #0009 35%, transparent 100%)`;
+    nebula.style.maskImage = state.image.contained ? mask + ", linear-gradient(transparent, #000 14%, #000 86%, transparent)" : mask;
+    nebula.style.maskComposite = "intersect";
+    nebula.style.opacity = brightest.hover;
+  } else nebula.style.opacity = 0;
+}
+
+function sprite(image, x, y, diameter, opacity) {
+  ctx.globalAlpha = clamp(opacity, 0, 1);
+  ctx.drawImage(image, x - diameter / 2, y - diameter / 2, diameter, diameter);
+}
+function drawField(dt) {
+  field.forEach(star => {
+    advanceTunnel(star, dt);
+    const p = project(star, star.depth);
+    const distance = Math.hypot(p.x - state.light.x, p.y - state.light.y);
+    const proximity = !reduced.matches ? Math.max(0, 1 - distance / CONFIG.cursor.radius) ** 2 * state.light.alpha : 0;
+    star.heat = reduced.matches ? 0 : follow(star.heat, proximity, dt, proximity > star.heat ? CONFIG.cursor.attack : CONFIG.cursor.relax);
+    if (!reduced.matches) star.phase += dt / star.period * (1 + star.heat * CONFIG.field.speedBoost);
+    const brightness = reduced.matches ? star.base + hash(0, star.seed) * .15 :
+      star.base * (1 - star.amplitude + blink(star.phase) * star.amplitude * 1.65);
+    let dim = 1;
+    initiatives.forEach(item => {
+      const d = Math.hypot(p.x - item.position.x, p.y - item.position.y);
+      if (item.hover < .005) return;
+      dim = Math.min(dim, 1 - CONFIG.hover.dim * item.hover * clamp((CONFIG.hover.dimRadius - d) / 25, 0, 1));
+    });
+    const radius = Math.hypot(star.x - state.driftCenter.x, star.y - state.driftCenter.y);
+    const travel = clamp(radius / (Math.min(state.width, state.height) * .5), 0, 1);
+    const sizeScale = reduced.matches ? 1 : .9 + travel * CONFIG.tunnel.growth;
+    const entrance = reduced.matches ? 1 : clamp(star.age / CONFIG.tunnel.fadeIn, 0, 1);
+    sprite(sprites.temperatures[star.temperature], p.x, p.y, star.size * CONFIG.field.spriteScale * sizeScale,
+      (brightness + star.heat * .35) * dim * entrance);
+  });
+}
+function drawHeroes() {
+  if (!state.photoReady) return;
+  const cameraScale = state.zoom * (1 + (reduced.matches ? 0 : state.scroll * CONFIG.scroll.scale));
+  const imageScale = state.image.width / CONFIG.sprite.referenceWidth * cameraScale;
+  const density = clamp(state.image.width / 1440, .5, 1.5) * cameraScale;
+  initiatives.forEach((item, i) => {
+    const p = item.position, b = item.brightness;
+    let swell = 0;
+    if (state.idle?.index === i) {
+      const t = clamp((state.time - state.idle.start) / CONFIG.idle.duration, 0, 1);
+      swell = 16 * t * t * (1 - t) * (1 - t) * CONFIG.idle.swell;
+    }
+    const scale = 1 + item.hover * (CONFIG.hover.scale - 1);
+    const shimmer = reduced.matches ? .96 + i * .006 :
+      1 + (blink(state.time / item.twinklePeriod + item.twinklePhase) * 2 - 1) * item.twinkleAmplitude;
+    // Calibrate the bright part of the sprite to the photo, not its diffuse halo.
+    const coreDiameter = CONFIG.sprite.whiteCoreDiameter[i] * imageScale / CONFIG.sprite.coreWhiteFraction;
+    const coreFlicker = reduced.matches ? 1 : 1 + (shimmer - 1) * .16;
+    sprite(sprites.glow, p.x, p.y, CONFIG.sprite.glow * density * (.6 + .4 * b) * (scale + swell), (.4 + item.hover * .28 + swell) * shimmer);
+    sprite(sprites.spike, p.x, p.y, CONFIG.sprite.spike * density * b * (1 + item.hover * 1.1), (.28 + item.hover * .24) * shimmer);
+    sprite(sprites.core, p.x, p.y, coreDiameter * CONFIG.sprite.coreSpread * scale * coreFlicker,
+      (CONFIG.sprite.coreOpacity + item.hover * .08) * shimmer);
+  });
+}
+function triggerConstellation(source = "title") {
+  // Treat nearby hovers as one animation, including travel through empty space.
+  // Preserve its clock even during retraction; only a fully cleared path re-enters.
+  if (state.constellation) {
+    state.constellation.held = true;
+    state.constellation.source = source;
+  } else {
+    state.constellation = { start: state.time, held: true, source };
+  }
+  wake();
+}
+function releaseConstellation(source) {
+  if (state.constellation?.source === source) state.constellation.held = false;
+  wake();
+}
+title.addEventListener("pointerenter", event => {
+  if (event.pointerType !== "touch") { triggerConstellation("title"); input(); }
+});
+title.addEventListener("focus", () => { triggerConstellation("title"); input(); });
+["pointerleave", "blur"].forEach(event => title.addEventListener(event, () => {
+  releaseConstellation("title");
+}));
+function drawConstellation() {
+  if (!state.constellation || !state.photoReady) return;
+  const c = CONFIG.constellation, age = state.time - state.constellation.start;
+  if (reduced.matches && !state.constellation.held) { state.constellation = null; return; }
+  if (!reduced.matches && age > c.draw * 2 + c.hold) { state.constellation = null; return; }
+  // Match the supplied reference: a stem, closed outline, and interior diagonal.
+  // The small intermediate photographic star is a waypoint, not an initiative.
+  // The nearby upper-left initiative remains unconnected, as in the reference.
+  const points = initiatives.map(item => item.position);
+  const [wx, wy] = c.intermediateStar;
+  points.push(project({ x: state.image.x + wx / 100 * state.image.width,
+    y: state.image.y + wy / 100 * state.image.height }, CONFIG.parallax.hero));
+  const edges = [[6, 4], [4, 1], [1, 0], [0, 7], [7, 3], [3, 5], [5, 4], [1, 3]];
+  const segments = edges.map(([a, b]) => ({ a: points[a], b: points[b],
+    length: Math.hypot(points[b].x - points[a].x, points[b].y - points[a].y) }));
+  const length = segments.reduce((sum, segment) => sum + segment.length, 0);
+  ctx.save(); ctx.globalCompositeOperation = "source-over";
+  ctx.strokeStyle = "#fff6ed"; ctx.lineWidth = c.lineWidth;
+  ctx.globalAlpha = c.opacity;
+  // Replay exactly the same easing backwards, retracting from the last star.
+  const progress = age <= c.draw + c.hold ? clamp(age / c.draw, 0, 1) :
+    1 - clamp((age - c.draw - c.hold) / c.draw, 0, 1);
+  // Clip by cumulative path length so the separate diagonal shares the same
+  // draw/retract timeline without adding an unwanted connecting segment.
+  let remaining = length * (reduced.matches ? 1 : easeOut(progress));
+  ctx.beginPath();
+  for (const segment of segments) {
+    if (remaining <= 0) break;
+    const fraction = Math.min(1, remaining / segment.length);
+    ctx.moveTo(segment.a.x, segment.a.y);
+    ctx.lineTo(segment.a.x + (segment.b.x - segment.a.x) * fraction,
+      segment.a.y + (segment.b.y - segment.a.y) * fraction);
+    remaining -= segment.length;
+  }
+  ctx.stroke(); ctx.restore();
+}
+
+function launchMeteor() {
+  const hb = hero.getBoundingClientRect(), margin = CONFIG.meteor.safeMargin;
+  const obstacles = [$(".intro"), $(".map-note"), ...initiatives.map(item => item.label)]
+    .map(element => { const r = element.getBoundingClientRect(); return {
+      x: r.left - hb.left - margin, y: r.top - hb.top - margin,
+      right: r.right - hb.left + margin, bottom: r.bottom - hb.top + margin }; });
+  // Reject an entire swept bounding rectangle, including the tail. No text crossing.
+  for (let attempt = 0; attempt < 40; attempt++) {
+    const length = random(...CONFIG.meteor.distance), angle = random(.3, .65);
+    const dx = Math.cos(angle), dy = Math.sin(angle);
+    const x = random(10 + CONFIG.meteor.trail, Math.max(90, state.width - length - 10));
+    const y = random(60, Math.max(80, state.height - length - 50));
+    const box = { x: x - dx * CONFIG.meteor.trail, y: y - dy * CONFIG.meteor.trail,
+      right: x + dx * length, bottom: y + dy * length };
+    if (box.x < 0 || box.right > state.width) continue;
+    if (obstacles.some(r => box.x < r.right && box.right > r.x && box.y < r.bottom && box.bottom > r.y)) continue;
+    state.meteor = { x, y, dx, dy, length, start: state.time }; break;
+  }
+}
+function drawMeteor() {
+  if (!state.meteor || reduced.matches) return;
+  const m = state.meteor, t = (state.time - m.start) / CONFIG.meteor.duration;
+  if (t >= 1) { state.meteor = null; return; }
+  const x = m.x + m.dx * m.length * t, y = m.y + m.dy * m.length * t;
+  ctx.save(); ctx.globalCompositeOperation = "source-over";
+  ctx.globalAlpha = CONFIG.meteor.opacity * 4 * t * (1 - t);
+  ctx.strokeStyle = "#e3e8ef"; ctx.lineWidth = .7;
+  ctx.beginPath(); ctx.moveTo(x - m.dx * CONFIG.meteor.trail, y - m.dy * CONFIG.meteor.trail);
+  ctx.lineTo(x, y); ctx.stroke(); ctx.restore();
+}
+
+// The sole requestAnimationFrame loop. Reduced motion renders only on invalidation.
+function frame(now) {
+  state.raf = 0;
+  if (document.hidden || !state.visible) return;
+  const dt = state.lastFrame ? Math.min(50, now - state.lastFrame) : 16;
+  state.lastFrame = now; state.time += dt;
+  if (state.layout) layout();
+  if (state.tween) {
+    const t = reduced.matches ? 1 : clamp((now - state.tween.start) / CONFIG.click.duration, 0, 1);
+    state.zoom = state.tween.from + (state.tween.to - state.tween.from) * easeOut(t);
+    if (t === 1) state.tween = null;
+  }
+  if (reduced.matches) {
+    state.pan = { x: 0, y: 0 };
+  }
+  else if (state.selected < 0 && !state.tween) {
+    const target = state.tilt.enabled && !fine.matches ? state.tilt : state.pointer.inside && fine.matches ? {
+      x: clamp(state.pointer.x / state.width * 2 - 1, -1, 1),
+      y: clamp(state.pointer.y / state.height * 2 - 1, -1, 1)
+    } : { x: 0, y: 0 };
+    state.pan.x = follow(state.pan.x, target.x, dt, CONFIG.parallax.ease);
+    state.pan.y = follow(state.pan.y, target.y, dt, CONFIG.parallax.ease);
+  }
+  // Restore the photographic and hero parallax, keeping their cores registered.
+  initiatives.forEach(item => { item.position = project(item.base, CONFIG.parallax.hero); });
+  setActive(nearestStar());
+  initiatives.forEach((item, i) => {
+    const target = i === state.active ? 1 : 0;
+    item.hover = reduced.matches ? target : follow(item.hover, target, dt, CONFIG.hover.ease / 3);
+  });
+  const lightTarget = state.active >= 0 ? initiatives[state.active].position : state.pointer;
+  state.light.x = follow(state.light.x, lightTarget.x, dt, CONFIG.cursor.lag);
+  state.light.y = follow(state.light.y, lightTarget.y, dt, CONFIG.cursor.lag);
+  const lightOn = !reduced.matches && fine.matches && state.pointer.inside && state.selected < 0;
+  state.light.alpha = follow(state.light.alpha, lightOn ? 1 : 0, dt, CONFIG.cursor.relax);
+  state.ring = reduced.matches ? (state.active >= 0 ? CONFIG.cursor.activeRing : CONFIG.cursor.ring) :
+    follow(state.ring, state.active >= 0 ? CONFIG.cursor.activeRing : CONFIG.cursor.ring, dt, CONFIG.cursor.ringEase);
+  if (!reduced.matches && state.selected < 0) {
+    if (!state.idleDone && state.active < 0 && state.time - state.lastInput >= CONFIG.idle.delay) {
+      state.idle = { index: Math.floor(Math.random() * initiatives.length), start: state.time };
+      state.idleDone = true;
+    }
+    if (state.idle && state.time - state.idle.start > CONFIG.idle.duration) state.idle = null;
+    if (state.time >= state.nextMeteor) {
+      launchMeteor(); state.nextMeteor = state.time + random(...CONFIG.meteor.interval);
+    }
+  }
+  updateDOM();
+  if (ctx) {
+    ctx.clearRect(0, 0, state.width, state.height);
+    ctx.globalCompositeOperation = "lighter";
+    drawField(dt); drawHeroes(); drawConstellation(); drawMeteor();
+    if (state.pointer.map && fine.matches && state.selected < 0) {
+      ctx.globalCompositeOperation = "source-over"; ctx.globalAlpha = .85;
+      ctx.strokeStyle = "#fff6ed"; ctx.lineWidth = .65;
+      ctx.beginPath(); ctx.arc(state.pointer.x, state.pointer.y, state.ring / 2, 0, Math.PI * 2); ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
+  if (!reduced.matches || state.tween) wake();
+}
+
+// Letter spans preserve whole words, line breaks, and the heading's accessible name.
+const litHeadings = [title, ...document.querySelectorAll(".content h2")];
+litHeadings.forEach(heading => {
+  heading.setAttribute("aria-label", heading.innerText.replace(/\s+/g, " ").trim());
+  [...heading.childNodes].forEach(node => {
+    if (node.nodeType !== Node.TEXT_NODE) return;
+    const fragment = document.createDocumentFragment();
+    node.textContent.split(/(\s+)/).forEach(word => {
+      if (/^\s*$/.test(word)) { fragment.append(document.createTextNode(word)); return; }
+      const wrapper = document.createElement("span");
+      wrapper.className = "lit-word"; wrapper.setAttribute("aria-hidden", "true");
+      [...word].forEach(letter => {
+        const span = document.createElement("span"); span.className = "lit-letter";
+        span.textContent = letter; wrapper.append(span);
+      });
+      fragment.append(wrapper);
+    });
+    node.replaceWith(fragment);
+  });
+});
+function lightLetters(event) {
+  if (reduced.matches || !fine.matches || event.pointerType === "touch") return;
+  // Event-driven CSS transitions also work below the hero while its RAF is paused.
+  litHeadings.forEach(heading => {
+    const box = heading.getBoundingClientRect(), radius = CONFIG.text.radius;
+    const tracking = getComputedStyle(heading).letterSpacing;
+    const baseTracking = tracking === "normal" ? "0px" : tracking;
+    const near = event.clientX > box.left - radius && event.clientX < box.right + radius &&
+      event.clientY > box.top - radius && event.clientY < box.bottom + radius;
+    const readings = [...heading.querySelectorAll(".lit-letter")].map(letter => {
+      if (!near) return [letter, 0];
+      const r = letter.getBoundingClientRect();
+      const distance = Math.hypot(event.clientX - (r.left + r.width / 2), event.clientY - (r.top + r.height / 2));
+      return [letter, Math.max(0, 1 - distance / radius)];
+    });
+    readings.forEach(([letter, amount]) => {
+      letter.style.opacity = .92 + amount * .08;
+      letter.style.filter = `brightness(${1 + amount * CONFIG.text.brightness})`;
+      letter.style.letterSpacing = `calc(${baseTracking} + ${amount * CONFIG.text.spacing}em)`;
+    });
+  });
+}
+function resetLetters() {
+  document.querySelectorAll(".lit-letter").forEach(letter => {
+    letter.style.opacity = ""; letter.style.filter = ""; letter.style.letterSpacing = "";
+  });
+}
+document.addEventListener("pointermove", event => {
+  if (event.pointerType === "touch" || dialog.open) return;
+  const r = hero.getBoundingClientRect();
+  state.pointer.x = event.clientX - r.left; state.pointer.y = event.clientY - r.top;
+  state.pointer.inside = event.clientX >= r.left && event.clientX <= r.right && event.clientY >= r.top && event.clientY <= r.bottom;
+  state.pointer.map = !!event.target.closest("#map") && fine.matches;
+  const direct = event.target.closest(".star[data-index]");
+  state.direct = direct ? Number(direct.dataset.index) : -1;
+  hero.classList.toggle("custom-cursor", !!ctx && state.pointer.map);
+  lightLetters(event); input();
+}, { passive: true });
+document.addEventListener("pointerout", event => {
+  if (event.relatedTarget) return;
+  state.pointer.inside = state.pointer.map = false; state.direct = -1;
+  hero.classList.remove("custom-cursor"); resetLetters(); wake();
+});
+document.addEventListener("keydown", input, { passive: true });
+document.addEventListener("pointerdown", event => {
+  if (event.pointerType === "touch") {
+    state.pointer.inside = state.pointer.map = false; state.direct = -1;
+    hero.classList.remove("custom-cursor"); resetLetters();
+  }
+  input();
+}, { passive: true });
+map.addEventListener("click", event => {
+  // Magnetic influence is clickable too, without stealing label/link clicks.
+  if (event.target.closest("button, a") || !fine.matches) return;
+  const index = nearestPointerStar();
+  if (index >= 0) openDetails(index, initiatives[index].button);
+});
+
+// Touch motion is opt-in; a denied or unsupported permission simply skips it.
+const motionButton = $("#motion-toggle");
+function syncMotionButton() {
+  motionButton.hidden = fine.matches || reduced.matches || !("DeviceOrientationEvent" in window);
+}
+motionButton.addEventListener("click", async () => {
+  try {
+    const api = window.DeviceOrientationEvent;
+    if (typeof api.requestPermission === "function" && await api.requestPermission() !== "granted") {
+      motionButton.textContent = "Motion unavailable"; return;
+    }
+    if (!state.tilt.enabled) window.addEventListener("deviceorientation", orient, { passive: true });
+    state.tilt.enabled = true; motionButton.textContent = "Motion enabled";
+    motionButton.disabled = true;
+  } catch { motionButton.textContent = "Motion unavailable"; }
+});
+function orient(event) {
+  if (reduced.matches || !state.visible || document.hidden || event.beta == null || event.gamma == null) return;
+  if (!state.tilt.baseline) state.tilt.baseline = { beta: event.beta, gamma: event.gamma };
+  const angle = (screen.orientation?.angle || 0) * Math.PI / 180;
+  const x = (event.gamma - state.tilt.baseline.gamma) / CONFIG.parallax.tiltRange;
+  const y = (event.beta - state.tilt.baseline.beta) / CONFIG.parallax.tiltRange;
+  state.tilt.x = clamp(x * Math.cos(angle) + y * Math.sin(angle), -1, 1);
+  state.tilt.y = clamp(y * Math.cos(angle) - x * Math.sin(angle), -1, 1);
+  wake();
+}
+screen.orientation?.addEventListener("change", () => { state.tilt.baseline = null; });
+
+function onScroll() {
+  if (state.selected < 0) {
+    const r = hero.getBoundingClientRect();
+    state.scroll = clamp(-r.top / Math.max(1, r.height), 0, 1);
+  }
+  input();
+}
+window.addEventListener("scroll", onScroll, { passive: true });
+new ResizeObserver(() => { state.layout = true; wake(); }).observe(hero);
+new IntersectionObserver(([entry]) => {
+  state.visible = entry.isIntersecting;
+  if (state.visible) { state.lastFrame = 0; wake(); } else stop();
+}).observe(hero);
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) stop(); else { state.lastFrame = 0; wake(); }
+});
+const reveals = [...document.querySelectorAll(".program > div, .initiatives > h2, .initiatives > p, .initiative-list > li, footer")];
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.remove("reveal-pending"); revealObserver.unobserve(entry.target);
+  });
+}, { threshold: .08 });
+reveals.forEach((element, i) => {
+  if (reduced.matches || element.getBoundingClientRect().top < innerHeight) return;
+  element.classList.add("reveal-ready", "reveal-pending");
+  element.style.setProperty("--reveal-delay", (i % 3) * CONFIG.scroll.stagger + "ms");
+  revealObserver.observe(element);
+});
+function preferencesChanged() {
+  state.idle = state.meteor = null; state.light.alpha = 0;
+  state.tilt.baseline = null; state.layout = true;
+  if (reduced.matches) {
+    state.zoom = 1; state.tween = null; state.pan = { x: 0, y: 0 };
+    reveals.forEach(element => element.classList.remove("reveal-pending"));
+    if (dialog.open && !closing) { clearTimeout(openTimer); dialog.classList.add("visible"); }
+  }
+  resetLetters(); syncMotionButton(); wake();
+}
+reduced.addEventListener("change", preferencesChanged);
+fine.addEventListener("change", preferencesChanged);
+compact.addEventListener("change", () => { state.layout = true; wake(); });
+photo.addEventListener("load", () => { state.photoReady = true; state.layout = true; wake(); });
+photo.addEventListener("error", () => {
+  state.photoReady = false; stars.hidden = true;
+  $(".map-note span").textContent = "The photograph is unavailable. Explore the initiatives below.";
+  wake();
+});
+state.photoReady = photo.complete && photo.naturalWidth > 0;
+document.fonts.ready.then(() => { state.layout = true; wake(); });
+syncMotionButton(); onScroll(); wake();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+[
+  {
+    "url": "https://asana.com/resources/team-structure",
+    "pages": [
+      "pages/north-star-resources/collaborating-as-a-team.html"
+    ],
+    "status": 200,
+    "final_url": "https://asana.com/resources/team-structure"
+  },
+  {
+    "url": "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1Sw3Eg1f-OWK_ZqXltUXvDKfFpQQPkXNSiPlyMK_eExfI_SwNIidLi9rAYx8wHGO8Br6H7qF9a",
+    "pages": [
+      "footer.html"
+    ],
+    "status": 200,
+    "final_url": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1Sw3Eg1f-OWK_ZqXltUXvDKfFpQQPkXNSiPlyMK_eExfI_SwNIidLi9rAYx8wHGO8Br6H7qF9a"
+  },
+  {
+    "url": "https://docs.google.com/forms/d/15VYa5rSO2l1EIKAHsqQtcmxYTXORkvYU5vnE64fwz8A/edit",
+    "pages": [
+      "pages/navigators-mentors.html"
+    ],
+    "status": 200,
+    "final_url": "https://docs.google.com/forms/d/15VYa5rSO2l1EIKAHsqQtcmxYTXORkvYU5vnE64fwz8A/viewform?edit_requested=true"
+  },
+  {
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSeX_LYKWYg3SAway2AdwtdCrNpVwTiAgTByODpEmseFoZzE3w/viewform",
+    "pages": [
+      "pages/stars-ftc-teams-and-pairings.html"
+    ],
+    "status": 404,
+    "note": "HTTP Error 404: Not Found"
+  },
+  {
+    "url": "https://docs.google.com/presentation/d/17hgNyywMzuepHch1k2TMQHEo8WElCMWx4nR3DXkIBdM/embed",
+    "pages": [
+      "pages/north-star-resources/engineering-the-perfect-portfolio.html"
+    ],
+    "status": 200,
+    "final_url": "https://docs.google.com/presentation/d/17hgNyywMzuepHch1k2TMQHEo8WElCMWx4nR3DXkIBdM/embed"
+  },
+  {
+    "url": "https://docs.google.com/presentation/d/17hgNyywMzuepHch1k2TMQHEo8WElCMWx4nR3DXkIBdM/present",
+    "pages": [
+      "pages/north-star-resources/engineering-the-perfect-portfolio.html"
+    ],
+    "status": 200,
+    "final_url": "https://docs.google.com/presentation/d/17hgNyywMzuepHch1k2TMQHEo8WElCMWx4nR3DXkIBdM/present"
+  },
+  {
+    "url": "https://docs.google.com/presentation/d/1DyalI5Q7IBbqaSy3Lmd7K0TPwT4HRbXaKHydmp8CUCo/embed",
+    "pages": [
+      "pages/perseverance-lausd-outreach.html"
+    ],
+    "status": 200,
+    "final_url": "https://docs.google.com/presentation/d/1DyalI5Q7IBbqaSy3Lmd7K0TPwT4HRbXaKHydmp8CUCo/embed"
+  },
+  {
+    "url": "https://docs.google.com/presentation/d/1DyalI5Q7IBbqaSy3Lmd7K0TPwT4HRbXaKHydmp8CUCo/present",
+    "pages": [
+      "pages/perseverance-lausd-outreach.html"
+    ],
+    "status": 200,
+    "final_url": "https://docs.google.com/presentation/d/1DyalI5Q7IBbqaSy3Lmd7K0TPwT4HRbXaKHydmp8CUCo/present"
+  },
+  {
+    "url": "https://docs.google.com/presentation/d/1QWQPGWLJBxJKFMCN_nFmzTMjFeaamxoPgg-e9VmdAfs/embed",
+    "pages": [
+      "pages/perseverance-lausd-outreach.html"
+    ],
+    "status": 200,
+    "final_url": "https://docs.google.com/presentation/d/1QWQPGWLJBxJKFMCN_nFmzTMjFeaamxoPgg-e9VmdAfs/embed"
+  },
+  {
+    "url": "https://docs.google.com/presentation/d/1QWQPGWLJBxJKFMCN_nFmzTMjFeaamxoPgg-e9VmdAfs/present",
+    "pages": [
+      "pages/perseverance-lausd-outreach.html"
+    ],
+    "status": 200,
+    "final_url": "https://docs.google.com/presentation/d/1QWQPGWLJBxJKFMCN_nFmzTMjFeaamxoPgg-e9VmdAfs/present"
+  },
+  {
+    "url": "https://drive.google.com/file/d/1CIxf1FaqNkV6u8DNYN19kUjRp_hpm2IH/preview",
+    "pages": [
+      "pages/north-star-resources/how-to-version-control.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1CIxf1FaqNkV6u8DNYN19kUjRp_hpm2IH/preview"
+  },
+  {
+    "url": "https://drive.google.com/file/d/1CIxf1FaqNkV6u8DNYN19kUjRp_hpm2IH/view",
+    "pages": [
+      "pages/north-star-resources/how-to-version-control.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1CIxf1FaqNkV6u8DNYN19kUjRp_hpm2IH/view"
+  },
+  {
+    "url": "https://drive.google.com/file/d/1CdJryv-igEXYwFiERFMv_SSl7WSnu1Ok/preview",
+    "pages": [
+      "pages/north-star-resources/quick-portfolio-tips.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1CdJryv-igEXYwFiERFMv_SSl7WSnu1Ok/preview"
+  },
+  {
+    "url": "https://drive.google.com/file/d/1ImDu81rtfxSr_r0Hx9gEPoBt5go6W6wb/preview",
+    "pages": [
+      "pages/north-star-resources/portfolio-examples.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1ImDu81rtfxSr_r0Hx9gEPoBt5go6W6wb/preview"
+  },
+  {
+    "url": "https://drive.google.com/file/d/1KIpyWuvDK9V6Ban-PMOrJaCLa-nlaLz8/preview",
+    "pages": [
+      "pages/north-star-resources/engineering-the-perfect-portfolio.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1KIpyWuvDK9V6Ban-PMOrJaCLa-nlaLz8/preview"
+  },
+  {
+    "url": "https://drive.google.com/file/d/1VduvBOdtT8nCOumPCtgthErkj-zHuTV4/preview",
+    "pages": [
+      "pages/north-star-resources/portfolio-examples.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1VduvBOdtT8nCOumPCtgthErkj-zHuTV4/preview"
+  },
+  {
+    "url": "https://drive.google.com/file/d/1_5z-kQIvb1_1CDI3nCUGJbPs_7nFiUun/preview",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1_5z-kQIvb1_1CDI3nCUGJbPs_7nFiUun/preview"
+  },
+  {
+    "url": "https://drive.google.com/file/d/1muJN6Hl9xULJe5DAfcro_XsO9QlEIl7c/preview",
+    "pages": [
+      "pages/north-star-resources/portfolio-examples.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1muJN6Hl9xULJe5DAfcro_XsO9QlEIl7c/preview"
+  },
+  {
+    "url": "https://drive.google.com/open?id=1CdJryv-igEXYwFiERFMv_SSl7WSnu1Ok",
+    "pages": [
+      "pages/north-star-resources/quick-portfolio-tips.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1CdJryv-igEXYwFiERFMv_SSl7WSnu1Ok/view?usp=drive_open"
+  },
+  {
+    "url": "https://drive.google.com/open?id=1ImDu81rtfxSr_r0Hx9gEPoBt5go6W6wb",
+    "pages": [
+      "pages/north-star-resources/portfolio-examples.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1ImDu81rtfxSr_r0Hx9gEPoBt5go6W6wb/view?usp=drive_open"
+  },
+  {
+    "url": "https://drive.google.com/open?id=1KIpyWuvDK9V6Ban-PMOrJaCLa-nlaLz8",
+    "pages": [
+      "pages/north-star-resources/engineering-the-perfect-portfolio.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1KIpyWuvDK9V6Ban-PMOrJaCLa-nlaLz8/view?usp=drive_open"
+  },
+  {
+    "url": "https://drive.google.com/open?id=1VduvBOdtT8nCOumPCtgthErkj-zHuTV4",
+    "pages": [
+      "pages/north-star-resources/portfolio-examples.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1VduvBOdtT8nCOumPCtgthErkj-zHuTV4/view?usp=drive_open"
+  },
+  {
+    "url": "https://drive.google.com/open?id=1_5z-kQIvb1_1CDI3nCUGJbPs_7nFiUun",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1_5z-kQIvb1_1CDI3nCUGJbPs_7nFiUun/view?usp=drive_open"
+  },
+  {
+    "url": "https://drive.google.com/open?id=1muJN6Hl9xULJe5DAfcro_XsO9QlEIl7c",
+    "pages": [
+      "pages/north-star-resources/portfolio-examples.html"
+    ],
+    "status": 200,
+    "final_url": "https://drive.google.com/file/d/1muJN6Hl9xULJe5DAfcro_XsO9QlEIl7c/view?usp=drive_open"
+  },
+  {
+    "url": "https://flltutorials.com/en/coachcorner/team%20management/2023/07/15/Innovation-Project-Overview.html",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/en/coachcorner/team%20management/2023/07/15/Innovation-Project-Overview.html"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/AlignInLaunch.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/AlignInLaunch.pdf"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/AligningOnLines.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/AligningOnLines.pdf"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/AlignonWalls.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/AlignonWalls.pdf"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/FindingLines.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/FindingLines.pdf"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/Gears.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/Gears.pdf"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/LineFollowing.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/LineFollowing.pdf"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/PseudocodeWorksheet.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/PseudocodeWorksheet.pdf"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/Shielding.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/Shielding.pdf"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/StrategyWorksheet.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/StrategyWorksheet.pdf"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/TechnicBasics.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/TechnicBasics.pdf"
+  },
+  {
+    "url": "https://flltutorials.com/translations/en-us/RobotGame/WallFollowing.pdf",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://flltutorials.com/translations/en-us/RobotGame/WallFollowing.pdf"
+  },
+  {
+    "url": "https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/ftc_ml/index.html",
+    "pages": [
+      "pages/north-star-resources/how-to-version-control.html"
+    ],
+    "status": 200,
+    "final_url": "https://ftc-docs.firstinspires.org/projects/ftcdocs-archive/en/latest/ftc_ml/index.html"
+  },
+  {
+    "url": "https://github.com/Curiosity11770",
+    "pages": [
+      "pages/north-star-resources/how-to-version-control.html"
+    ],
+    "status": 200,
+    "final_url": "https://github.com/Curiosity11770"
+  },
+  {
+    "url": "https://gm0.org/en/latest/docs/software/tutorials/mecanum-drive.html",
+    "pages": [
+      "pages/north-star-resources/drivetrain-basics.html"
+    ],
+    "status": 200,
+    "final_url": "https://gm0.org/en/latest/docs/software/tutorials/mecanum-drive.html"
+  },
+  {
+    "url": "https://johndeerefirst.submittable.com/submit/330019/2025-2026-john-deere-first-grant-application",
+    "pages": [
+      "pages/north-star-resources/grants.html"
+    ],
+    "status": 302,
+    "note": "HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.\nThe last 30x error message was:\nMoved Temporarily"
+  },
+  {
+    "url": "https://seagullcodes.github.io/ConstellationPairs2526/",
+    "pages": [
+      "pages/stars-ftc-teams-and-pairings.html"
+    ],
+    "status": 200,
+    "final_url": "https://seagullcodes.github.io/ConstellationPairs2526/",
+    "browser_note": "Rendered blank when opened independently in the in-app browser. Source scripts reported: maplibregl is not defined."
+  },
+  {
+    "url": "https://thesystemsthinker.com/creating-a-conflict-management-plan/",
+    "pages": [
+      "pages/north-star-resources/collaborating-as-a-team.html"
+    ],
+    "status": 403,
+    "note": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ucla.swe.org/",
+    "pages": [
+      "pages/navigators-mentors.html"
+    ],
+    "status": 200,
+    "final_url": "https://ucla.swe.org/"
+  },
+  {
+    "url": "https://www.asmebruins.com/",
+    "pages": [
+      "pages/navigators-mentors.html"
+    ],
+    "status": 200,
+    "final_url": "https://www.asmebruins.com/"
+  },
+  {
+    "url": "https://www.baesystems.com/en-us/partnership/community-investment/community-investment-partners/first/first-team-grants-application",
+    "pages": [
+      "pages/north-star-resources/grants.html"
+    ],
+    "status": 200,
+    "final_url": "https://www.baesystems.com/en-us/partnership/community-investment/community-investment-partners/first/first-team-grants-application"
+  },
+  {
+    "url": "https://www.firstinspires.org/node/20896",
+    "pages": [
+      "pages/north-star-resources/collaborating-as-a-team.html"
+    ],
+    "status": 200,
+    "final_url": "https://www.firstinspires.org/about"
+  },
+  {
+    "url": "https://www.iamangelfoundation.org/",
+    "pages": [
+      "pages/perseverance-lausd-outreach.html"
+    ],
+    "status": 200,
+    "final_url": "https://www.iamangelfoundation.org/"
+  },
+  {
+    "url": "https://www.instagram.com/curiosity11770/",
+    "pages": [
+      "footer.html"
+    ],
+    "status": 200,
+    "final_url": "https://www.instagram.com/curiosity11770/"
+  },
+  {
+    "url": "https://www.pitsco.com/pages/experience-pitsco-grants-and-funding?srsltid=AfmBOopKBExGI2ijvAHe9SS4zEcC8Xe7XXFS1nRY8PPcEO-4prRlBfHN",
+    "pages": [
+      "pages/north-star-resources/grants.html"
+    ],
+    "status": 200,
+    "final_url": "https://www.pitsco.com/pages/experience-pitsco-grants-and-funding?srsltid=AfmBOopKBExGI2ijvAHe9SS4zEcC8Xe7XXFS1nRY8PPcEO-4prRlBfHN"
+  },
+  {
+    "url": "https://www.ptc.com/en/education/first",
+    "pages": [
+      "pages/north-star-resources/grants.html"
+    ],
+    "status": 403,
+    "note": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=_0NliUFNXe0&pp=ygUXZmxsIG1vZHVsYXIgYXR0YWNobWVudHM%3D",
+    "pages": [
+      "pages/north-star-resources/fll-guides.html"
+    ],
+    "status": 200,
+    "final_url": "https://www.youtube.com/watch?v=_0NliUFNXe0&pp=ygUXZmxsIG1vZHVsYXIgYXR0YWNobWVudHM%3D"
+  }
+]

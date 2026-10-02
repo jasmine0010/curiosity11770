@@ -6,6 +6,8 @@ const root = path.resolve(__dirname, '..');
 const pages = JSON.parse(fs.readFileSync(path.join(root, 'content/pages.json'), 'utf8'));
 for (const { path: file } of pages) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
+  assert(!html.includes('—'), `${file}: em dash found`);
+  assert(!/20\d{2}\s+-\s+\d{2}\s+Season/.test(html), `${file}: inconsistent season name`);
   assert(!/googletagmanager|google-analytics|window\.messages|_at_config|atari\.vw/.test(html), `${file}: copied runtime or analytics`);
   assert(!/allow-modals|allow-storage-access-by-user-activation|allow-popups-to-escape-sandbox/.test(html), `${file}: excessive embed permissions`);
   assert.equal((html.match(/<h1[ >]/g) || []).length, 1, `${file}: one page heading`);

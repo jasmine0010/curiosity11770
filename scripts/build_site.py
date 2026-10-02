@@ -24,12 +24,16 @@ def nav(current):
             return True
         if item == 'past-seasons.html' and (current.startswith('past-seasons/') or (re.match(r'20\d{2}-\d{2}-season(?:/|\.html)', current) and not current.startswith('2024-25-season'))):
             return True
-        if item == 'curiosity-cares.html' and current in {'portfolio-support.html', 'female-empowerment-summit.html'}:
-            return True
         return False
-    return f'''<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/home.html" aria-label="Curiosity 11770 home">{MARK}<span>Curiosity<small>Robotics · 11770</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu <span>+</span></button><nav id="site-nav" aria-label="Main navigation">{''.join(f'<a href="/{u}"'+(' aria-current="page"' if active(u) else '')+f'>{t}</a>' for u,t in items)}<a class="nav-contact" href="/contact.html"{' aria-current="page"' if current == 'contact.html' else ''}>Contact</a></nav></header>'''
+    primary_links = ''.join(f'<a href="/{u}"'+(' aria-current="page"' if active(u) else '')+f'>{t}</a>' for u,t in items)
+    home_current = ' aria-current="page"' if current == 'home.html' else ''
+    portfolio_current = ' aria-current="page"' if current == 'portfolio-support.html' else ''
+    summit_current = ' aria-current="page"' if current == 'female-empowerment-summit.html' else ''
+    peer_links = f'''<a href="/constellation/home.html">Constellation</a><a href="/constellation/north-star-resources.html">Resources</a><a href="/portfolio-support.html"{portfolio_current}>Portfolio Support</a><a href="/female-empowerment-summit.html"{summit_current}>Female Empowerment Summit</a>'''
+    mobile_peer_links = peer_links.replace('<a ', '<a class="nav-peer-mobile" ', 4)
+    return f'''<a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/home.html" aria-label="Curiosity 11770 home">{MARK}<span>Curiosity<small>Robotics · 11770</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu <span>+</span></button><nav id="site-nav" aria-label="Main navigation"><a class="nav-mobile-only nav-home" href="/home.html"{home_current}>Home</a>{primary_links}<a class="nav-contact" href="/contact.html"{' aria-current="page"' if current == 'contact.html' else ''}>Contact</a><button class="nav-more-toggle" aria-expanded="false" aria-controls="nav-more-panel">More <span aria-hidden="true">+</span></button>{mobile_peer_links}<div class="nav-more-panel" id="nav-more-panel">{peer_links}</div></nav></header>'''
 def footer():
-    return f'''<footer class="site-footer"><div class="footer-top"><a class="footer-cta" href="/contact.html">Connect with Us!</a></div><div class="footer-bottom"><a class="brand" href="/home.html">{FOOTER_MARK}<span>Curiosity<small>Robotics · 11770</small></span></a><p>Marlborough School<br>Los Angeles, California</p><div><a href="https://www.instagram.com/curiosity11770/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:team11770@marlborough.org">Email</a></div><div><a href="/professional-partners.html">Professional Partners</a><a href="/community-partners.html">Community Partners</a><a href="https://constellation.curiosity11770.marlborough.org/home">Constellation</a><a href="https://constellation.curiosity11770.marlborough.org/north-star-resources">Resources</a></div></div><div class="colophon"><span>© Team Curiosity 11770</span><span>Courage. Connection. Collaboration.</span><a href="#top">Back to top</a></div></footer>'''
+    return f'''<footer class="site-footer"><div class="footer-top"><a class="footer-cta" href="/contact.html">Connect with Us!</a></div><div class="footer-bottom"><a class="brand" href="/home.html">{FOOTER_MARK}<span>Curiosity<small>Robotics · 11770</small></span></a><p>Marlborough School<br>Los Angeles, California</p><div><a href="https://www.instagram.com/curiosity11770/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:team11770@marlborough.org">Email</a></div><div><a href="/professional-partners.html">Professional Partners</a><a href="/community-partners.html">Community Partners</a><a href="/constellation/home.html">Constellation</a><a href="/constellation/north-star-resources.html">Resources</a></div></div><div class="colophon"><span>© Team Curiosity 11770</span><span>Courage. Connection. Collaboration.</span><a href="#top">Back to top</a></div></footer>'''
 HOME = (ROOT / 'content/home.html').read_text(encoding='utf-8')
 SEASONS = [
     ('2024-25', 'Into the Deep', 'Rosalind Plankton', 'Rosalind Franklin'),
@@ -95,7 +99,12 @@ def clean_section(section):
         if url.count('https://calendar.google.com/')>1:
             url=url[:url.find('https://calendar.google.com/',1)]
         return 'href="'+html.escape(url,quote=True)+'"'
-    return re.sub(r'href="([^"]*)"',fix,section).replace('\ufffd','—')
+    return re.sub(r'href="([^"]*)"',fix,section).replace('\ufffd','–').replace('—','–')
+
+def normalize_site_text(value):
+    """Keep season labels consistent and avoid em dashes in public output."""
+    value = value.replace('—', '–')
+    return re.sub(r'\b(20\d{2})\s*-\s*(\d{2})(?=\s+Season\b)', r'\1–\2', value)
 
 def plain_text(fragment):
     return html.unescape(re.sub(r'<[^>]+>', '', fragment)).replace('\xa0', ' ').strip()
@@ -195,6 +204,8 @@ def page_body(page):
         page_kind = 'outreach-page'
     elif name == 'blog.html':
         page_kind = 'blog-page'
+    elif name == 'contact.html':
+        page_kind = 'contact-page'
     category='About Us' if name=='about-us.html' else 'Team Curiosity'
     if 'season' in name: category='Season archive'
     season_match=re.search(r'(20\d{2}-\d{2})-season',name)
@@ -280,6 +291,10 @@ for page in pages:
     title='Curiosity - FTC #11770' if page['path']=='home.html' else page['title']+' | Curiosity 11770'
     body=HOME if page['path']=='home.html' else page_body(page)
     output=f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b0b0b"><meta name="description" content="Curiosity 11770. A robotics team of girls and gender minorities from Marlborough School, Los Angeles. Participating in FIRST Tech Challenge since 2016."><title>{html.escape(title)}</title><link rel="icon" href="/assets/design/team-logo-red.svg?v=20260919" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/design/site.css?v=20260919s"><script src="/assets/design/site.js?v=20260919b" defer></script></head><body id="top">{nav(page['path'])}<main id="main">{body}</main>{footer()}</body></html>'''
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b0b0b"><meta name="description" content="Curiosity 11770. A robotics team of girls and gender minorities from Marlborough School, Los Angeles. Participating in FIRST Tech Challenge since 2016."><title>{html.escape(title)}</title><link rel="icon" href="/assets/design/team-logo-red.svg?v=20260919" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/design/site.css?v=20260919s"><script src="/assets/design/site.js?v=20260923a" defer></script></head><body id="top">{nav(page['path'])}<main id="main">{body}</main>{footer()}</body></html>'''
+    output = normalize_site_text(output).replace('site.css?v=20260919s', 'site.css?v=20260923i').replace('site.js?v=20260923a', 'site.js?v=20260923b')
     (ROOT/page['path']).write_text(output,encoding='utf-8')
 print(f'Built {len(pages)} pages.')
+
+from build_constellation import build as build_constellation
+build_constellation()
