@@ -27,7 +27,7 @@ def nav(current):
     home_current = ' aria-current="page"' if current == 'home.html' else ''
     portfolio_current = ' aria-current="page"' if current == 'portfolio-support.html' else ''
     summit_current = ' aria-current="page"' if current == 'female-empowerment-summit.html' else ''
-    peer_links = f'''<a href="/constellation/home.html">Constellation</a><a href="/constellation/north-star-resources.html">Resources</a><a href="/portfolio-support.html"{portfolio_current}>Portfolio Support</a><a href="/female-empowerment-summit.html"{summit_current}>Female Empowerment Summit</a>'''
+    peer_links = f'''<a href="/constellation/north-star-resources.html">Resources</a><a href="/portfolio-support.html"{portfolio_current}>Portfolio Support</a><a href="/female-empowerment-summit.html"{summit_current}>Female Empowerment Summit</a>'''
     partners_current = ' aria-current="page"' if current == 'professional-partners.html' else ''
     peer_links += f'<a href="/professional-partners.html"{partners_current}>Professional Partners</a>'
     community_current = ' aria-current="page"' if current == 'community-partners.html' else ''
@@ -41,7 +41,7 @@ def footer(current):
 <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1Sw3Eg1f-OWK_ZqXltUXvDKfFpQQPkXNSiPlyMK_eExfI_SwNIidLi9rAYx8wHGO8Br6H7qF9a" aria-label="Schedule a meeting with Curiosity" title="Schedule a meeting"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h3M13 14h3M8 17h3"/></svg></a>
 </div>'''
     top = '' if current == 'contact.html' else '<div class="footer-top"><a class="footer-cta" href="/contact.html">Connect with Us!</a>'+contact_icons+'</div>'
-    return f'''<footer class="site-footer">{top}<div class="footer-bottom"><a class="brand" href="/home.html">{FOOTER_MARK}<span>Curiosity<small>Robotics · 11770</small></span></a><p>Marlborough School<br>Los Angeles, California</p><div><a href="https://www.instagram.com/curiosity11770/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:team11770@marlborough.org">Email</a></div><div><a href="/professional-partners.html">Professional Partners</a><a href="/community-partners.html">Community Partners</a><a href="/constellation/home.html">Constellation</a><a href="/constellation/north-star-resources.html">Resources</a></div></div><div class="colophon"><span>© Team Curiosity 11770</span><span>Courage. Connection. Collaboration.</span><a href="#top">Back to top</a></div></footer>'''
+    return f'''<footer class="site-footer">{top}<div class="footer-bottom"><a class="brand" href="/home.html">{FOOTER_MARK}<span>Curiosity<small>Robotics · 11770</small></span></a><p>Marlborough School<br>Los Angeles, California</p><div><a href="https://www.instagram.com/curiosity11770/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:team11770@marlborough.org">Email</a></div><div><a href="/professional-partners.html">Professional Partners</a><a href="/community-partners.html">Community Partners</a><a href="/constellation/north-star-resources.html">Resources</a></div></div><div class="colophon"><span>© Team Curiosity 11770</span><span>Courage. Connection. Collaboration.</span><a href="#top">Back to top</a></div></footer>'''
 HOME = (ROOT / 'content/home.html').read_text(encoding='utf-8')
 SEASONS = [
     ('2024-25', 'Into the Deep', 'Rosalind Plankton', 'Rosalind Franklin'),
