@@ -453,7 +453,7 @@ for page in pages:
     body=HOME if page['path']=='home.html' else page_body(page)
     output=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b0b0b"><meta name="description" content="Curiosity 11770. A robotics team of girls and gender minorities from Marlborough School, Los Angeles. Participating in FIRST Tech Challenge since 2016."><title>{html.escape(title)}</title><link rel="icon" href="/assets/design/team-logo-red.svg?v=20260919" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/design/site.css?v=20260919s"><link rel="stylesheet" href="/assets/design/typography.css?v=20261002b"><script src="/assets/design/site.js?v=20260923a" defer></script></head><body id="top">{nav(page['path'])}<main id="main">{body}</main>{footer(page['path'])}</body></html>'''
-    output = normalize_site_text(output).replace('site.css?v=20260919s', 'site.css?v=20261003t').replace('site.js?v=20260923a', 'site.js?v=20260923b')
+    output = normalize_site_text(output).replace('site.css?v=20260919s', 'site.css?v=20261003t').replace('site.js?v=20260923a', 'site.js?v=20261002b')
     (ROOT/page['path']).write_text(output,encoding='utf-8')
 print(f'Built {len(pages)} pages.')
 

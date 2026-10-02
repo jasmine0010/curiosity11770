@@ -50,12 +50,9 @@ const carousel = document.querySelector('.photo-hero');
 if (carousel) {
   const slides = [...carousel.querySelectorAll('.hero-slide')];
   const count = carousel.querySelector('.slide-count');
-  const pauseButton = carousel.querySelector('.slide-pause');
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let current = 0;
   let paused = motion.matches;
-  let hovering = false;
-  let focused = false;
   let timer;
 
   function show(index) {
@@ -68,24 +65,15 @@ if (carousel) {
   }
   function schedule() {
     window.clearInterval(timer);
-    if (!paused && !hovering && !focused && !document.hidden) {
-      timer = window.setInterval(() => show(current + 1), 6500);
+    if (!paused && !document.hidden) {
+      timer = window.setInterval(() => show(current + 1), 5000);
     }
-    pauseButton.textContent = paused ? 'Play' : 'Pause';
-    pauseButton.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
   }
   carousel.querySelectorAll('[data-slide]').forEach(button => {
     button.addEventListener('click', () => {
       show(current + (button.dataset.slide === 'next' ? 1 : -1));
       schedule();
     });
-  });
-  pauseButton.addEventListener('click', () => { paused = !paused; schedule(); });
-  carousel.addEventListener('mouseenter', () => { hovering = true; schedule(); });
-  carousel.addEventListener('mouseleave', () => { hovering = false; schedule(); });
-  carousel.addEventListener('focusin', () => { focused = true; schedule(); });
-  carousel.addEventListener('focusout', event => {
-    if (!carousel.contains(event.relatedTarget)) { focused = false; schedule(); }
   });
   document.addEventListener('visibilitychange', schedule);
   motion.addEventListener('change', () => { paused = motion.matches; schedule(); });
