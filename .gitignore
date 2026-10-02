@@ -6,3 +6,4 @@ content/constellation/map-source.txt
 content/constellation/browser-captures.json
 content/constellation/baseline-path.txt
 scripts/__pycache__/
+_site/

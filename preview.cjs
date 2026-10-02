@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(404).end('Not found');
       return;
     }
-    const assetTypes = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.woff2': 'font/woff2' };
+    const assetTypes = { '.pdf': 'application/pdf', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.svg': 'image/svg+xml', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.woff2': 'font/woff2' };
     const assetType = name.startsWith('assets/') ? assetTypes[path.extname(name)] : undefined;
     const canonical = assetType || name.endsWith('.html') ? name : name + '.html';
     const target = path.resolve(root, canonical);

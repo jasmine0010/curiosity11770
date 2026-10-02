@@ -56,7 +56,11 @@ h2{font-size:clamp(34px,3.7vw,52px);line-height:1.14}
 .impact-copy h2{font-size:clamp(33px,3.4vw,46px);line-height:1.15}
 .season-rows h3{font-size:34px}
 .page-hero h1{font-size:clamp(48px,6.1vw,82px);line-height:1.12}
-.footer-top{justify-content:flex-start}
+.footer-top{display:flex;justify-content:flex-start;flex-wrap:wrap;column-gap:32px;row-gap:16px}
+.footer-contact-links{display:flex;align-items:center;gap:8px}
+.footer-contact-links a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--white)}
+.footer-contact-links a:hover{color:#d8a397}
+.footer-contact-links svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .footer-cta{font-size:clamp(30px,3.5vw,48px);gap:35px}
 .brand{font-size:26px}
 .footer-bottom{grid-template-columns:1.1fr 1fr .65fr 1.05fr;gap:28px}
@@ -71,23 +75,23 @@ h2{font-size:clamp(34px,3.7vw,52px);line-height:1.14}
 .community-links>a:last-child{border-bottom:1px solid var(--line)}
 .community-title{display:block;font-size:21px;font-weight:500;line-height:1.4}
 .community-description{display:block;color:var(--muted);font-size:16px;line-height:1.7;margin-top:7px;max-width:550px}
-.season-entry{display:grid;grid-template-columns:125px minmax(0,1fr) 170px;gap:32px;padding:34px 0;border-top:1px solid var(--line);align-items:start}
+
 .season-entry:last-child{border-bottom:1px solid var(--line)}
-.season-year{font-size:17px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:5px}
-.season-identity h2,.season-identity h3{font-size:clamp(28px,3vw,40px);line-height:1.2;overflow-wrap:break-word}
+
+
 .season-game{margin-top:9px;font-size:17px}
 .season-namesake{margin-top:5px;color:var(--muted);font-size:16px}
-.season-entry-links{display:flex;flex-direction:column;align-items:stretch;gap:8px}
-.season-entry-links a{font-size:15px;min-height:44px}
+
+
 .archive-intro{color:var(--muted);margin-bottom:32px}
-.blog-feature h2{margin:34px 0}
-.blog-excerpt-layout{display:grid;grid-template-columns:1fr 2fr;gap:8%}
-.blog-entry-label time{color:var(--muted);font-size:15px}
-.blog-entry-label h3{font-size:32px;margin-top:14px}
-.blog-excerpt-copy p{font-size:17px;color:var(--muted);line-height:1.85;max-width:700px}
-.blog-excerpt-copy .text-arrow{margin-top:20px}
-@media(max-width:900px){.community-links{margin-left:15%}.season-entry{grid-template-columns:100px minmax(0,1fr);gap:20px}.season-entry-links{grid-column:2;flex-direction:row;gap:28px}.season-entry-links a{gap:20px}}
-@media(max-width:600px){.community-links{margin-left:0}.community-title{font-size:20px}.season-entry{grid-template-columns:1fr;gap:14px;padding:28px 0}.season-entry-links{grid-column:1;flex-wrap:wrap}.season-year{padding-top:0}.season-identity h2,.season-identity h3{font-size:28px}.blog-excerpt-layout{grid-template-columns:1fr;gap:22px}.blog-feature h2{font-size:36px}.blog-excerpt-copy p{font-size:16px}}
+
+
+
+
+
+
+@media(max-width:900px){.community-links{margin-left:15%}}
+@media(max-width:600px){.community-links{margin-left:0}.community-title{font-size:20px}}
 
 /* Edge fades leave the central 85% of standalone photos at full brightness. */
 .section-label{padding-left:0}
@@ -110,7 +114,7 @@ h2{font-size:clamp(34px,3.7vw,52px);line-height:1.14}
 #site-nav .nav-contact:after{left:24px}
 
 .page-content>.page-photo:first-child{width:calc(100% + 4vw);margin-left:-4vw;margin-bottom:64px}
-.page-content .gallery-featured{width:calc(100% + 4vw);margin-left:-4vw}
+.page-content .gallery-featured{width:100%;margin-left:0}
 .editorial-gallery{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);align-items:start}
 .editorial-gallery img:first-child{grid-row:span 2;aspect-ratio:4/5}
 .editorial-gallery img:not(:first-child){aspect-ratio:4/3;max-height:360px}
@@ -160,7 +164,7 @@ h2{font-size:clamp(34px,3.7vw,52px);line-height:1.14}
 #site-nav>a[aria-current]{border-bottom-color:#d48d79}
 .section-nav a[aria-current]{color:#dca08f}
 .community-links{margin-left:58%}
-.blog-feature{padding-top:62px;padding-bottom:62px}
+
 .archive-section{padding-top:50px;padding-bottom:76px}
 .archive-heading{margin-top:0}
 .page-hero{padding-top:36px;padding-bottom:23px}
@@ -170,6 +174,7 @@ h2{font-size:clamp(34px,3.7vw,52px);line-height:1.14}
 .caption-crop{overflow:hidden}
 .caption-crop>img{transform:scale(1.08);transform-origin:50% 0}
 .page-photo.caption-crop>img{aspect-ratio:16/9;object-fit:cover;object-position:50% 18%;transform:none}
+.page-photo.about-team-photo>img{width:100%;height:auto;max-height:none;aspect-ratio:3/2;object-fit:cover;object-position:center bottom}
 .slideshow-controls button[data-slide]{width:58px;font-size:14px}
 .footer-cta{border-bottom:3px solid var(--red);padding-bottom:10px}
 
@@ -179,9 +184,9 @@ h2{font-size:clamp(34px,3.7vw,52px);line-height:1.14}
 .site-footer:before{content:'';position:absolute;z-index:0;width:min(620px,48vw);aspect-ratio:1;background:url('/assets/design/team-logo-red.svg') center/contain no-repeat;right:-7vw;top:-185px;opacity:.16;pointer-events:none}
 .site-footer>*{position:relative;z-index:1}
 
-.season-entry{position:relative;grid-template-columns:190px minmax(0,1fr) 170px}
-.season-year{align-self:start;padding:4px 0 10px;color:var(--white);font:500 clamp(54px,5vw,66px)/.9 var(--display);letter-spacing:-.055em;white-space:nowrap}
-.season-slash{display:inline-block;margin:0 .035em;color:var(--red);font-weight:400;transform:skewX(-8deg)}
+
+
+
 
 /* Robot pages use an image-led technical diptych. */
 .robot-showcase{display:grid;grid-template-columns:1.08fr .92fr;min-height:620px;margin:0 0 72px;border-bottom:1px solid var(--line);overflow:hidden}
@@ -200,6 +205,7 @@ h2{font-size:clamp(34px,3.7vw,52px);line-height:1.14}
 .robot-spec{display:grid;grid-template-columns:170px minmax(0,1fr);gap:28px;max-width:1000px!important;padding:22px 0;margin:0!important;border-top:1px solid var(--line)}
 .robot-spec:last-child{border-bottom:1px solid var(--line)}
 .robot-spec strong{font-weight:500;color:#dca08f}
+.robot-page .editorial-content .robot-accent{color:#dca08f;font-weight:500}
 
 /* Team pages emphasize the roster photography. */
 .team-page .editorial-block{padding:52px 0}
@@ -217,12 +223,14 @@ h2{font-size:clamp(34px,3.7vw,52px);line-height:1.14}
 .highlights-page .editorial-content>p{max-width:820px}
 .highlights-page .highlight-event{font-size:24px;line-height:1.3;margin:32px 0 17px;color:var(--white)}
 .highlights-page .highlight-event:first-child{margin-top:0}
+.highlights-page .highlight-list{list-style:disc;max-width:820px;padding-left:1.4em;margin:0 0 28px}
+.highlights-page .highlight-list li+li{margin-top:8px}
 .highlights-page .editorial-gallery{margin-top:34px}
 
 @media(max-width:900px){
-  .season-entry{grid-template-columns:165px minmax(0,1fr)}
-  .season-entry-links{grid-column:2}
-  .season-year{font-size:56px}
+
+
+
   .robot-showcase{min-height:0}
   .robot-visual{height:500px}
   .highlights-page .editorial-block{grid-template-columns:82px minmax(0,1fr);gap:28px}
@@ -230,9 +238,9 @@ h2{font-size:clamp(34px,3.7vw,52px);line-height:1.14}
 @media(max-width:600px){
   .site-header>.brand .brand-mark{height:44px}
   .site-footer:before{width:430px;right:-210px;top:-105px;opacity:.14}
-  .season-entry{grid-template-columns:1fr;gap:10px;padding:32px 0}
-  .season-entry-links{grid-column:1}
-  .season-year{width:auto;margin-left:0;font-size:54px;padding-bottom:5px}
+
+
+
   .robot-showcase{grid-template-columns:1fr;margin-bottom:48px}
   .robot-visual{height:470px;padding:12px}
   .robot-page{padding-bottom:110px}
@@ -251,7 +259,7 @@ h2{font-size:clamp(34px,3.7vw,52px);line-height:1.14}
   .hero-name{font-size:clamp(46px,13vw,56px)}
   .hero-team-id{margin-top:9px;font-size:clamp(22px,6.5vw,28px)}
   .community-links{margin-left:0}
-  .blog-feature{padding-top:48px;padding-bottom:48px}
+
   .archive-section{padding-top:42px;padding-bottom:58px}
   .page-hero{padding-top:28px;padding-bottom:20px}
   .page-hero h1{margin-top:20px;margin-bottom:22px}
@@ -322,11 +330,13 @@ main:has(.team-page)>.section-nav{padding-top:18px;padding-bottom:24px}
 .team-roster+.team-roster{border-top:1px solid var(--line);padding-top:88px}
 .team-roster>h2{margin-bottom:46px;font-size:clamp(34px,4vw,50px)}
 .member-grid{display:grid;grid-template-columns:repeat(3,minmax(0,330px));justify-content:space-between;gap:72px clamp(40px,4.5vw,76px);align-items:start}
-.member-card:nth-child(3n+2){margin-top:22px}
+
 .member-card img{width:100%;aspect-ratio:4/5;object-fit:cover;border-top:2px solid var(--red)}
+.member-card img.member-illustration{aspect-ratio:1;object-fit:contain;border-top:0}
+.member-card img.member-photo{aspect-ratio:4/5;object-fit:contain;object-position:center bottom;border:0}
 .member-card img.image-reveal{opacity:1;translate:none;transition:none}
 .member-card figcaption{padding:14px 0 0}
-.member-card:nth-child(3n+2) figcaption{padding-left:14px}
+
 .member-card strong{display:block;font-size:20px;font-weight:500;line-height:1.35;color:var(--white)}
 .member-card figcaption span{display:block;margin-top:6px;color:#dca08f;font-size:14px;line-height:1.45}
 
@@ -355,7 +365,7 @@ main:has(.team-page)>.section-nav{padding-top:18px;padding-bottom:24px}
 
 @media(max-width:900px){
   .member-grid{grid-template-columns:repeat(3,minmax(0,210px));gap:54px 28px}
-  .member-card:nth-child(3n+2){margin-top:20px}
+
 }
 @media(max-width:600px){
   .section-nav{gap:24px;padding-top:10px;padding-bottom:25px}
@@ -370,9 +380,9 @@ main:has(.team-page)>.section-nav{padding-top:18px;padding-bottom:24px}
   .team-group-photo img{height:280px;object-position:center}
   .team-roster{padding-bottom:74px}
   .member-grid{grid-template-columns:repeat(2,minmax(0,150px));justify-content:space-between;gap:42px 24px}
-  .member-card:nth-child(3n+2){margin-top:0}
-  .member-card:nth-child(even){margin-top:18px}
-  .member-card:nth-child(even) figcaption{padding-left:10px}
+
+
+
   .member-card strong{font-size:16px}
   .outreach-page .gallery-featured{width:100%;margin-left:0}
   .outreach-collage{min-height:450px;margin-bottom:62px}
@@ -489,9 +499,9 @@ main:has(.team-page)>.section-nav{padding-top:18px;padding-bottom:24px}
 /* One vertical rhythm applies across home sections and generated inner pages. */
 .section-pad{padding-left:6.4%;padding-right:6.4%}
 .mission,.impact,.season-section,.blog-feature,.archive-section{padding-top:var(--space-section);padding-bottom:var(--space-section)}
-.impact,.blog-feature{padding-top:var(--space-section-open);padding-bottom:var(--space-section-open)}
-.page-masthead .page-hero{min-height:clamp(300px,25vw,390px);padding-top:clamp(30px,3vw,48px);padding-bottom:clamp(28px,3vw,44px)}
-.masthead-title{margin-top:clamp(42px,5vw,72px)}
+.impact{padding-top:var(--space-section-open);padding-bottom:var(--space-section-open)}
+.page-masthead .page-hero{min-height:clamp(270px,22.5vw,350px);padding-top:clamp(26px,2.6vw,42px);padding-bottom:clamp(24px,2.6vw,38px)}
+.masthead-title{margin-top:clamp(36px,4.3vw,62px)}
 .page-masthead .section-nav{padding-top:22px;padding-bottom:28px}
 .page-masthead+.page-content{padding-top:clamp(58px,6vw,92px)}
 .page-content{padding-bottom:clamp(88px,8vw,128px);border-bottom:1px solid var(--line-strong)}
@@ -508,7 +518,7 @@ main:has(.team-page)>.section-nav{padding-top:18px;padding-bottom:24px}
 .masthead-robot .masthead-art{opacity:.25}
 
 /* Content photography follows two patterns: one dominant image or one asymmetric pair. */
-.page-content>.page-photo:first-child,.team-group-photo{width:calc(100% + var(--grid-break));margin-left:calc(-1 * var(--grid-break))}
+.page-content>.page-photo:first-child,.team-group-photo{width:100%;margin-left:0}
 .editorial-gallery{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:clamp(16px,2vw,28px)}
 .editorial-gallery img:first-child{grid-column:1;grid-row:span 2;aspect-ratio:4/5}
 .editorial-gallery img:not(:first-child){grid-column:2;grid-row:auto;aspect-ratio:4/3}
@@ -580,8 +590,8 @@ body:has(.page-content) .site-footer{border-top:0}
 @media(max-width:600px){
   :root{--grid-break:0px;--space-section:58px;--space-section-open:76px;--space-page-end:96px}
   .section-pad{padding-left:6%;padding-right:6%}
-  .page-masthead .page-hero{min-height:236px;padding-top:24px;padding-bottom:22px}
-  .masthead-title{width:100%;margin-top:32px}
+  .page-masthead .page-hero{min-height:212px;padding-top:20px;padding-bottom:18px}
+  .masthead-title{width:100%;margin-top:28px}
   .page-masthead+.page-content{padding-top:52px}
   .page-content:not(.team-page)>.editorial-block,
   .page-content:not(.team-page)>.editorial-block:nth-of-type(even){padding-top:58px;padding-bottom:58px}
@@ -598,25 +608,6 @@ body:has(.page-content) .site-footer{border-top:0}
   .quick-links a:after,.community-links>a:after,.footer-bottom a:after,.colophon a:after{transition:none}
 }
 
-/* Content-aware rhythm keeps short scraped sections from floating in empty space. */
-.page-masthead+.page-content{padding-top:clamp(48px,5vw,72px)}
-.page-content:not(.team-page)>.editorial-block,
-.page-content:not(.team-page)>.editorial-block:nth-of-type(even){padding-top:clamp(46px,4.8vw,72px);padding-bottom:clamp(46px,4.8vw,72px)}
-.page-content:not(.team-page)>.editorial-block:not(:has(h2,img,iframe,.editorial-gallery,.mechanism-detail)),
-.page-content:not(.team-page)>.editorial-block:nth-of-type(even):not(:has(h2,img,iframe,.editorial-gallery,.mechanism-detail)){
-  padding-top:clamp(34px,3.6vw,54px);
-  padding-bottom:clamp(34px,3.6vw,54px);
-}
-.page-content:not(.team-page)>.editorial-block:has(h2):not(:has(p,img,iframe,.editorial-gallery,.mechanism-detail)),
-.page-content:not(.team-page)>.editorial-block:nth-of-type(even):has(h2):not(:has(p,img,iframe,.editorial-gallery,.mechanism-detail)){
-  padding-top:clamp(32px,3.2vw,48px);
-  padding-bottom:clamp(32px,3.2vw,48px);
-}
-.page-content:not(.team-page)>.editorial-block:has(iframe,.editorial-gallery,.mechanism-detail){padding-top:clamp(58px,6vw,88px);padding-bottom:clamp(58px,6vw,88px)}
-.blog-page>.editorial-block{padding-top:clamp(62px,6vw,92px)!important;padding-bottom:clamp(62px,6vw,92px)!important}
-.highlights-page>.editorial-block{padding-top:clamp(48px,5vw,70px)!important;padding-bottom:clamp(48px,5vw,70px)!important}
-.robot-page>.editorial-block{padding-top:clamp(52px,5.5vw,78px)!important;padding-bottom:clamp(52px,5.5vw,78px)!important}
-
 .page-content:not(.blog-page):not(.highlights-page):not(.robot-page):not(.team-page)>.editorial-block:first-of-type .editorial-content>p:first-child{
   max-width:920px;
   color:var(--white);
@@ -625,56 +616,72 @@ body:has(.page-content) .site-footer{border-top:0}
 }
 .editorial-content h2:only-child{font-size:clamp(36px,4vw,54px);margin:0}
 .editorial-content>a{font-size:16px;font-weight:500}
-.outreach-collage{margin-bottom:clamp(32px,4vw,56px)}
-.outreach-page .outreach-collage+.editorial-block{padding-top:clamp(34px,3.5vw,52px)}
+#main .editorial-content>a.donation-button{display:inline-flex;align-items:center;justify-content:center;min-height:56px;margin:24px 0 0;padding:17px 30px;border:1px solid var(--red);background:var(--red);color:var(--white);font-size:18px;font-weight:600;line-height:1.3;text-decoration:none;transition:background .2s,border-color .2s}
+#main .editorial-content>a.donation-button:hover{background:#9b2d1b;border-color:#9b2d1b;color:var(--white)}
 
-@media(max-width:600px){
-  .page-masthead+.page-content{padding-top:42px}
-  .page-content:not(.team-page)>.editorial-block,
-  .page-content:not(.team-page)>.editorial-block:nth-of-type(even){padding-top:46px;padding-bottom:46px}
-  .page-content:not(.team-page)>.editorial-block:not(:has(h2,img,iframe,.editorial-gallery,.mechanism-detail)),
-  .page-content:not(.team-page)>.editorial-block:nth-of-type(even):not(:has(h2,img,iframe,.editorial-gallery,.mechanism-detail)){
-    padding-top:32px;
-    padding-bottom:32px;
-  }
-  .page-content:not(.team-page)>.editorial-block:has(h2):not(:has(p,img,iframe,.editorial-gallery,.mechanism-detail)),
-  .page-content:not(.team-page)>.editorial-block:nth-of-type(even):has(h2):not(:has(p,img,iframe,.editorial-gallery,.mechanism-detail)){
-    padding-top:30px;
-    padding-bottom:30px;
-  }
-  .page-content:not(.team-page)>.editorial-block:has(iframe,.editorial-gallery,.mechanism-detail){padding-top:54px;padding-bottom:54px}
-  .blog-page>.editorial-block,.highlights-page>.editorial-block,.robot-page>.editorial-block{padding-top:50px!important;padding-bottom:50px!important}
-  .outreach-collage{margin-bottom:28px}
-}
-
-/* Contact uses its existing invitation and address as the page's visual focus. */
+/* One editorial composition keeps the photo and contact paths together. */
 .masthead-contact .masthead-art{right:0;width:42%;background:var(--red);opacity:.12;clip-path:polygon(28% 0,100% 0,100% 100%,0 100%)}
-.contact-page .contact-lead{
-  position:relative;
-  display:grid;
-  grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);
-  gap:clamp(44px,7vw,112px);
-  align-items:end;
-  min-height:260px;
-  margin:0;
-  padding:32px 0 72px 28px;
-  border-bottom:1px solid var(--line-soft);
-}
-.contact-page .contact-lead:before{content:'';position:absolute;left:0;top:32px;bottom:72px;width:3px;background:var(--red)}
-.contact-page .contact-lead>p{max-width:480px;font:500 clamp(42px,5vw,72px)/1.06 var(--display);letter-spacing:-.025em}
-.contact-page .contact-lead .text-arrow{width:max-content;max-width:100%;padding:0 0 12px;font-size:clamp(20px,2.5vw,34px);line-height:1.25;overflow-wrap:anywhere}
-.contact-page>.editorial-block:first-of-type{padding-top:clamp(64px,7vw,104px)!important}
-.contact-page>.editorial-block:first-of-type .editorial-content{max-width:none}
-.contact-page>.editorial-block:first-of-type .editorial-content>img{width:74%;max-width:920px;margin-left:auto;aspect-ratio:16/9}
+.contact-page{padding-top:clamp(42px,5vw,70px)!important;padding-bottom:clamp(72px,8vw,120px)}
+.contact-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:clamp(32px,4vw,64px)}
+.contact-details{display:flex;flex-direction:column;justify-content:center;min-width:0;padding:0}
+.contact-details h2{max-width:620px;font-size:clamp(38px,4vw,58px);line-height:1.12;letter-spacing:-.025em}
+.contact-methods{margin-top:32px;border-top:2px solid var(--red)}
+.contact-method{display:grid;grid-template-columns:115px minmax(0,1fr);gap:24px;align-items:baseline;padding:19px 0;border-bottom:1px solid var(--line)}
+.contact-method span{font-size:15px;color:var(--muted)}
+.contact-method a{font-size:clamp(17px,1.5vw,21px);line-height:1.45;overflow-wrap:anywhere;text-decoration:none}
+.contact-method a:hover{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:5px}
+.contact-photo{margin:0;min-width:0;height:clamp(360px,32vw,440px);overflow:hidden}
+.contact-photo img{width:100%;height:100%;min-height:0;object-fit:cover;object-position:50% 50%}
 
+@media(max-width:900px){
+  .contact-layout{grid-template-columns:1fr;gap:36px;min-height:0}
+  .contact-details{padding:0}
+  .contact-methods{margin-top:34px}
+  .contact-photo,.contact-photo img{min-height:0;height:auto}
+  .contact-photo img{aspect-ratio:16/10;height:auto;object-position:50% 43%}
+}
 @media(max-width:600px){
   .masthead-contact .masthead-art{right:-18%;width:68%;opacity:.1}
-  .contact-page .contact-lead{grid-template-columns:1fr;gap:34px;min-height:0;padding:18px 0 52px 20px}
-  .contact-page .contact-lead:before{top:18px;bottom:52px;width:2px}
-  .contact-page .contact-lead>p{font-size:clamp(38px,12vw,50px)}
-  .contact-page .contact-lead .text-arrow{font-size:clamp(17px,5.2vw,22px)}
-  .contact-page>.editorial-block:first-of-type{padding-top:54px!important}
-  .contact-page>.editorial-block:first-of-type .editorial-content>img{width:100%;margin-left:0}
+  .contact-page{padding-top:36px!important;padding-bottom:70px}
+  .contact-details h2{font-size:clamp(36px,9vw,46px)}
+  .contact-method{grid-template-columns:1fr;gap:4px;padding:16px 0}
+  .contact-method a{font-size:18px}
+  .contact-photo img{aspect-ratio:4/3}
+}
+
+/* Homepage sections share one grid and one spacing rhythm. */
+.homepage-sections{width:calc(100% - 12.8%);max-width:1200px;margin:96px auto;display:grid;gap:96px}
+.homepage-sections>.section-pad{padding:0;min-width:0}
+.homepage-sections .home-section-heading{margin:0 0 28px}
+.home-section-heading>p{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 10px}
+.home-section-heading h2,.homepage-sections .blog-feature-heading h2,.homepage-sections .archive-heading h2{font-size:40px;font-weight:500;line-height:1.15;margin:0}
+.homepage-sections .mission-grid,.outreach-feature,.season-spotlight{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:start;margin:0}
+.homepage-sections .mission-photo,.outreach-feature-photo,.season-spotlight-photo{margin:0;padding:0;min-width:0;aspect-ratio:3/2;overflow:hidden}
+.homepage-sections .mission-photo img,.outreach-feature-photo img,.season-spotlight-photo img{display:block;position:static;width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 50%}
+.homepage-sections .mission-photo img{object-position:50% 0;transform:scale(1.08);transform-origin:50% 0}
+.homepage-sections .mission-copy p,.outreach-feature-intro p{font-size:17px;line-height:1.8;color:var(--muted);max-width:580px;margin:0 0 18px}
+.homepage-sections .season-section{background:transparent;border:0}
+.season-spotlight-photo{grid-column:1;grid-row:1;clip-path:polygon(18px 0,100% 0,100% 100%,0 100%,0 18px)}
+.season-spotlight-copy{grid-column:2;grid-row:1}
+.season-spotlight-game{font-size:26px;line-height:1.3;margin:0}
+.season-spotlight-context{font-size:14px;color:var(--muted);margin-top:8px}
+.season-spotlight-links{display:flex;flex-direction:column;margin-top:24px;border-top:2px solid var(--red)}
+.season-spotlight-links a{font-size:17px;padding:13px 0;border-bottom:1px solid var(--line);width:100%;transition:color .2s}
+.season-spotlight-links a:hover{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:6px}
+.outreach-feature-photo{grid-column:2;grid-row:1}
+.outreach-feature-details{min-width:0;grid-column:1;grid-row:1}
+.outreach-feature .community-links{margin:24px 0 0}
+.outreach-feature .community-links>a{padding:16px 0}
+.outreach-feature .community-title{font-size:20px}
+.outreach-feature .community-description{font-size:16px;line-height:1.65;margin-top:5px}
+.homepage-sections .archive-heading{margin:0 0 28px}
+.homepage-sections .archive-heading,.homepage-sections .season-directory{margin-left:0;margin-right:0}
+@media(max-width:899px){
+  .homepage-sections{width:88%;margin:64px auto;gap:64px}
+  .homepage-sections .mission-grid,.outreach-feature,.season-spotlight{display:grid;grid-template-columns:1fr;gap:24px}
+  .home-section-heading h2,.homepage-sections .blog-feature-heading h2,.homepage-sections .archive-heading h2{font-size:32px}
+  .season-spotlight-photo,.season-spotlight-copy,.outreach-feature-photo,.outreach-feature-details{grid-column:auto;grid-row:auto}
+  .homepage-sections .mission-copy p,.outreach-feature-intro p,.season-spotlight-links a{font-size:16px}
 }
 
 /* The secondary destinations stay equal, while a compact panel keeps the desktop header calm. */
@@ -725,3 +732,345 @@ body:has(.page-content) .site-footer{border-top:0}
   #site-nav{top:80px;max-height:calc(100svh - 80px);padding-top:18px;padding-bottom:28px}
   #site-nav>a,#site-nav .nav-contact{padding:9px 0;font-size:17px}
 }
+
+/* Archive rows keep each entry's navigation with its identity. */
+.season-directory,.archive-heading,.archive-intro{width:100%;max-width:960px;margin-left:auto;margin-right:auto}
+.archive-masthead .masthead-top,.archive-masthead .masthead-title{width:100%;max-width:960px;margin-left:auto;margin-right:auto}
+.season-entry{display:grid;grid-template-columns:120px minmax(0,1fr);gap:32px;padding:26px 0;border-top:1px solid var(--line);align-items:baseline}
+.season-year{color:var(--white);font:400 22px/1.3 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.season-identity h2,.season-identity h3{font-size:clamp(30px,2.5vw,34px);line-height:1.2;overflow-wrap:break-word}
+.season-identity .season-game{margin-top:8px}
+.season-entry-links{display:flex;flex-wrap:wrap;gap:24px;margin-top:16px}
+.season-entry-links a{display:inline-flex;align-items:center;min-height:44px;padding:6px 0;font-size:16px;color:var(--white);text-decoration:underline;text-decoration-color:var(--red);text-decoration-thickness:1px;text-underline-offset:5px}
+.season-entry-links a:after{content:none}
+.season-entry-links a:hover,.season-entry-links a:focus-visible{color:var(--white);text-decoration-thickness:2px}
+@media(max-width:600px){
+  .season-entry{grid-template-columns:1fr;gap:10px;padding:26px 0}
+  .season-year{font-size:22px}
+}
+
+/* A compact article preview keeps its heading, date, and excerpt together. */
+.blog-feature-inner{max-width:960px;margin:0}
+.blog-feature-heading{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.blog-feature-heading h2{font-size:clamp(32px,3vw,40px);margin:0}
+.blog-feature-heading>span{font-size:14px;color:var(--muted);white-space:nowrap}
+.blog-preview{padding-top:28px}
+.blog-preview-heading{display:flex;align-items:baseline;gap:24px;flex-wrap:wrap;margin-bottom:16px}
+.blog-preview-heading h3{font-size:30px;line-height:1.2}
+.blog-preview-heading time{font-size:15px;color:var(--muted)}
+.blog-preview>p{max-width:760px;font-size:17px;line-height:1.8;color:var(--muted)}
+.blog-preview>.text-arrow{margin-top:18px}
+@media(max-width:600px){
+  .blog-feature-heading{align-items:flex-start;flex-direction:column;gap:10px;padding-bottom:20px}
+  .blog-preview-heading{gap:10px 20px}
+  .blog-preview>p{font-size:16px}
+}
+
+/* Preserve the complete composition of supplied highlight photographs. */
+.highlights-page .editorial-content img.photo-full-frame{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain}
+.editorial-content img.season-archive-photo{height:auto;max-height:none;max-width:700px;aspect-ratio:auto;object-fit:contain}
+/* Two-photo groups share a row so both outer edges stay aligned. */
+#main .editorial-gallery:has(>img:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:clamp(200px,30vw,360px);align-items:stretch}
+#main .editorial-gallery:has(>img:nth-child(2):last-child)>img{grid-column:auto;grid-row:auto;width:100%;height:100%;min-height:0;max-height:none;aspect-ratio:auto;margin:0;object-fit:cover}
+@media(max-width:600px){#main .editorial-gallery:has(>img:nth-child(2):last-child){grid-template-columns:1fr;grid-template-rows:none;grid-auto-rows:auto}#main .editorial-gallery:has(>img:nth-child(2):last-child)>img{height:auto;aspect-ratio:3/2}}
+.archive-poster-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1100px;margin:0 auto}
+.archive-poster-gallery figure,.archive-photo-gallery figure{margin:0;min-width:0}
+.archive-poster-gallery a{display:block}
+.archive-poster-gallery img{width:100%;height:auto;object-fit:contain}
+.archive-poster-stack{grid-template-columns:1fr;max-width:800px}
+.archive-photo-gallery:has(>figure:only-child){grid-template-columns:1fr;max-width:520px}
+.archive-photo-gallery:has(>figure:only-child)>figure{aspect-ratio:auto}
+.archive-photo-gallery:has(>figure:only-child) img{height:auto}
+.archive-photo-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:900px;margin:0 auto}
+.archive-photo-gallery figure{aspect-ratio:4/3;overflow:hidden}
+.archive-photo-gallery img{width:100%;height:100%;object-fit:cover}
+@media(max-width:700px){.archive-poster-gallery{grid-template-columns:1fr;gap:24px}.archive-photo-gallery{gap:16px}}
+
+/* The poster sets the height of the aligned, two-column robot gallery. */
+.robot-documentation{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:stretch;max-width:1200px;margin:0 auto 48px}
+.robot-concept-sheet{min-width:0;margin:0}
+.robot-concept-sheet a{display:block}
+.robot-documentation img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;filter:none}
+.robot-supporting-photos{display:grid;grid-template-rows:repeat(2,minmax(0,1fr));gap:24px;min-height:0;min-width:0}
+.robot-supporting-photos figure{position:relative;min-height:0;margin:0;overflow:hidden}
+.robot-supporting-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.robot-season-2020-21:before{display:none}
+/* Anchor the decoration to the photo grid, so both scale in the same coordinate space. */
+.robot-season-2020-21 .robot-documentation:before{content:'';position:absolute;z-index:-1;top:13%;left:38%;width:91.667%;aspect-ratio:3/4;transform:scaleX(-1);background:url('/assets/robots/2020-21/robot-background.png') center/contain no-repeat;opacity:.14;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 0,#000 70%,transparent 94%);mask-image:linear-gradient(to bottom,#000 0,#000 70%,transparent 94%)}
+.masthead-robot-2020-21 .masthead-art{background-image:url('/assets/seasons/2020-21/robot-header.jpeg');background-size:cover;background-position:0% 60%}
+.robot-season-2020-21 .editorial-content ul{padding-left:24px;font-size:17px;line-height:1.8;color:var(--muted);margin:20px 0}
+.robot-season-2020-21 .editorial-content li+li{margin-top:8px}
+@media(max-width:600px){.robot-documentation{grid-template-columns:1fr;gap:24px}.robot-supporting-photos{grid-template-rows:auto auto}.robot-supporting-photos img{position:static;height:auto;object-fit:contain}.robot-season-2020-21 .editorial-content ul{font-size:16px}}
+
+@media(max-width:600px){.robot-season-2020-21 .robot-documentation:before{opacity:.12}}
+
+/* Season overview photographs retain their full composition. */
+.season-overview-lead{max-width:1100px;margin:0 auto 48px}
+.season-overview-mosaic{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:repeat(2,clamp(180px,22vw,270px)) clamp(240px,30vw,360px);gap:24px}
+.season-overview-mosaic figure{position:relative;overflow:hidden;margin:0;min-width:0}
+.season-overview-mosaic figure:first-child{grid-column:span 7;grid-row:span 2}
+.season-overview-mosaic figure:nth-child(2),.season-overview-mosaic figure:nth-child(3),.season-overview-mosaic figure:nth-child(4){grid-column:span 5}
+.season-overview-mosaic figure:nth-child(5){grid-column:span 7}
+.season-overview-mosaic img{display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:700px){.season-overview-mosaic{grid-template-columns:1fr;grid-template-rows:none;gap:16px}.season-overview-mosaic figure:nth-child(n){grid-column:auto;grid-row:auto;aspect-ratio:4/3}}
+.season-overview-feature{display:grid;grid-template-columns:1.8fr 1fr;gap:24px;margin:0 0 var(--season-gap,48px)}
+.season-overview-feature figure{margin:0;min-width:0}
+.season-overview-feature-main img{display:block;width:100%;height:auto}
+.season-overview-side{display:grid;grid-template-rows:repeat(2,minmax(0,1fr));gap:24px;min-height:0}
+.season-overview-side figure{position:relative;overflow:hidden}
+.season-overview-side img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media(max-width:700px){.season-overview-feature{grid-template-columns:1fr;gap:16px}.season-overview-side{gap:16px}.season-overview-side figure{aspect-ratio:3/2}}
+.season-overview-lead img,.season-overview-photos img{display:block;width:100%;height:auto;object-fit:contain}
+.season-overview-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:1100px;margin:48px auto 0}
+.season-overview-photos figure{margin:0;min-width:0;aspect-ratio:1;overflow:hidden}
+.season-overview-photos img{height:100%;aspect-ratio:1;object-fit:cover;object-position:center}
+.season-overview-photos figure:last-child img{object-position:50% 48%}
+.season-overview-photos.season-overview-pairs{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:24px}
+.season-overview-pairs figure,.season-overview-pairs img{aspect-ratio:3/2}
+.season-overview-page:has(.season-overview-pairs) .season-overview-lead{margin-bottom:24px}
+.season-overview-opening{display:grid;grid-template-columns:1.55fr 1fr;grid-template-rows:clamp(240px,32vw,390px);gap:24px;max-width:1100px;margin:0 auto var(--season-gap,48px)}
+.season-overview-opening figure{min-width:0;min-height:0;margin:0;overflow:hidden}
+.season-overview-opening img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.season-overview-photos.season-overview-asymmetric{grid-template-columns:repeat(12,minmax(0,1fr));grid-template-rows:clamp(220px,29vw,320px) clamp(240px,32vw,350px)}
+.season-overview-asymmetric figure{grid-column:span 5;aspect-ratio:auto}
+.season-overview-asymmetric figure:nth-child(2),.season-overview-asymmetric figure:nth-child(3){grid-column:span 7}
+.season-overview-asymmetric img{aspect-ratio:auto}
+.season-overview-asymmetric:has(figure:nth-child(2):last-child){grid-template-rows:clamp(240px,32vw,350px)}
+.season-overview-asymmetric:has(figure:nth-child(2):last-child) figure:first-child{grid-column:span 7}
+.season-overview-asymmetric:has(figure:nth-child(2):last-child) figure:last-child{grid-column:span 5}
+@media(min-width:701px){.season-overview-asymmetric.season-overview-reverse-widths:has(figure:nth-child(2):last-child) figure:first-child{grid-column:span 5}.season-overview-asymmetric.season-overview-reverse-widths:has(figure:nth-child(2):last-child) figure:last-child{grid-column:span 7}}
+@media(max-width:700px){.season-overview-photos.season-overview-asymmetric:has(figure:nth-child(2):last-child){grid-template-rows:none}.season-overview-photos.season-overview-asymmetric:has(figure:nth-child(2):last-child) figure:nth-child(n){grid-column:1}}
+@media(max-width:700px){.season-overview-opening{grid-template-columns:1fr;grid-template-rows:none;gap:20px}.season-overview-opening figure{aspect-ratio:3/2}.season-overview-photos.season-overview-asymmetric{grid-template-columns:1fr;grid-template-rows:none;gap:20px}.season-overview-photos.season-overview-asymmetric figure{grid-column:1;aspect-ratio:3/2;width:100%}}
+@media(max-width:600px){.season-overview-photos{grid-template-columns:1fr;gap:24px}.season-overview-lead{margin-bottom:32px}}
+
+/* Keep overview copy aligned with the centered photographs at every zoom level. */
+.season-overview-page>.editorial-block{width:100%;max-width:1100px;margin-left:auto;margin-right:auto}
+.season-overview-page .editorial-content{max-width:none}
+
+/* One content boundary per inner-page type, shared by titles, navigation and body. */
+body:has(.page-content){--page-content-width:1100px;--page-content-gutter:6.4%}
+body:has(.robot-page),body:has(.team-page),body:has(.contact-page){--page-content-width:1200px}
+body:has(.blog-page){--page-content-width:980px}
+body:has(.archive-masthead){--page-content-width:960px}
+.page-content,.page-masthead>.page-hero,.page-masthead>.section-nav{padding-left:max(var(--page-content-gutter),calc((100% - var(--page-content-width))/2));padding-right:max(var(--page-content-gutter),calc((100% - var(--page-content-width))/2))}
+@media(max-width:600px){body:has(.page-content){--page-content-gutter:6%}}
+
+.masthead-team-2020-21 .masthead-art{background-image:url('/assets/team/2020-21/full-team.jpg');background-size:cover;background-position:50% 45%}
+
+.masthead-overview-2020-21 .masthead-art{background-image:url('/assets/seasons/2020-21/overview-header.jpg');background-size:cover;background-position:50% 55%}
+
+.outreach-closing-photo{margin:48px 0 0}
+.outreach-closing-photo img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+
+.masthead-outreach-2020-21 .masthead-art{background-image:url('/assets/seasons/2020-21/outreach-header.jpg');background-size:cover;background-position:100% 55%}
+
+.highlights-page .editorial-block:not(:has(.block-index)){grid-template-columns:minmax(0,1fr);gap:0}
+.masthead-outreach-2020-21 + .outreach-page .editorial-content p{color:var(--white)}
+.masthead-outreach-2020-21 + .outreach-page .editorial-content p a,.masthead-outreach-2020-21 + .outreach-page .editorial-content p strong{color:inherit}
+
+.season-portfolio-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;margin:48px 0;align-items:start}
+.season-portfolio-document object{display:block;width:100%;height:680px;border:1px solid var(--line);background:#fff}
+.season-portfolio-document>a{display:inline-block;margin-top:14px;text-decoration:underline;text-underline-offset:5px}
+.season-portfolio-copy .editorial-block{padding-top:0}
+@media(max-width:700px){.season-portfolio-layout{grid-template-columns:minmax(0,1fr);gap:28px}.season-portfolio-document object{height:560px}}
+
+.season-overview-photos-top{margin-top:0}
+.season-portfolio-layout{align-items:stretch}
+.season-portfolio-document object{height:100%;min-height:680px}
+.season-portfolio-copy{display:flex;flex-direction:column;min-width:0}
+.season-portfolio-copy .editorial-block{padding-bottom:24px;border-bottom:0}
+.season-portfolio-photo{position:relative;flex:1;min-height:280px;margin:0;overflow:hidden}
+.season-portfolio-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover}
+@media(max-width:700px){.season-portfolio-document object{height:560px;min-height:0}.season-portfolio-photo{flex:none;min-height:0;aspect-ratio:4/3}.season-portfolio-copy .editorial-block{padding-top:0}}
+
+/* Shared layout rhythm for every season tab. */
+body:has(.season-page-content){--page-content-width:1100px;--season-start:clamp(50px,5vw,70px);--season-gap:48px;--season-end:80px}
+#main>.season-page-content{padding-top:var(--season-start);padding-bottom:var(--season-end);display:flow-root}
+#main>.season-page-content>:first-child{margin-top:0}
+/* Override the legacy page-type padding, including its important declarations. */
+#main .season-page-content .editorial-content>:first-child{margin-top:0}
+#main .season-page-content .editorial-content>:last-child{margin-bottom:0}
+#main .season-page-content .editorial-content h2{margin-bottom:24px}
+#main .season-page-content .editorial-content h2:not(:first-child){margin-top:32px}
+#main .season-page-content .editorial-content p{margin-top:16px;margin-bottom:16px}
+#main .season-page-content .editorial-content>p:first-child{margin-top:0}
+#main .season-page-content :is(.team-intro,.outreach-collage,.robot-showcase,.robot-documentation,.season-overview-lead){margin-top:0;margin-bottom:var(--season-gap)}
+#main .season-page-content .team-roster{padding-bottom:var(--season-gap)}
+#main .season-page-content .team-roster+.team-roster{padding-top:var(--season-gap)}
+#main .season-page-content .team-roster:last-child{padding-bottom:0}
+#main .season-page-content .team-roster>h2{margin-bottom:24px}
+#main .season-page-content .season-portfolio-layout{margin:var(--season-gap) 0 0}
+#main .season-page-content .outreach-closing-photo{margin-top:var(--season-gap)}
+#main .season-page-content .page-photo{max-width:100%;margin-left:0;margin-right:0;width:100%}
+@media(max-width:700px){body:has(.season-page-content){--season-start:48px;--season-gap:32px;--season-end:56px}}
+
+/* Breadcrumbs name the current page; separators have equal, compact spacing. */
+.page-breadcrumb{display:flex;align-items:baseline;flex-wrap:wrap;column-gap:6px;row-gap:4px;font:400 14px/1.6 var(--body);color:var(--muted);min-width:0}
+.page-breadcrumb a,.page-breadcrumb [aria-current]{margin:0;padding:0}
+.page-breadcrumb [aria-current]{color:var(--white)}
+.breadcrumb-separator{color:var(--muted)}
+
+.masthead-robot-2021-22 .masthead-art{background-image:url('/assets/robots/2021-22/robot-header.jpg');background-size:cover;background-position:50% 55%}
+
+.robot-season-2021-22:before{display:none}
+.masthead-overview-2021-22 .masthead-art{background-image:url('/assets/seasons/2021-22/overview-header.jpg');background-position:65% 45%}
+.masthead-team-2021-22 .masthead-art{background-image:url('/assets/seasons/2021-22/team-header.jpg');background-position:65% 70%}
+.masthead-highlights-2021-22 .masthead-art{background-image:url('/assets/seasons/2021-22/highlights-header.jpg');background-position:65% 50%}
+.masthead-outreach-2021-22 .masthead-art{background-image:url('/assets/seasons/2021-22/outreach-header.png');background-position:65% 45%}
+.masthead-overview-2022-23 .masthead-art{background-image:url('/assets/seasons/2022-23/overview-header.jpg');background-position:70% 45%}
+.masthead-team-2022-23 .masthead-art{background-image:url('/assets/seasons/2022-23/team-header.jpg');background-position:65% 40%}
+.masthead-highlights-2022-23 .masthead-art{background-image:url('/assets/seasons/2022-23/highlights-header.jpg');background-position:65% 50%}
+.masthead-overview-2023-24 .masthead-art{background-image:url('/assets/seasons/2023-24/overview-header.png');background-position:60% 45%}
+.masthead-robot-2023-24 .masthead-art{background-image:url('/assets/seasons/2023-24/robot-header.png');background-size:cover;background-position:60% 55%}
+.masthead-team-2023-24 .masthead-art{background-image:url('/assets/seasons/2023-24/team-header.png');background-position:65% 40%}
+.masthead-highlights-2023-24 .masthead-art{background-image:url('/assets/seasons/2023-24/highlights-header.png');background-position:60% 50%}
+.masthead-overview-2024-25 .masthead-art{background-image:url('/assets/seasons/2024-25/overview-header.jpg');background-position:65% 45%}
+.masthead-robot-2024-25 .masthead-art{background-image:url('/assets/seasons/2024-25/robot-header.jpg');background-size:cover;background-position:65% 60%}
+.masthead-team-2024-25 .masthead-art{background-image:url('/assets/seasons/2024-25/team-header.jpg');background-position:65% 40%}
+.masthead-highlights-2024-25 .masthead-art{background-image:url('/assets/seasons/2024-25/highlights-header.jpg');background-position:50% 65%}
+.robot-season-2022-23:before{display:none}
+.robot-season-2023-24:before{display:none}
+.robot-season-2024-25:before{display:none}
+.robot-deep-grid{display:grid;grid-template-columns:.95fr 1.25fr .8fr;grid-template-rows:.85fr 1fr;gap:24px;aspect-ratio:895/693;margin-bottom:var(--season-gap)}
+.robot-deep-grid figure{min-width:0;min-height:0;margin:0;overflow:hidden}
+.robot-deep-grid img{display:block;width:100%;height:100%;max-height:none;object-fit:contain;filter:none}
+.robot-deep-grid figure:nth-child(1){grid-area:1/1}
+.robot-deep-grid figure:nth-child(2){grid-area:1/2}
+.robot-deep-grid figure:nth-child(3){grid-area:1/3/3/4;height:55%;align-self:start}
+.robot-deep-grid figure:nth-child(4){grid-area:2/1}
+.robot-deep-grid figure:nth-child(5){grid-area:2/2}
+.robot-deep-grid figure:nth-child(1) img,.robot-deep-grid figure:nth-child(4) img{transform:scale(1.15)}
+.robot-deep-grid figure:nth-child(3) img{transform:scale(1.2);transform-origin:center 65%}
+@media(max-width:600px){.robot-deep-grid{grid-template-columns:1fr 1.2fr;grid-template-rows:repeat(3,clamp(200px,55vw,320px));aspect-ratio:auto;gap:16px}.robot-deep-grid figure:nth-child(3){grid-area:2/2/4/3;height:100%}.robot-deep-grid figure:nth-child(4){grid-area:2/1}.robot-deep-grid figure:nth-child(5){grid-area:3/1}}
+.robot-mechanism-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,clamp(200px,30vw,360px));grid-template-areas:'claw lift arm' 'drive lift launcher';gap:24px;margin-bottom:var(--season-gap)}
+.robot-mechanism-grid figure{position:relative;min-width:0;min-height:0;margin:0;overflow:hidden}
+.robot-mechanism-grid figure:nth-child(1){grid-area:claw}
+.robot-mechanism-grid figure:nth-child(2){grid-area:drive}
+.robot-mechanism-grid figure:nth-child(3){grid-area:lift}
+.robot-mechanism-grid figure:nth-child(4){grid-area:arm}
+.robot-mechanism-grid figure:nth-child(5){grid-area:launcher}
+.robot-mechanism-grid img{display:block;width:100%;height:100%;max-height:none;object-fit:contain;filter:none}
+.robot-mechanism-grid figure:nth-child(5) img{position:absolute;top:50%;height:auto;transform:translateY(-58%)}
+@media(max-width:600px){.robot-mechanism-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(3,clamp(180px,48vw,280px));grid-template-areas:'claw lift' 'drive lift' 'arm launcher';gap:16px}}
+.masthead-robot-2022-23 .masthead-art{background-image:url('/assets/robots/2022-23/robot-header.png');background-position:right center;background-size:auto 200%}
+.robot-documentation-featured{grid-template-columns:minmax(0,1.15fr) minmax(0,2fr);align-items:start}
+.robot-documentation-featured .robot-supporting-photos{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto}
+.robot-documentation-featured .robot-supporting-photos figure{aspect-ratio:3/2}
+.robot-documentation-featured .robot-supporting-photos figure:nth-child(n+3){aspect-ratio:3/4}
+.robot-documentation-featured .robot-supporting-photos img{object-fit:contain;object-position:center top}
+@media(max-width:700px){
+  .robot-documentation-featured{grid-template-columns:1fr}
+  .robot-documentation-featured .robot-concept-sheet{width:100%;max-width:420px;justify-self:center}
+  .robot-documentation-featured .robot-supporting-photos{grid-template-rows:auto auto;gap:16px}
+  .robot-documentation-featured .robot-supporting-photos img{position:absolute;height:100%}
+}
+
+.member-card img.member-profile-card{aspect-ratio:1080/1290;object-fit:contain;object-position:center top;border:0}
+
+.outreach-documentation{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.outreach-documentation figure{margin:0;min-width:0}
+.outreach-poster img{display:block;width:100%;height:auto}
+.outreach-supporting-photos{display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:24px;min-height:0}
+.outreach-supporting-photos figure{position:relative;overflow:hidden}
+.outreach-supporting-photos img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media(max-width:700px){.outreach-documentation{grid-template-columns:minmax(0,1fr)}.outreach-supporting-photos{grid-template-rows:none}.outreach-supporting-photos figure{aspect-ratio:4/3}.outreach-supporting-photos img{position:static}}
+
+.highlight-photo-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:var(--season-gap,48px)}
+.highlight-photo-top{margin-top:0;margin-bottom:var(--season-gap,48px)}
+.highlight-photo-row figure{margin:0;aspect-ratio:3/2;overflow:hidden}
+.highlight-photo-row img{display:block;width:100%;height:100%;object-fit:cover}
+.highlight-photo-trio{grid-template-columns:repeat(3,minmax(0,1fr))}
+.highlight-photo-trio figure{aspect-ratio:4/3}
+.highlight-photo-natural figure{aspect-ratio:3/2}
+@media(max-width:700px){.highlight-photo-trio{grid-template-columns:1fr}}
+@media(max-width:600px){.highlight-photo-row{gap:12px}}
+
+/* Compact donation-page sections and aligned contact methods. */
+#main .cares-page .editorial-content>:first-child{margin-top:0}
+#main .cares-page .editorial-content>:last-child{margin-bottom:0}
+#main .cares-page .editorial-content>h2{margin-bottom:24px}
+.cares-contact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:16px}
+#main .cares-contact-row>a.cares-contact-button{display:flex;align-items:center;justify-content:center;min-height:76px;padding:18px 22px;border:1px solid var(--red);border-radius:3px;background:var(--red);color:var(--white);font-size:17px;font-weight:500;line-height:1.3;text-decoration:none;transition:background .2s,border-color .2s}
+#main .cares-contact-row>a.cares-contact-button:hover{background:#9b2d1b;border-color:#9b2d1b;color:var(--white)}
+#main .cares-contact-row .cares-discord{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:76px;margin:0;padding:14px 18px;border:1px solid #63372a;border-radius:3px;background:#160806;text-align:center;line-height:1.4}
+.cares-discord strong{color:#dca08f;font-size:14px;font-weight:500}
+.cares-discord span{font-size:16px;overflow-wrap:anywhere}
+@media(max-width:700px){.cares-contact-row{grid-template-columns:1fr;gap:12px}}
+
+.cares-accepted{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:start}
+.cares-accepted-copy{min-width:0}
+#main .cares-accepted-copy>p:first-child{margin-top:0}
+#main .cares-accepted-copy>p:last-child{margin-bottom:0}
+.cares-accepted-copy ul{list-style:disc;margin:16px 0 22px;padding-left:1.4em}
+.cares-accepted-copy li+li{margin-top:7px}
+.cares-accepted figure{margin:0;min-width:0;width:100%;max-width:300px;justify-self:end}
+#main .cares-accepted figure>img{display:block;width:100%;height:auto;max-width:none;max-height:none;aspect-ratio:auto;object-fit:contain;margin:0;filter:none}
+@media(max-width:700px){.cares-accepted{grid-template-columns:1fr;gap:24px}.cares-accepted figure{width:100%;max-width:260px;justify-self:start}}
+
+.archive-poster-trio{grid-template-columns:1.070588fr 1fr 1.003482fr;align-items:stretch}
+.archive-poster-trio figure{min-height:0}
+.archive-poster-trio a{height:100%}
+.archive-poster-trio img{height:100%;object-fit:contain}
+.archive-inline-photo{max-width:420px;margin:24px 0 32px}
+#main .editorial-content .archive-inline-photo img{width:100%;height:auto;max-height:none;aspect-ratio:auto;margin:0;object-fit:contain}
+.archive-awards{list-style:disc;margin:16px 0 28px;padding-left:1.4em}
+.archive-awards li+li{margin-top:8px}
+@media(max-width:700px){.archive-poster-trio{grid-template-columns:1fr}.archive-poster-trio img{height:auto}}
+
+/* One body rhythm: a single gap between sections, without stacked padding. */
+#main>.page-content{--body-gap:40px;--body-start:32px;padding-top:var(--body-start)!important}
+#main>.page-content>:nth-child(n){margin-top:0;margin-bottom:0}
+#main>.page-content>:nth-child(n)+:nth-child(n){margin-top:var(--body-gap)}
+#main>.page-content>.editorial-block:nth-child(n):nth-of-type(n){padding-top:0!important;padding-bottom:0!important;border-top:0!important;border-bottom:0!important}
+#main>.page-content>.team-roster:nth-child(n){padding-top:0;padding-bottom:0}
+#main .page-content .editorial-content>:first-child{margin-top:0}
+#main .page-content .editorial-content>:last-child{margin-bottom:0}
+@media(max-width:700px){#main>.page-content{--body-gap:28px;--body-start:28px}}
+
+/* Homepage text links remain visibly underlined before interaction. */
+#main .mission-copy>a.text-arrow,
+#main .community-links>a .community-title{color:var(--white);text-decoration-line:underline;text-decoration-color:var(--red);text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-skip-ink:auto}
+#main .mission-copy>a.text-arrow:hover,#main .mission-copy>a.text-arrow:focus-visible,
+#main .community-links>a:hover .community-title,#main .community-links>a:focus-visible .community-title{color:var(--white);text-decoration-thickness:2px}
+#main .mission-copy>a.text-arrow:after,#main .community-links>a:after{content:none}
+
+#main .portfolio-support-page .editorial-content :is(p,li) a{color:var(--white);text-decoration-line:underline;text-decoration-color:#dca08f;text-decoration-thickness:1px;text-underline-offset:5px}
+#main .portfolio-support-page .editorial-content :is(p,li) a:hover,#main .portfolio-support-page .editorial-content :is(p,li) a:focus-visible{text-decoration-thickness:2px}
+/* Keep the summit title on two deliberate lines at every screen size. */
+.page-masthead.masthead-summit .masthead-title{width:100%;max-width:1100px}
+.page-masthead.masthead-summit h1{font-size:clamp(38px,5.8vw,82px)}
+.masthead-summit h1>span{display:block;white-space:nowrap}
+.masthead-summit .masthead-art{width:56%;background:url('/assets/general/empowerment-summit-header.png') center/cover no-repeat;opacity:.24}
+@media(max-width:700px){.page-masthead.masthead-summit h1{font-size:clamp(22px,6.3vw,44px)}}
+/* Desktop links and the More control use the same text and underline baseline. */
+@media(min-width:1221px){
+  #site-nav>a:not(.nav-mobile-only):not(.nav-peer-mobile),#site-nav>.nav-more-toggle{display:flex;align-items:center;min-height:36px;padding-top:6px;padding-bottom:6px;font-size:15px;line-height:1.4}
+  #site-nav>a:after,#site-nav>.nav-more-toggle:after{bottom:-6px}
+}
+@media(min-width:1221px) and (max-width:1440px){#site-nav .nav-contact:after{left:18px}}
+/* Partner logos retain their colors and share aligned, uncropped display areas. */
+#main .partners-page .editorial-content{max-width:none}
+#main .partners-intro{max-width:850px;margin:0;text-align:left}
+#main .partners-intro p{max-width:none}
+#main .partners-intro .partners-thanks{margin-top:24px;color:#dca08f}
+#main .partners-thanks strong{font-weight:600}
+.partners-logo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.partners-logo-grid>figure{display:flex;align-items:center;justify-content:center;min-width:0;height:200px;padding:24px;background:#fff;border-radius:3px}
+#main .partners-logo-grid img{width:100%;height:100%;max-width:100%;max-height:100%;margin:0;aspect-ratio:auto;object-fit:contain}
+@media(max-width:900px){.partners-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.partners-logo-grid{gap:16px}.partners-logo-grid>figure{height:160px;padding:18px}}
+@media(max-width:360px){.partners-logo-grid{grid-template-columns:1fr}}
+.masthead-blog .masthead-art{width:56%;background:url('/assets/general/blog-header.png') 45% 55%/cover no-repeat;opacity:.24}
+.masthead-blog .masthead-date{display:none}
+#main .partners-page .editorial-content h3{margin:28px 0 12px}
+
+
+.community-girl-photo{max-width:600px;background:transparent}
+#main .community-girl-photo img{width:100%;height:auto;max-width:none;max-height:none;aspect-ratio:auto;object-fit:contain;margin:0}
+/* Layered slants build a gradual accent across geometric page headers. */
+.masthead-generic .masthead-art,.masthead-contact .masthead-art{width:56%;background:url('/assets/design/header-slants.svg') center/100% 100% no-repeat;opacity:1;clip-path:none;-webkit-mask-image:none;mask-image:none}
+@media(max-width:700px){.masthead-generic .masthead-art,.masthead-contact .masthead-art{right:-18%;width:78%;opacity:1}}
+.community-girl-feature{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:40px;align-items:start}
+.community-girl-feature .community-girl-photo{width:100%;max-width:320px}
+#main .community-girl-copy>:first-child{margin-top:0}
+@media(max-width:700px){.community-girl-feature{grid-template-columns:1fr;gap:28px}.community-girl-feature .community-girl-photo{max-width:280px}}
