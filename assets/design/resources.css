@@ -1,0 +1,70 @@
+/* Resources use Curiosity's header, reading typography, and shared body spacing. */
+.resources-page .c-intro,.resources-page .c-content-section{padding:0;border:0;background:transparent}
+.resources-page .c-prose,.resources-page .c-content-grid{max-width:none}
+.resources-page .c-prose{max-width:850px}
+.resources-page .c-content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}
+.resources-page .c-content-section--single .c-content-grid{grid-template-columns:1fr}
+.resources-page .c-column{min-width:0}
+.resources-page :is(p,ul,ol){font-size:var(--reading-size);line-height:var(--reading-leading);color:var(--reading-color)}
+.resources-page p{margin:0 0 16px;max-width:850px}
+.resources-page :is(ul,ol){padding-left:1.4em;margin:0 0 20px}
+.resources-page li+li{margin-top:8px}
+.resources-page :is(h2,h3){margin:28px 0 18px}
+.resources-page :is(.c-column,.c-prose)>:first-child{margin-top:0}
+.resources-page :is(.c-column,.c-prose)>:last-child{margin-bottom:0}
+.resources-page strong{font-weight:600}
+.resources-page :is(p,li) a{color:var(--white);text-decoration:underline;text-decoration-color:#dca08f;text-underline-offset:5px}
+.resources-page figure{margin:0 0 18px}
+.resources-page figure img{width:100%;height:auto;object-fit:contain}
+.resources-page .c-content-grid:has(.c-card){grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:stretch}
+.resources-page .c-content-grid:has(.c-card)>.c-column--copy{display:contents}
+.resources-page .c-card,.resources-page .c-content-grid:has(.c-card)>.c-column--media{display:flex;flex-direction:column;border:1px solid var(--line);background:#100807;min-width:0}
+.resources-page .c-card{color:var(--white);text-decoration:none;transition:border-color .2s}
+.resources-page .c-card:hover,.resources-page .c-card:focus-visible{border-color:#dca08f}
+.resources-page .c-card img,.resources-page .c-content-grid:has(.c-card)>.c-column--media img{width:100%;aspect-ratio:3/2;object-fit:contain;background:#fff;height:auto}
+.resources-page .c-card span,.resources-page .c-content-grid:has(.c-card)>.c-column--media>p{padding:18px;margin:0;font-size:17px;line-height:1.5}
+.resources-page .c-card span{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:5px}
+.resources-page .c-content-grid:has(.c-card)>.c-column--media>figure{margin:0}
+.resources-page .c-action{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:12px 20px;margin:12px 0;color:var(--white);border:1px solid #63372a;background:#160806;text-decoration:underline;text-decoration-color:#dca08f;text-underline-offset:5px;overflow-wrap:anywhere}
+.resources-page .c-action:hover{background:var(--red)}
+.resources-page .c-embed{margin-bottom:24px}
+.resources-page .c-embed iframe{display:block;width:100%;height:560px;border:1px solid var(--line);background:#fff}
+.resources-page .c-embed:has(iframe[src*="youtube"]) iframe{height:auto;aspect-ratio:16/9}
+.resources-page .c-embed .c-action{width:100%;margin:12px 0 0}
+.resource-spanish>*+*{margin-top:var(--body-gap)}
+@media(max-width:1000px){.resources-page .c-content-grid:has(.c-card){grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.resources-page .c-content-grid{grid-template-columns:1fr;gap:28px}.resources-page .c-embed iframe{height:420px}}
+@media(max-width:480px){.resources-page .c-content-grid:has(.c-card){grid-template-columns:1fr;gap:20px}}
+
+/* Only guides whose original layout was inspected receive source formatting. */
+.resources-page .resource-source-layout .c-content-grid{grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:28px}
+.resources-page .resource-source-layout .c-column{grid-column:var(--column-start)/span var(--column-span)}
+.resources-page .resource-source-layout p{max-width:none}
+#main .resources-page .resource-heading{font-family:'Oswald','Arial Narrow',sans-serif;font-size:clamp(30px,3vw,40px);font-weight:400;line-height:1.4;letter-spacing:normal;margin:0 0 18px}
+#main .resources-page .resource-accent{color:#dca08f}
+.resources-page .resource-heading strong{font-weight:inherit}
+.resources-page .resource-centered{text-align:center}
+.resources-page .resource-cnc-models figure,.resources-page .resource-cnc-panels figure,.resources-page .resource-cnc-photos figure{margin:0}
+.resources-page .resource-cnc-models img{height:clamp(240px,25vw,360px);object-fit:contain}
+.resources-page .resource-cnc-panels img{height:clamp(160px,17vw,245px);object-fit:contain}
+.resources-page .resource-cnc-photos img{height:clamp(340px,34vw,490px);object-fit:cover}
+.resources-page .resource-cnc-machining img{height:clamp(280px,27vw,400px)}
+@media(max-width:900px){
+ .resources-page .resource-source-layout .c-content-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .resources-page .resource-source-layout .c-column{grid-column:auto}
+ .resources-page .resource-source-layout .c-column--copy{grid-column:1/-1}
+ .resources-page .resource-cnc-materials .c-content-grid{grid-template-columns:1fr}
+ .resources-page .resource-cnc-models img{height:clamp(220px,36vw,320px)}
+ .resources-page .resource-cnc-panels img{height:clamp(130px,24vw,210px)}
+ .resources-page .resource-cnc-photos img{height:clamp(230px,45vw,400px)}
+}
+@media(max-width:600px){
+ .resources-page .resource-source-layout .c-content-grid{grid-template-columns:1fr}
+ .resources-page .resource-source-layout .c-column{grid-column:1}
+ .resources-page :is(.resource-cnc-models,.resource-cnc-panels,.resource-cnc-photos) .c-content-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+ .resources-page :is(.resource-cnc-models,.resource-cnc-panels,.resource-cnc-photos) .c-column--copy{grid-column:1/-1}
+ .resources-page :is(.resource-cnc-models,.resource-cnc-panels,.resource-cnc-photos) .c-column--media{grid-column:auto}
+ .resources-page .resource-cnc-models img{height:clamp(130px,36vw,220px)}
+ .resources-page .resource-cnc-panels img{height:clamp(85px,24vw,140px)}
+ .resources-page .resource-cnc-photos img{height:clamp(180px,55vw,280px)}
+}

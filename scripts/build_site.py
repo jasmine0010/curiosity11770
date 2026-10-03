@@ -27,7 +27,8 @@ def nav(current):
     home_current = ' aria-current="page"' if current == 'home.html' else ''
     portfolio_current = ' aria-current="page"' if current == 'portfolio-support.html' else ''
     summit_current = ' aria-current="page"' if current == 'female-empowerment-summit.html' else ''
-    peer_links = f'''<a href="/constellation/north-star-resources.html">Resources</a><a href="/portfolio-support.html"{portfolio_current}>Portfolio Support</a><a href="/female-empowerment-summit.html"{summit_current}>Female Empowerment Summit</a>'''
+    resources_current = ' aria-current="page"' if current == 'resources.html' or current.startswith('resources/') else ''
+    peer_links = f'''<a href="/resources.html"{resources_current}>Resources</a><a href="/portfolio-support.html"{portfolio_current}>Portfolio Support</a><a href="/female-empowerment-summit.html"{summit_current}>Female Empowerment Summit</a>'''
     partners_current = ' aria-current="page"' if current == 'professional-partners.html' else ''
     peer_links += f'<a href="/professional-partners.html"{partners_current}>Professional Partners</a>'
     community_current = ' aria-current="page"' if current == 'community-partners.html' else ''
@@ -41,7 +42,7 @@ def footer(current):
 <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1Sw3Eg1f-OWK_ZqXltUXvDKfFpQQPkXNSiPlyMK_eExfI_SwNIidLi9rAYx8wHGO8Br6H7qF9a" aria-label="Schedule a meeting with Curiosity" title="Schedule a meeting"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v16H4zM4 10h16M8 2v6M16 2v6M8 14h3M13 14h3M8 17h3"/></svg></a>
 </div>'''
     top = '' if current == 'contact.html' else '<div class="footer-top"><a class="footer-cta" href="/contact.html">Connect with Us!</a>'+contact_icons+'</div>'
-    return f'''<footer class="site-footer">{top}<div class="footer-bottom"><a class="brand" href="/home.html">{FOOTER_MARK}<span>Curiosity<small>Robotics · 11770</small></span></a><p>Marlborough School<br>Los Angeles, California</p><div><a href="https://www.instagram.com/curiosity11770/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:team11770@marlborough.org">Email</a></div><div><a href="/professional-partners.html">Professional Partners</a><a href="/community-partners.html">Community Partners</a><a href="/constellation/north-star-resources.html">Resources</a></div></div><div class="colophon"><span>© Team Curiosity 11770</span><span>Courage. Connection. Collaboration.</span><a href="#top">Back to top</a></div></footer>'''
+    return f'''<footer class="site-footer">{top}<div class="footer-bottom"><a class="brand" href="/home.html">{FOOTER_MARK}<span>Curiosity<small>Robotics · 11770</small></span></a><p>Marlborough School<br>Los Angeles, California</p><div><a href="https://www.instagram.com/curiosity11770/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:team11770@marlborough.org">Email</a></div><div><a href="/professional-partners.html">Professional Partners</a><a href="/community-partners.html">Community Partners</a><a href="/resources.html">Resources</a></div></div><div class="colophon"><span>© Team Curiosity 11770</span><span>Courage. Connection. Collaboration.</span><a href="#top">Back to top</a></div></footer>'''
 HOME = (ROOT / 'content/home.html').read_text(encoding='utf-8')
 SEASONS = [
     ('2024-25', 'Into the Deep', 'Rosalind Plankton', 'Rosalind Franklin'),
@@ -247,10 +248,15 @@ def page_body(page):
             season_url = '/' + season_match.group(1) + '-season.html'
             season_label = season_match.group(1).replace('-', '–')
             crumbs.append(f'<a href="{season_url}">{season_label}</a>')
+    if page.get('resource_content') and name != 'resources.html':
+        crumbs.append('<a href="/resources.html">Resources</a>')
     crumbs.append(f'<span aria-current="page">{html.escape(title)}</span>')
     breadcrumb = '<nav class="page-breadcrumb" aria-label="Breadcrumb">' + '<span class="breadcrumb-separator" aria-hidden="true">/</span>'.join(crumbs) + '</nav>'
     hero=f'''<section class="page-hero section-pad"><div class="masthead-top">{breadcrumb}{season_context}</div><div class="masthead-title"><h1>{header_title}</h1></div><div class="masthead-art" aria-hidden="true">{masthead_art}</div></section>'''
     sibling=''
+    if page.get('resource_content'):
+        resource_body = (ROOT / page['resource_content']).read_text(encoding='utf-8')
+        return f'<div class="page-masthead masthead-generic">{hero}</div><div class="page-content section-pad resources-page">{resource_body}</div>'
     nav_season_match=re.match(r'(202[0-4]-\d{2})-season',name)
     if nav_season_match:
         season=nav_season_match.group(1)+'-season'
@@ -451,10 +457,19 @@ def page_body(page):
 for page in pages:
     title='Curiosity - FTC #11770' if page['path']=='home.html' else page['title']+' | Curiosity 11770'
     body=HOME if page['path']=='home.html' else page_body(page)
+    language = page.get('lang', 'en')
     output=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0b0b0b"><meta name="description" content="Curiosity 11770. A robotics team of girls and gender minorities from Marlborough School, Los Angeles. Participating in FIRST Tech Challenge since 2016."><title>{html.escape(title)}</title><link rel="icon" href="/assets/design/team-logo-red.svg?v=20260919" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/design/site.css?v=20260919s"><link rel="stylesheet" href="/assets/design/typography.css?v=20261002b"><script src="/assets/design/site.js?v=20260923a" defer></script></head><body id="top">{nav(page['path'])}<main id="main">{body}</main>{footer(page['path'])}</body></html>'''
-    output = normalize_site_text(output).replace('site.css?v=20260919s', 'site.css?v=20261003t').replace('site.js?v=20260923a', 'site.js?v=20261002b')
-    (ROOT/page['path']).write_text(output,encoding='utf-8')
+    output = normalize_site_text(output).replace('site.css?v=20260919s', 'site.css?v=20261003u').replace('site.js?v=20260923a', 'site.js?v=20261002b')
+    output = output.replace('<html lang="en">', f'<html lang="{language}">')
+    if page.get('resource_content'):
+        resource_styles = '<link rel="stylesheet" href="/assets/design/resources.css?v=20261002b">'
+        if page['path'] != 'resources.html':
+            resource_styles += '<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">'
+        output = output.replace('</head>', resource_styles+'</head>')
+    target = ROOT/page['path']
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(output,encoding='utf-8')
 print(f'Built {len(pages)} pages.')
 
 from build_constellation import build as build_constellation

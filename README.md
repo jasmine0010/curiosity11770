@@ -14,16 +14,18 @@ The server supports both saved `.html` pages and the original extensionless rout
 - `scripts/build_site.py`: shared page layout and static page generation.
 - `content/home.html`: homepage copy, photos, and slideshow markup.
 - `content/pages.json`: the existing site's extracted editorial content.
+- `content/resources/`: the Resources landing page and all English/Spanish guides.
+- `assets/design/resources.css`: resource cards, guide images, and document layouts.
 - `assets/placeholders/`: three user-supplied photos reused as placeholders.
 
-Run `python scripts/build_site.py` after editing templates or content. This uses only the Python standard library and regenerates all 36 HTML pages. Run `node tests/security.cjs` to check local links, assets, and security invariants.
+Run `python scripts/build_site.py` after editing templates or content. This uses only the Python standard library and regenerates the main site and Constellation. Run `node tests/security.cjs` to check local links, assets, and security invariants. Run `node tests/resources.cjs` to verify the transferred guide collection and its media.
 
 The most recent season in the supplied content is 2024–25; it is presented as a featured season, not a claim about the current season. The reused photos are temporary replacements, not historical portraits or sponsor logos. Google Fonts and the original video/document embeds require an internet connection. No analytics are included.
 
 ## Constellation
 
-The editable recreation is at `/constellation/home.html` and includes 27 public pages, the original star map design, resources, translated guides, local images, and site search. Curiosity's navigation links to this local section.
+The original recreation is at `/constellation/home.html` and includes 27 public pages, the star map, local images, and site search. Curiosity's Resources link now opens `/resources.html`, which links directly to 17 English guides and two Spanish guides beneath `/resources/`. Resources is the single landing page; categories and Spanish resources are sections on that page.
 
-Run `node scripts/build.cjs` to rebuild both sites (63 pages). This also finds Codex's bundled Python on Windows when `python` is not on PATH. Preview with the existing `node preview.cjs` server.
+Run `node scripts/build.cjs` to rebuild both sites. This also finds Codex's bundled Python on Windows when `python` is not on PATH. Preview with the existing `node preview.cjs` server.
 
 See [the Constellation editing guide](content/constellation/README.md) for content, images, map positions, new pages, and source-link limitations. Run `node tests/constellation.cjs` alongside the existing security checks.

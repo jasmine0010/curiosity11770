@@ -25,5 +25,5 @@ for (const { path: file } of pages) {
     assert(fs.existsSync(target), `${file}: missing local target ${value}`);
   }
 }
-assert.equal(pages.length, 36);
-console.log('PASS: 36 pages; local links/assets, headings, image descriptions, sandbox permissions, opener isolation, and removal of Google runtime/analytics.');
+assert.equal(new Set(pages.map(p => p.path)).size, pages.length, 'Page paths are unique');
+console.log(`PASS: ${pages.length} pages; local links/assets, headings, image descriptions, sandbox permissions, opener isolation, and removal of Google runtime/analytics.`);

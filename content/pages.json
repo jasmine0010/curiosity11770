@@ -777,9 +777,9 @@
     "title": "Portfolio Support",
     "sections": [
       "<h2>Portfolio Support</h2>",
-      "<p>Team Curiosity 11770 has won the Think Award many times, and even at the World Championship level. Because of this, we consider ourselves experts in building and editing a portfolio, and would love to extend that expertise to help you and your team succeed! We have two options of portfolio support and editing - please pick the one that works best for your team below! Additionally, we give portfolio presentations at season kickoffs and at other various events year. Recordings of those can be seen on the <a href=\"/constellation/north-star-resources.html\">resources page</a>.</p>",
+      "<p>Team Curiosity 11770 has won the Think Award many times, and even at the World Championship level. Because of this, we consider ourselves experts in building and editing a portfolio, and would love to extend that expertise to help you and your team succeed! We have two options of portfolio support and editing - please pick the one that works best for your team below! Additionally, we give portfolio presentations at season kickoffs and at other various events year. Recordings of those can be seen on the <a href=\"/resources.html\">resources page</a>.</p>",
       "<h2>feedback (2-8 PAGE DOCUMENT WITH SUGGESTIONS/EDITS)</h2>\n<p>In this option, we will review your portfolio and send back a document with listed edits and suggestions. Please submit your portfolio to <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSfop2CS4JUiUpW2o5rM0IN_gmFqPupDL8l7lPLOHwlkg75MpQ/viewform?usp=sf_link\">submit your portfolio here</a> as a complete draft. Please only upload a PDF; we will not be able to provide feedback if it is in other formats. Additionally, upload any specific questions or areas you would like specific advice on. We will do our best to get edits to you within a week (usually we're pretty fast!); if we expect to take longer, we'll email you to let you know.</p>\n<h2>dIRECT SUPPORT FROM CURIOSITY (ONLINE MEETING + FEEDBACK)</h2>\n<p>In our direct option, please set up a meeting with us at <a href=\"https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0nKJqpLBir6use9N7eMTm36I5faIxsGjwbCg0st2zYF4Uya6iJmEM0vusw_T4OjsyW9GqaRW21\">schedule a meeting here</a>. We will meet for roughly thirty minutes on Google Meet, depending on how long it takes and how far you are into developing your portfolio, and go through every page and section providing feedback and edits. </p>\n<p>Bring:</p>\n<p>Your portfolio (online please, so you can share your screen if need be)</p>\n<p>Email your portfolio to us beforehand (<a href=\"mailto:team11770@marlborough.org\">team11770@marlborough.org</a>) - please do this ASAP</p>\n<p>Team members who both are working on the portfolio and are knowledgeable to some extent about your technical and non-technical work</p>\n<p>A way to take down notes/feedback (we will send you a copy of our own feedback, but just in case you want your own notes)</p>",
-      "<p>We contributed to T.W.C.A.'s portfolio resource! Check out <a href=\"https://twcarobotics.com/wp-content/uploads/2025/01/v2-engineering-portfolio-resource-for-first-tech-challenge-teams.pdf\">T.W.C.A.’s portfolio resource</a>.</p>\n<p>If you are looking for portfolio examples, we have past portfolios in the <a href=\"/constellation/north-star-resources/portfolio-examples.html\">North Star section of Constellation</a>. </p>"
+      "<p>We contributed to T.W.C.A.'s portfolio resource! Check out <a href=\"https://twcarobotics.com/wp-content/uploads/2025/01/v2-engineering-portfolio-resource-for-first-tech-challenge-teams.pdf\">T.W.C.A.’s portfolio resource</a>.</p>\n<p>If you are looking for portfolio examples, we have past portfolios in the <a href=\"/resources/portfolio-examples.html\">Resources section</a>. </p>"
     ]
   },
   {
@@ -790,5 +790,146 @@
       "<div class=\"partners-intro\"><p>We wouldn't be able to do the work that we do without the help of our amazing sponsors and professional partners. We work to create connections with many groups and are extremely grateful for their support</p><p class=\"partners-thanks\"><strong>Thank you to all of our sponsors and partners:</strong></p></div>",
       "<div class=\"partners-logo-grid\"><figure><img src=\"/assets/partners/marlborough.png?v=20261002b\" alt=\"Marlborough School logo\" loading=\"lazy\"></figure><figure><img src=\"/assets/partners/nasa.png?v=20261002b\" alt=\"NASA logo\" loading=\"lazy\"></figure><figure><img src=\"/assets/partners/harbor-freight.png?v=20261002b\" alt=\"Harbor Freight logo\" loading=\"lazy\"></figure><figure><img src=\"/assets/partners/aerospace.png?v=20261002b\" alt=\"The Aerospace Corporation logo\" loading=\"lazy\"></figure><figure><img src=\"/assets/partners/northrop-grumman.png?v=20261002b\" alt=\"Northrop Grumman logo\" loading=\"lazy\"></figure><figure><img src=\"/assets/partners/nation-builder.png?v=20261002b\" alt=\"NationBuilder logo\" loading=\"lazy\"></figure><figure><img src=\"/assets/partners/lair.png?v=20261002b\" alt=\"LAIR logo\" loading=\"lazy\"></figure><figure><img src=\"/assets/partners/robotis.png?v=20261002b\" alt=\"ROBOTIS logo\" loading=\"lazy\"></figure></div>"
     ]
+  },
+  {
+    "path": "resources.html",
+    "title": "Resources",
+    "sections": [],
+    "resource_content": "content/resources/index.html"
+  },
+  {
+    "path": "resources/cad-best-practices.html",
+    "title": "CAD Best Practices",
+    "sections": [],
+    "resource_content": "content/resources/cad-best-practices.html",
+    "resource_original": "north-star-resources/cad-best-practices"
+  },
+  {
+    "path": "resources/cnc-guide.html",
+    "title": "CNC Guide",
+    "sections": [],
+    "resource_content": "content/resources/cnc-guide.html",
+    "resource_original": "north-star-resources/cnc-guide"
+  },
+  {
+    "path": "resources/collaborating-as-a-team.html",
+    "title": "Collaborating as a Team",
+    "sections": [],
+    "resource_content": "content/resources/collaborating-as-a-team.html",
+    "resource_original": "north-star-resources/collaborating-as-a-team"
+  },
+  {
+    "path": "resources/creating-the-portfolio-in-depth-guide.html",
+    "title": "Creating the Portfolio: In-Depth Guide",
+    "sections": [],
+    "resource_content": "content/resources/creating-the-portfolio-in-depth-guide.html",
+    "resource_original": "north-star-resources/creating-the-portfolio-in-depth-guide"
+  },
+  {
+    "path": "resources/drivetrain-basics.html",
+    "title": "Drivetrain Basics",
+    "sections": [],
+    "resource_content": "content/resources/drivetrain-basics.html",
+    "resource_original": "north-star-resources/drivetrain-basics"
+  },
+  {
+    "path": "resources/engineering-the-perfect-portfolio.html",
+    "title": "Engineering the Perfect Portfolio",
+    "sections": [],
+    "resource_content": "content/resources/engineering-the-perfect-portfolio.html",
+    "resource_original": "north-star-resources/engineering-the-perfect-portfolio"
+  },
+  {
+    "path": "resources/fll-guides.html",
+    "title": "FLL Guides",
+    "sections": [],
+    "resource_content": "content/resources/fll-guides.html",
+    "resource_original": "north-star-resources/fll-guides"
+  },
+  {
+    "path": "resources/grants.html",
+    "title": "Grants",
+    "sections": [],
+    "resource_content": "content/resources/grants.html",
+    "resource_original": "north-star-resources/grants"
+  },
+  {
+    "path": "resources/how-to-build-an-engaging-presentation.html",
+    "title": "How to Build An Engaging Presentation",
+    "sections": [],
+    "resource_content": "content/resources/how-to-build-an-engaging-presentation.html",
+    "resource_original": "north-star-resources/how-to-build-an-engaging-presentation"
+  },
+  {
+    "path": "resources/how-to-fundraise.html",
+    "title": "How to Fundraise",
+    "sections": [],
+    "resource_content": "content/resources/how-to-fundraise.html",
+    "resource_original": "north-star-resources/how-to-fundraise"
+  },
+  {
+    "path": "resources/how-to-version-control.html",
+    "title": "How to Version Control",
+    "sections": [],
+    "resource_content": "content/resources/how-to-version-control.html",
+    "resource_original": "north-star-resources/how-to-version-control"
+  },
+  {
+    "path": "resources/onshape-insert-tool.html",
+    "title": "Onshape Insert Tool",
+    "sections": [],
+    "resource_content": "content/resources/onshape-insert-tool.html",
+    "resource_original": "north-star-resources/onshape-insert-tool"
+  },
+  {
+    "path": "resources/portfolio-examples.html",
+    "title": "Portfolio Examples",
+    "sections": [],
+    "resource_content": "content/resources/portfolio-examples.html",
+    "resource_original": "north-star-resources/portfolio-examples"
+  },
+  {
+    "path": "resources/quick-portfolio-tips.html",
+    "title": "Quick Portfolio Tips",
+    "sections": [],
+    "resource_content": "content/resources/quick-portfolio-tips.html",
+    "resource_original": "north-star-resources/quick-portfolio-tips"
+  },
+  {
+    "path": "resources/scouting-tips-and-tricks.html",
+    "title": "Scouting Tips and Tricks",
+    "sections": [],
+    "resource_content": "content/resources/scouting-tips-and-tricks.html",
+    "resource_original": "north-star-resources/scouting-tips-and-tricks"
+  },
+  {
+    "path": "resources/the-perfect-connect-email.html",
+    "title": "The Perfect Connect Email",
+    "sections": [],
+    "resource_content": "content/resources/the-perfect-connect-email.html",
+    "resource_original": "north-star-resources/the-perfect-connect-email"
+  },
+  {
+    "path": "resources/wiring-and-configuration-best-practices.html",
+    "title": "Wiring and Configuration Best Practices",
+    "sections": [],
+    "resource_content": "content/resources/wiring-and-configuration-best-practices.html",
+    "resource_original": "north-star-resources/wiring-and-configuration-best-practices"
+  },
+  {
+    "path": "resources/es/cad-best-practices.html",
+    "title": "Mejores prácticas de CAD",
+    "sections": [],
+    "resource_content": "content/resources/es/cad-best-practices.html",
+    "resource_original": "translated-north-star-resources/translated-cad-best-practices",
+    "lang": "es"
+  },
+  {
+    "path": "resources/es/how-to-fundraise.html",
+    "title": "Cómo recaudar fondos",
+    "sections": [],
+    "resource_content": "content/resources/es/how-to-fundraise.html",
+    "resource_original": "translated-north-star-resources/translated-how-to-fundraise",
+    "lang": "es"
   }
 ]
