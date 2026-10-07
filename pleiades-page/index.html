@@ -20,6 +20,7 @@
       --pink: #edbfd4;
       --cyan: #b9e5ee;
       --hairline: #3a4354;
+      --section-gap: 144px;
       --serif: "Cormorant Garamond", "Palatino Linotype", Palatino, Georgia, serif;
       --sans: "Segoe UI", Helvetica, Arial, sans-serif;
       --ease: cubic-bezier(.22,.61,.36,1);
@@ -40,11 +41,14 @@
     .eyebrow { font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
     h1, h2, h3, p { margin: 0; }
     h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.08; }
-    .hero { position: relative; min-height: 820px; height: 100svh; isolation: isolate; overflow: hidden; background: var(--night); }
+    .hero { position: relative; padding-top: var(--cluster-top, 0px); isolation: isolate; overflow: hidden; background: var(--night); }
+    /* Reserve the photograph's natural aspect ratio in document flow. Content
+       follows this box immediately as the viewport width changes. */
+    .cluster-size { width: 100%; aspect-ratio: 2400 / 1730; pointer-events: none; }
     .ambient { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 44%; filter: var(--photo-treatment); opacity: .38; }
     .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(var(--night), transparent 48%, var(--night)); }
-    .intro { position: relative; z-index: 3; width: min(39rem, 70%); padding: 2.4rem clamp(1.5rem, 5vw, 8rem); padding-right: 0; pointer-events: none; }
-    h1 { font-size: clamp(4.5rem, 8vw, 8rem); letter-spacing: -.04em; margin: .65rem 0 .8rem; }
+    .intro { position: absolute; top: 0; left: 0; z-index: 3; width: min(39rem, 70%); padding: 2.4rem clamp(1.5rem, 5vw, 8rem); padding-right: 0; pointer-events: none; }
+    h1 { font-size: clamp(4.5rem, calc(3.5rem + 4.5vw), 8rem); letter-spacing: -.04em; margin: .65rem 0 .8rem; }
     .intro p:last-child { max-width: 28rem; color: var(--white); text-wrap: balance; }
     .map { position: absolute; inset: 0; }
     .scene { position: absolute; inset: 0; pointer-events: none; transform-origin: 0 0; will-change: transform; }
@@ -57,9 +61,9 @@
     .star-label { position: absolute; display: block; width: max-content; max-width: 245px; text-align: left; color: var(--white); font-size: .875rem; font-weight: 400; line-height: 1.5; letter-spacing: .09em; text-shadow: 0 1px 3px #080b13, 0 0 8px #080b13, 0 0 16px #080b13; transition: color 500ms; }
     .star.is-active .star-label { color: var(--white); }
     .star:focus-visible .star-label { outline: 2px solid var(--cyan); outline-offset: 5px; }
-    .map-note { position: absolute; z-index: 3; bottom: 1.6rem; left: clamp(1.5rem, 5vw, 8rem); right: clamp(1.5rem, 5vw, 8rem); display: flex; justify-content: space-between; gap: 1rem; font-size: .875rem; color: var(--muted); }
+    .map-note { position: relative; z-index: 3; margin-top: 48px; padding-inline: clamp(1.5rem, 5vw, 8rem); display: flex; justify-content: space-between; gap: 1rem; font-size: .875rem; color: var(--muted); }
     .content { max-width: 1160px; margin: auto; padding: 0 clamp(1.5rem, 6vw, 5rem); }
-    .program { padding: 6rem 0; display: grid; grid-template-columns: 1fr 1.35fr; gap: 3rem; border-bottom: 1px solid var(--hairline); }
+    .program { padding: var(--section-gap) 0 6rem; display: grid; grid-template-columns: 1fr 1.35fr; gap: 3rem; border-bottom: 1px solid var(--hairline); }
     h2 { font-size: clamp(2.4rem, 4vw, 3.7rem); margin-top: .85rem; }
     .program p + p { margin-top: 1rem; }
     dl { margin: 1.8rem 0 0; }
@@ -104,15 +108,13 @@
       .hero.custom-cursor .map, .hero.custom-cursor .map * { cursor: none; }
     }
     @media (max-width: 999px) {
-      .hero { height: auto; min-height: max(100svh, 1030px); }
       .intro { width: 100%; padding: 2rem 1.5rem; }
-      h1 { font-size: clamp(4.5rem, 17vw, 7rem); }
       .intro p:last-child { max-width: 24rem; }
-      .map { top: 280px; bottom: 100px; }
+      .map { top: 0; bottom: 100px; }
       .star { width: 28px; height: 28px; }
       .star-label { font-size: .875rem; letter-spacing: .045em; }
       .map-note { flex-direction: column; gap: .3rem; }
-      .program { grid-template-columns: 1fr; gap: 2rem; padding: 4rem 0; }
+      .program { grid-template-columns: 1fr; gap: 2rem; padding: var(--section-gap) 0 4rem; }
       .initiatives { padding-top: 4rem; }
       .initiative-list > li { padding-left: 2.5rem; }
       footer { flex-direction: column; }
@@ -133,6 +135,7 @@
   <a class="skip" href="#initiatives">Skip star map; read initiatives</a>
   <main>
     <section class="hero" aria-labelledby="page-title">
+      <div class="cluster-size" aria-hidden="true"></div>
       <img class="ambient" src="/assets/general/pleiades.jpg" alt="" aria-hidden="true">
       <div class="scene" id="scene">
         <img class="photo" id="photo" src="/assets/general/pleiades.jpg" width="2400" height="1730" alt="The Pleiades star cluster, with bright star cores and reflection nebulosity shown in pink." fetchpriority="high">
@@ -468,19 +471,25 @@ dialog.addEventListener("close", () => {
 function layout() {
   state.layout = false;
   state.domKey = "";
+  // One continuous rule for all screens: tall aspect ratios provide more room
+  // above the image; the offset starts increasing beyond a 3:4 height:width ratio.
+  const aspectOffset = clamp((innerHeight / hero.clientWidth - 3 / 4) * 360, 0, 280);
+  hero.style.setProperty("--cluster-top", aspectOffset + "px");
   state.width = hero.clientWidth; state.height = hero.clientHeight;
   const hb = hero.getBoundingClientRect(), mb = map.getBoundingClientRect();
   state.mapX = mb.left - hb.left; state.mapY = mb.top - hb.top;
-  const w = map.clientWidth, h = map.clientHeight;
-  state.driftCenter = { x: state.mapX + w / 2, y: state.mapY + h / 2 };
+  // The in-flow aspect-ratio box controls both photograph and section placement.
+  // No viewport-height cap: every width change changes the photograph's height.
+  const w = map.clientWidth;
   const iw = photo.naturalWidth || 2400, ih = photo.naturalHeight || 1730;
-  const cover = Math.max(w / iw, h / ih);
-  const contained = compact.matches || !(iw * cover * .72 < w - 72 && ih * cover * .53 < h - 96);
-  const scale = contained ? Math.min(w / iw, h * .7 / ih) : cover;
-  const rw = iw * scale, rh = ih * scale;
-  const ox = state.mapX + (contained ? (w - rw) / 2 : clamp(w / 2 - rw * .475, w - rw, 0));
-  const oy = state.mapY + (contained ? (h - rh) / 2 : clamp(h / 2 - rh * .445, h - rh, 0));
+  const sizeBox = $(".cluster-size");
+  sizeBox.style.aspectRatio = `${iw} / ${ih}`;
+  const rw = sizeBox.clientWidth, rh = sizeBox.getBoundingClientRect().height;
+  const ox = sizeBox.offsetLeft, oy = sizeBox.offsetTop, contained = true;
   state.image = { x: ox, y: oy, width: rw, height: rh, contained };
+  // The in-flow map note ends the hero; section padding defines the gap below it.
+  state.height = hero.clientHeight;
+  state.driftCenter = { x: state.mapX + w / 2, y: state.mapY + map.clientHeight / 2 };
   [photo, nebula].forEach(image => Object.assign(image.style,
     { width: rw + "px", height: rh + "px", left: ox + "px", top: oy + "px" }));
   photo.style.maskImage = contained ? "linear-gradient(transparent, #000 14%, #000 86%, transparent)" : "none";
@@ -965,6 +974,7 @@ function onScroll() {
 }
 window.addEventListener("scroll", onScroll, { passive: true });
 new ResizeObserver(() => { state.layout = true; wake(); }).observe(hero);
+window.addEventListener("resize", () => { state.layout = true; wake(); }, { passive: true });
 new IntersectionObserver(([entry]) => {
   state.visible = entry.isIntersecting;
   if (state.visible) { state.lastFrame = 0; wake(); } else stop();
